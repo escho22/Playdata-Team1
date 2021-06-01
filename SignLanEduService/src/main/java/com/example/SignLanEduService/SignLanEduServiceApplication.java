@@ -1,0 +1,13 @@
+package com.example.SignLanEduService;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SignLanEduServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SignLanEduServiceApplication.class, args);
+	}
+
+}
