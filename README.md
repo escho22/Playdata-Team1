@@ -1,7 +1,7 @@
 ### Playdata : Final Project 
 # Sign language Education Service
 
-0601_1804 [김민규] 최초 프로젝트 업로드
+Project에 Board 생성했습니당
 
 
 
