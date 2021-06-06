@@ -57,3 +57,14 @@ spring.datasource.hikari.jdbc-url: jdbc:mysql://13.209.35.156:3306/sign?useUnico
 # Hikari Connection Pool
 spring.datasource.hikari.username=root
 spring.datasource.hikari.password=1234
+
+
+# JSP View path
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=.jsp
+# MariaDB
+spring.datasource.hikari.driver-class-name=org.mariadb.jdbc.Driver
+spring.datasource.hikari.jdbc-url: jdbc:mariadb://13.209.35.156:3306/sign?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+# Hikari Connection Pool
+spring.datasource.hikari.username=root
+spring.datasource.hikari.password=1234
