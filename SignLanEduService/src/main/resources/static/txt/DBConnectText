@@ -1,0 +1,59 @@
+====JDBC Local====성공
+#mariaDB
+spring.datasource.driverClassName=org.mariadb.jdbc.Driver
+spring.datasource.url=jdbc:mariadb://127.0.0.1:3306/sign
+spring.datasource.username=root
+spring.datasource.password=1234
+# JSP View path
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=.jsp
+
+
+====JDBC AWS====성공
+#mariaDB
+spring.datasource.driverClassName=org.mariadb.jdbc.Driver
+spring.datasource.url=jdbc:mariadb://13.209.35.156:3306/sign
+spring.datasource.username=root
+spring.datasource.password=1234
+# JSP View path
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=.jsp
+
+
+====hikari Local====
+실패1
+# JSP View path
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=.jsp
+# MariaDB
+spring.datasource.hikari.driver-class-name=org.mariadb.jdbc.Driver
+spring.datasource.hikari.jdbc-url: jdbc:mariadb://localhost:3306/sign?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+# Hikari Connection Pool
+spring.datasource.hikari.username=root
+spring.datasource.hikari.password=1234
+
+실패2
+# JSP View path
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=.jsp
+# DEVTOOLS (DevToolsProperties)
+spring.devtools.livereload.enabled=true
+# MariaDB
+spring.datasource.hikari.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.hikari.jdbc-url: jdbc:mysql://localhost:3306/sign?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+# Hikari Connection Pool
+spring.datasource.hikari.username=root
+spring.datasource.hikari.password=1234
+
+====hikari AWS====
+# JSP View path
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=.jsp
+# DEVTOOLS (DevToolsProperties)
+spring.devtools.livereload.enabled=true
+# MariaDB
+spring.datasource.hikari.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.hikari.jdbc-url: jdbc:mysql://13.209.35.156:3306/sign?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+# Hikari Connection Pool
+spring.datasource.hikari.username=root
+spring.datasource.hikari.password=1234
