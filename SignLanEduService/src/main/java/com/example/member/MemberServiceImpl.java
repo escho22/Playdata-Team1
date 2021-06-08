@@ -67,6 +67,12 @@ public class MemberServiceImpl implements MemberService {
 		// TODO Auto-generated method stub
 		return mapper.passwd_update(map);
 	}
+	
+	@Override
+	public int recent_update(int m_num) {
+		// TODO Auto-generated method stub
+		return mapper.recent_update(m_num);
+	}
 
 	@Override
 	public int login(Map<String, Object> map) {

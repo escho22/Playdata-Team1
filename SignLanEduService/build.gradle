@@ -33,6 +33,8 @@ dependencies {
     runtimeOnly 'mysql:mysql-connector-java'
     // https://mvnrepository.com/artifact/org.apache.tiles/tiles-jsp
     implementation group: 'org.apache.tiles', name: 'tiles-jsp', version: '3.0.8'
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation group: 'org.json', name: 'json', version: '20201115'
 }
 
 test {

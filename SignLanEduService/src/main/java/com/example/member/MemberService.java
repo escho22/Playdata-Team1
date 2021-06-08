@@ -15,6 +15,7 @@ public interface MemberService {
 	MemberVO readById(String m_id);
 	int passwd_check(Map map);
 	int passwd_update(Map map);
+	int recent_update(int m_num);
 	int login(Map<String,Object> map);
 	boolean isMember(HttpSession session);  
 
