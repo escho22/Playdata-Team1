@@ -90,4 +90,11 @@ public class MemberServiceImpl implements MemberService {
 		return sw;
 	}
 
+	//quiz 풀고 member의 point update
+	@Override
+	public int update_point(int m_num, int point) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

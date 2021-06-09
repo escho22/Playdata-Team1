@@ -18,5 +18,7 @@ public interface MemberService {
 	int recent_update(int m_num);
 	int login(Map<String,Object> map);
 	boolean isMember(HttpSession session);  
+	
+	int update_point(int m_num, int point);//quiz풀고 point update
 
 }
