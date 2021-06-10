@@ -58,19 +58,27 @@ public class QuizController {
 	}
 	
 	//선택된 level의 quiz page로 이동 (views/quiz/main.jsp에서 js로 webcam구동+ajax방식으로 word하나씩 출력해야함)
+//	@RequestMapping(value = "/quiz/start", method = RequestMethod.GET)
+//	public ModelAndView start(int m_num, int level) {//sessionScope.m_num으로 m_num 전달받으면됨.
+//		
+//		ModelAndView mav = new ModelAndView();
+//
+//		MemberVO vo = mservice.read(m_num);
+//		String[] words = wservice.get_words(level); //level에 해당하는 단어들 반환
+//		
+//		mav.addObject("level", level);
+//		mav.addObject("words", words);
+//		mav.addObject("member", vo);
+//		mav.setViewName("/quiz/start");
+//
+//		return mav;
+//	}
+	
 	@RequestMapping(value = "/quiz/start", method = RequestMethod.GET)
-	public ModelAndView start(int m_num, int level) {//sessionScope.m_num으로 m_num 전달받으면됨.
+	public ModelAndView start() {//sessionScope.m_num으로 m_num 전달받으면됨.
 		
 		ModelAndView mav = new ModelAndView();
-
-		MemberVO vo = mservice.read(m_num);
-		String[] words = wservice.get_words(level); //level에 해당하는 단어들 반환
-		
-		mav.addObject("level", level);
-		mav.addObject("words", words);
-		mav.addObject("member", vo);
 		mav.setViewName("/quiz/start");
-
 		return mav;
 	}
 	

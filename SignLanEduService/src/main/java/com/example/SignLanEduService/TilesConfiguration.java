@@ -10,9 +10,10 @@ public class TilesConfiguration {
 	@Bean
 	public TilesConfigurer tilesConfigurer() {
 		final TilesConfigurer configurer = new TilesConfigurer();
-		// ÇØ´ç °æ·Î¿¡ tiles.xml ÆÄÀÏÀ» ³ÖÀ½
+		// ï¿½Ø´ï¿½ ï¿½ï¿½Î¿ï¿½ tiles.xml ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		configurer.setDefinitions(new String[] { "classpath:/tiles/tiles.xml", 
-												 "classpath:/tiles/tiles_member.xml" });
+												 "classpath:/tiles/tiles_member.xml",
+												 "classpath:/tiles/tiles_quiz.xml"});
 		configurer.setCheckRefresh(true);
 		return configurer;
 	}

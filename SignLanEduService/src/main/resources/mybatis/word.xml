@@ -7,30 +7,30 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <!-- 아래 쿼리문 수정필요 -->
 
 
-	<select id="checkID" resultType="String" parameterType="int">
-		SELECT
-		w_word
-		FROM word
-		WHERE =#{level}
-	</select>
+<!-- 	<select id="checkID" resultType="String" parameterType="int"> -->
+<!-- 		SELECT -->
+<!-- 		w_word -->
+<!-- 		FROM word -->
+<!-- 		WHERE =#{level} -->
+<!-- 	</select> -->
 
-	<select id="read" resultType="com.example.member.MemberVO"
-		parameterType="int">
-		SELECT m_num, m_id, m_pw, m_name, m_birth, m_sex,
-		m_email, m_register, m_recent, m_point, m_is_admin
-		FROM member
-		WHERE
-		m_num = #{m_num}
-	</select>
+<!-- 	<select id="read" resultType="com.example.member.MemberVO" -->
+<!-- 		parameterType="int"> -->
+<!-- 		SELECT m_num, m_id, m_pw, m_name, m_birth, m_sex, -->
+<!-- 		m_email, m_register, m_recent, m_point, m_is_admin -->
+<!-- 		FROM member -->
+<!-- 		WHERE -->
+<!-- 		m_num = #{m_num} -->
+<!-- 	</select> -->
 
-	<select id="readById" resultType="com.example.member.MemberVO"
-		parameterType="String">
-		SELECT m_num, m_id, m_pw, m_name, m_birth, m_sex,
-		m_email, m_register, m_recent, m_point, m_is_admin
-		FROM member
-		WHERE
-		m_id = #{m_id}
-	</select>
+<!-- 	<select id="readById" resultType="com.example.member.MemberVO" -->
+<!-- 		parameterType="String"> -->
+<!-- 		SELECT m_num, m_id, m_pw, m_name, m_birth, m_sex, -->
+<!-- 		m_email, m_register, m_recent, m_point, m_is_admin -->
+<!-- 		FROM member -->
+<!-- 		WHERE -->
+<!-- 		m_id = #{m_id} -->
+<!-- 	</select> -->
 
 
 </mapper>
