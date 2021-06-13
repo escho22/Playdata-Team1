@@ -4,8 +4,44 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.SignLanEduService.dao.WordMapper">
 
-<!-- 아래 쿼리문 수정필요 -->
+<insert id="createWord" parameterType="com.example.SignLanEduService.vo.WordVO">
+		INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty)
+		VALUES (#{w_word}, #{w_explain}, #{w_path}, #{w_index}, #{w_difficulty})
+</insert>
 
+<select id="listWord" resultType="com.example.SignLanEduService.vo.WordVO">
+	SELECT * FROM word ORDER BY w_num ASC
+</select>
+
+<select id="readWord" resultType="com.example.SignLanEduService.vo.WordVO" parameterType="int">
+	SELECT * FROM word WHERE w_num = #{w_num}
+</select>
+
+<select id="readWordByWord" resultType="com.example.SignLanEduService.vo.WordVO" parameterType="String"> 
+	SELECT * FROM word WHERE w_word = #{w_word}
+</select>
+
+<select id="readWordByDifficulty" resultType="com.example.SignLanEduService.vo.WordVO" parameterType="int">
+	SELECT * FROM word WHERE w_difficulty = #{w_difficulty} ORDER BY w_num ASC
+</select>
+
+<select id="readWordByIndex" resultType="com.example.SignLanEduService.vo.WordVO" parameterType="int">
+	SELECT * FROM word WHERE w_index = #{w_index}
+</select>
+
+<update id="updateWord" parameterType="com.example.SignLanEduService.vo.WordVO">
+    UPDATE word 
+    SET w_word = #{w_word}, w_explain = #{w_explain}, w_path = #{w_path},
+          w_index = #{w_index}, w_difficulty = #{w_difficulty}
+    WHERE w_num = #{w_num}
+</update>
+
+<delete id="deleteWord" parameterType="int">
+    DELETE FROM word
+    WHERE w_num=#{w_num}
+</delete>
+
+<!-- 아래 쿼리문 수정필요 -->
 
 <!-- 	<select id="checkID" resultType="String" parameterType="int"> -->
 <!-- 		SELECT -->

@@ -17,13 +17,10 @@ import org.springframework.web.servlet.ModelAndView;
 import com.example.SignLanEduService.service.MemberService;
 import com.example.SignLanEduService.service.QuizService;
 import com.example.SignLanEduService.service.WordService;
-import com.example.SignLanEduService.vo.MemberVO;
 import com.example.SignLanEduService.vo.QuizVO;
-
 
 @Controller
 public class QuizController {
-
 
 	@Autowired
 	@Qualifier("com.example.SignLanEduService.service.QuizServiceImpl")
