@@ -1,4 +1,4 @@
-package com.example.member;
+package com.example.SignLanEduService.controller;
 
 import java.util.HashMap;
 import java.util.List;
@@ -19,11 +19,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.SignLanEduService.service.MemberService;
+import com.example.SignLanEduService.vo.MemberVO;
+
 @Controller
 public class MemberController {
 
 	@Autowired
-	@Qualifier("com.example.member.MemberServiceImpl")
+	@Qualifier("com.example.SignLanEduService.service.MemberServiceImpl")
 	private MemberService service;
 
 	public MemberController() {

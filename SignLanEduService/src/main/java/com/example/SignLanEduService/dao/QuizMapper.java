@@ -1,4 +1,6 @@
-package com.example.quiz;
+package com.example.SignLanEduService.dao;
+
+import com.example.SignLanEduService.vo.QuizVO;
 
 public interface QuizMapper {
 	

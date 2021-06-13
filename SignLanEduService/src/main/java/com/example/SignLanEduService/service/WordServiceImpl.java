@@ -1,9 +1,12 @@
-package com.example.word;
+package com.example.SignLanEduService.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("com.example.word.WordServiceImpl")
+import com.example.SignLanEduService.dao.WordMapper;
+import com.example.SignLanEduService.vo.WordVO;
+
+@Service("com.example.SignLanEduService.service.WordServiceImpl")
 public class WordServiceImpl implements WordService {
 
 	@Autowired

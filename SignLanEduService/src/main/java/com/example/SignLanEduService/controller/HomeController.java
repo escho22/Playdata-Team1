@@ -1,4 +1,4 @@
-package com.example.SignLanEduService;
+package com.example.SignLanEduService.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

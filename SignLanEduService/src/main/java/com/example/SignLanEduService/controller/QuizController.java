@@ -1,4 +1,4 @@
-package com.example.quiz;
+package com.example.SignLanEduService.controller;
 
 
 import javax.servlet.http.HttpSession;
@@ -14,9 +14,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.member.MemberService;
-import com.example.member.MemberVO;
-import com.example.word.WordService;
+import com.example.SignLanEduService.service.MemberService;
+import com.example.SignLanEduService.service.QuizService;
+import com.example.SignLanEduService.service.WordService;
+import com.example.SignLanEduService.vo.MemberVO;
+import com.example.SignLanEduService.vo.QuizVO;
 
 
 @Controller
@@ -24,15 +26,15 @@ public class QuizController {
 
 
 	@Autowired
-	@Qualifier("com.example.quiz.QuizServiceImpl")
+	@Qualifier("com.example.SignLanEduService.service.QuizServiceImpl")
 	private QuizService service;
 	
 	@Autowired
-	@Qualifier("com.example.member.MemberServiceImpl")
+	@Qualifier("com.example.SignLanEduService.service.MemberServiceImpl")
 	private MemberService mservice;
 
 	@Autowired
-	@Qualifier("com.example.word.WordServiceImpl")
+	@Qualifier("com.example.SignLanEduService.service.WordServiceImpl")
 	private WordService wservice;
 	
 

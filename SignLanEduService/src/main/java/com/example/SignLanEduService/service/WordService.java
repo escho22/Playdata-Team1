@@ -1,4 +1,6 @@
-package com.example.word;
+package com.example.SignLanEduService.service;
+
+import com.example.SignLanEduService.vo.WordVO;
 
 public interface WordService {
 	

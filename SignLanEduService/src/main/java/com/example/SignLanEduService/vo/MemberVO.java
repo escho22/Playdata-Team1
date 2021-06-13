@@ -1,4 +1,4 @@
-package com.example.member;
+package com.example.SignLanEduService.vo;
 
 import lombok.Data;
 

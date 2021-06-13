@@ -1,1 +1,4 @@
 /.metadata/
+
+### my ignore ###
+/SignLanEduService/src/main/resources/application.yml

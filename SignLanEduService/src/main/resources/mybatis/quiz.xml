@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.quiz.QuizMapper">
+<mapper namespace="com.example.SignLanEduService.dao.QuizMapper">
 
-	<insert id="create" parameterType="com.example.quiz.QuizVO">
+	<insert id="create" parameterType="com.example.SignLanEduService.vo.QuizVO">
 		INSERT INTO quiz (q_num,
 		m_num, w_num, q_correct, q_percent, q_date)
 		VALUES (#{q_num},#{m_num}, #{w_num}, #{q_correct}, 

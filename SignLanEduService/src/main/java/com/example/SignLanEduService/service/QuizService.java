@@ -1,4 +1,6 @@
-package com.example.quiz;
+package com.example.SignLanEduService.service;
+
+import com.example.SignLanEduService.vo.QuizVO;
 
 public interface QuizService {
 	

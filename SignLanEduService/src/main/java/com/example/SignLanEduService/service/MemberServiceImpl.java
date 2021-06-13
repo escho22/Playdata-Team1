@@ -1,4 +1,4 @@
-package com.example.member;
+package com.example.SignLanEduService.service;
 
 import java.util.List;
 import java.util.Map;
@@ -8,7 +8,10 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("com.example.member.MemberServiceImpl")
+import com.example.SignLanEduService.dao.MemberMapper;
+import com.example.SignLanEduService.vo.MemberVO;
+
+@Service("com.example.SignLanEduService.service.MemberServiceImpl")
 public class MemberServiceImpl implements MemberService {
 	
 	@Autowired

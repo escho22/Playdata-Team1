@@ -1,11 +1,12 @@
-package com.example.quiz;
+package com.example.SignLanEduService.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.member.MemberMapper;
+import com.example.SignLanEduService.dao.QuizMapper;
+import com.example.SignLanEduService.vo.QuizVO;
 
-@Service("com.example.quiz.QuizServiceImpl")
+@Service("com.example.SignLanEduService.service.QuizServiceImpl")
 public class QuizServiceImpl implements QuizService {
 
 	@Autowired

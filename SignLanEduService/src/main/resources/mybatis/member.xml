@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.member.MemberMapper">
+<mapper namespace="com.example.SignLanEduService.dao.MemberMapper">
 	<select id="checkID" resultType="int" parameterType="String">
 		SELECT
 		COUNT(m_id) as cnt
@@ -10,7 +10,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE m_id=#{m_id}
 	</select>
 
-	<insert id="create" parameterType="com.example.member.MemberVO">
+	<insert id="create" parameterType="com.example.SignLanEduService.vo.MemberVO">
 		INSERT INTO member (m_id,
 		m_pw, m_name, m_birth, m_sex, m_email)
 		VALUES (#{m_id}, #{m_pw},
@@ -18,7 +18,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 
 	<!-- m_num로 회원 정보 조회 -->
-	<select id="read" resultType="com.example.member.MemberVO"
+	<select id="read" resultType="com.example.SignLanEduService.vo.MemberVO"
 		parameterType="int">
 		SELECT m_num, m_id, m_pw, m_name, m_birth, m_sex,
 		m_email, m_register, m_recent, m_point, m_is_admin
@@ -28,7 +28,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 
 	<!-- m_id로 회원 정보 조회 -->
-	<select id="readById" resultType="com.example.member.MemberVO"
+	<select id="readById" resultType="com.example.SignLanEduService.vo.MemberVO"
 		parameterType="String">
 		SELECT m_num, m_id, m_pw, m_name, m_birth, m_sex,
 		m_email, m_register, m_recent, m_point, m_is_admin
@@ -37,7 +37,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		m_id = #{m_id}
 	</select>
 
-	<update id="update" parameterType="com.example.member.MemberVO">
+	<update id="update" parameterType="com.example.SignLanEduService.vo.MemberVO">
 		UPDATE member
 		SET
 		m_name=#{m_name}, m_birth=#{m_birth}, m_sex=#{m_sex},

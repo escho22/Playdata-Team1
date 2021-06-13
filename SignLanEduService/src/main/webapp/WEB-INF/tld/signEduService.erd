@@ -298,6 +298,22 @@
                       <defaultValue></defaultValue>
                     </net.java.amateras.db.visual.model.ColumnModel>
                     <net.java.amateras.db.visual.model.ColumnModel>
+                      <columnName>w_index</columnName>
+                      <logicalName>단어모델번호</logicalName>
+                      <columnType class="net.java.amateras.db.dialect.ColumnType">
+                        <name>INT</name>
+                        <logicalName>Integer</logicalName>
+                        <supportSize>true</supportSize>
+                        <type>4</type>
+                      </columnType>
+                      <size>1</size>
+                      <notNull>false</notNull>
+                      <primaryKey>false</primaryKey>
+                      <description></description>
+                      <autoIncrement>false</autoIncrement>
+                      <defaultValue></defaultValue>
+                    </net.java.amateras.db.visual.model.ColumnModel>
+                    <net.java.amateras.db.visual.model.ColumnModel>
                       <columnName>w_difficulty</columnName>
                       <logicalName>단어난이도</logicalName>
                       <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../../targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/source/columns/net.java.amateras.db.visual.model.ColumnModel[2]/columnType"/>
@@ -315,7 +331,14 @@
                     <green>255</green>
                     <blue>206</blue>
                   </backgroundColor>
-                  <sql></sql>
+                  <sql>INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;배고프다&apos;, &apos;배고프다&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000227.avi&apos;, 12, 4);&#xd;
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;병원&apos;, &apos;병원&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000232.avi&apos;, 15, 4);&#xd;
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;선생님&apos;, &apos;선생님&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000256.avi&apos;, 21, 4);&#xd;
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;아줌마&apos;, &apos;아줌마&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000282.avi&apos;, 29, 4);&#xd;
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;엘리베이터&apos;, &apos;엘리베이터&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000298.avi&apos;, 37, 4);&#xd;
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;택시&apos;, &apos;택시&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000384.avi&apos;, 45, 4);&#xd;
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;팔꿈치&apos;, &apos;팔꿈치&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000393.avi&apos;, 46, 4);&#xd;
+</sql>
                 </target>
                 <foreignKeyName>learn_FK_2</foreignKeyName>
                 <references/>

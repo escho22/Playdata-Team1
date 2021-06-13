@@ -17,13 +17,13 @@ import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
 @PropertySource("classpath:/application.properties")
-@MapperScan(basePackages= {"com.example.*"})
+@MapperScan(basePackages= {"com.example.SignLanEduService.dao"})
 public class DatabaseConfiguration {
 	@Autowired
 	  private ApplicationContext applicationContext;
 	  
 	  @Bean
-	  @ConfigurationProperties(prefix="spring.datasource.hikari") // 설정 파일의 접두사 선언 
+	  @ConfigurationProperties(prefix="spring.datasource.hikari")
 	  public HikariConfig hikariConfig() {
 	      return new HikariConfig();
 	  }
@@ -31,7 +31,7 @@ public class DatabaseConfiguration {
 	  @Bean
 	  public DataSource dataSource() throws Exception{
 	      DataSource dataSource = new HikariDataSource(hikariConfig());
-	      System.out.println(dataSource.toString());  // 정상적으로 연결 되었는지 해시코드로 확인
+	      System.out.println(dataSource.toString());
 	      return dataSource;
 	  }
 	  

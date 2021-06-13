@@ -1,3 +1,8 @@
+DROP TABLE IF EXISTS quiz;
+DROP TABLE IF EXISTS learn;
+DROP TABLE IF EXISTS word;
+DROP TABLE IF EXISTS member;
+
 /**********************************/
 /* Table Name: 회원 */
 /**********************************/
@@ -23,6 +28,7 @@ CREATE TABLE word(
 		w_word                        		VARCHAR(20)		 NOT NULL COMMENT '단어',
 		w_explain                     		VARCHAR(20)		 NULL  COMMENT '단어설명',
 		w_path                        		VARCHAR(100)		 NULL  COMMENT '단어경로',
+		w_index                       		INT(1)		 NULL  COMMENT '단어모델번호',
 		w_difficulty                  		INT(1)		 DEFAULT 1		 NOT NULL COMMENT '단어난이도'
 ) COMMENT='단어';
 
@@ -57,3 +63,10 @@ INSERT INTO member (m_id, m_pw, m_name, m_birth, m_sex, m_email, m_is_admin) VAL
 INSERT INTO member (m_id, m_pw, m_name, m_birth, m_sex, m_email) VALUES ('test1', 1234, '테스트계정', '2002-06-04', 0, '2002@피파.com');
 INSERT INTO member (m_id, m_pw, m_name, m_birth, m_sex, m_email) VALUES ('test2', 1234, '테스트계정2', '2002-06-10', 1, '2002@한국축협.com');
 
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('배고프다', '배고프다', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000227.avi', 12, 4);
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('병원', '병원', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000232.avi', 15, 4);
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('선생님', '선생님', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000256.avi', 21, 4);
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('아줌마', '아줌마', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000282.avi', 29, 4);
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('엘리베이터', '엘리베이터', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000298.avi', 37, 4);
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('택시', '택시', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000384.avi', 45, 4);
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('팔꿈치', '팔꿈치', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000393.avi', 46, 4);
