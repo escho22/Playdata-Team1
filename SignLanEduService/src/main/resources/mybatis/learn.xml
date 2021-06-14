@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.SignLanEduService.dao.LearnMapper">
+
+<insert id="createLearn" parameterType="com.example.SignLanEduService.vo.LearnVO">
+	INSERT INTO learn (m_num, w_num) VALUES (#{m_num}, #{w_num});
+</insert>
+
+<select id="listLearn" resultType="com.example.SignLanEduService.vo.LearnVO">
+	SELECT * FROM learn ORDER BY l_num ASC
+</select>
+
+<select id="readLearn" resultType="com.example.SignLanEduService.vo.LearnVO" parameterType="int">
+	SELECT * FROM learn WHERE l_num = #{l_num}
+</select>
+
+<select id="readLearnbyMember" resultType="com.example.SignLanEduService.vo.LearnVO" parameterType="int"> 
+	SELECT * FROM learn WHERE m_num = #{m_num} ORDER BY l_num ASC
+</select>
+
+<select id="readLearnbyWord" resultType="com.example.SignLanEduService.vo.LearnVO" parameterType="int">
+	SELECT * FROM learn WHERE w_num = #{w_num} ORDER BY l_num ASC
+</select>
+
+<delete id="deleteLearn" parameterType="int">
+    DELETE FROM learn
+    WHERE l_num=#{l_num}
+</delete>
+
+</mapper>
