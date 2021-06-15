@@ -23,6 +23,83 @@ public class LearnController {
 		System.out.println("---> LearnController created");
 	}
 	
+	@RequestMapping(value = "/learn/select", method = RequestMethod.GET)
+	public ModelAndView selectLearn() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/learn/select");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level1/choose", method = RequestMethod.GET)
+	public ModelAndView learnLevel1() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/learn/level1/choose");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level2/choose", method = RequestMethod.GET)
+	public ModelAndView learnLevel2() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/learn/level2/choose");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level3/choose", method = RequestMethod.GET)
+	public ModelAndView learnLevel3() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/learn/level3/choose");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/choose", method = RequestMethod.GET)
+	public ModelAndView learnLevel4() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/learn/level4/choose");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/learn_4_1", method = RequestMethod.GET)
+	public ModelAndView learnLevel4_1() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/learn/level4/learn_4_1");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/learn_4_2", method = RequestMethod.GET)
+	public ModelAndView learnLevel4_2() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/learn/level4/learn_4_2");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/learn_4_3", method = RequestMethod.GET)
+	public ModelAndView learnLevel4_3() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/learn/level4/learn_4_3");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/learn_4_4", method = RequestMethod.GET)
+	public ModelAndView learnLevel4_4() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/learn/level4/learn_4_4");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/learn_4_5", method = RequestMethod.GET)
+	public ModelAndView learnLevel4_5() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/learn/level4/learn_4_5");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/learn_4_6", method = RequestMethod.GET)
+	public ModelAndView learnLevel4_6() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/learn/level4/learn_4_6");
+		return mav;
+	}
+	
 	@RequestMapping(value = "/learn/create", method = RequestMethod.GET)
 	public ModelAndView createLearn() {
 		ModelAndView mav = new ModelAndView();

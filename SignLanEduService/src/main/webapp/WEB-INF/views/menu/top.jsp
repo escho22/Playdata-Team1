@@ -34,18 +34,18 @@
   <ul class="nav nav-tabs">
     <li class="active"><a href="${root}/">Home</a></li>
         <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">회원 <span class="caret"></span></a>
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learn <span class="caret"></span></a>
       <ul class="dropdown-menu">
-        <li><a href="${root}/member/list">회원 목록</a></li>
-        <li><a href="${root}/member/create">회원 가입</a></li>
+        <li><a href="${root}/learn/select">난이도 선택</a></li>
+        <li><a href="${root}/learn/level4/choose">Level 4</a></li>
       </ul>
     </li> 
     
     <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">학습 <span class="caret"></span></a>
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Quiz <span class="caret"></span></a>
       <ul class="dropdown-menu">
-        <li><a href="${root}/learn/list">학습 목록</a></li>
-        <li><a href="${root}/learn/create">#</a></li>
+        <li><a href="${root}/quiz/select">난이도 선택</a></li>
+        <li><a href="${root}/quiz/level4/choose">Level 4</a></li>
       </ul>
     </li>
     <c:choose>

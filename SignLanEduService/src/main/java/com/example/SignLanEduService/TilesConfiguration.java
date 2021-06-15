@@ -6,14 +6,15 @@ import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesView;
 import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
+@Configuration
 public class TilesConfiguration {
 	@Bean
 	public TilesConfigurer tilesConfigurer() {
 		final TilesConfigurer configurer = new TilesConfigurer();
-		// �ش� ��ο� tiles.xml ������ ����
 		configurer.setDefinitions(new String[] { "classpath:/tiles/tiles.xml", 
-												 "classpath:/tiles/tiles_member.xml",
-												 "classpath:/tiles/tiles_quiz.xml"});
+												 "classpath:/tiles/tilesMember.xml",
+												 "classpath:/tiles/tilesQuiz.xml",
+												 "classpath:/tiles/tilesLearn.xml"});
 		configurer.setCheckRefresh(true);
 		return configurer;
 	}

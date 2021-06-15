@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
   <head>
     <title>Multiple object detection using pre trained model in TensorFlow.js</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <!-- Import the webpage's stylesheet -->
     <link rel="stylesheet" href="style.css">
   </head>  

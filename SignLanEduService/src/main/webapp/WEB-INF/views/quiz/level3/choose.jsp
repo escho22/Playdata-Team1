@@ -5,18 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, width=device-width" />
-<title>SignEdu</title>
+<title>Quiz - Level 3</title>
 </head>
 <body>
-This is Index Page
+<h2>Quiz - Level 3</h2>
 <hr>
-<table border="1">
-	<tr> 
-		<td><A href='/learn/select'>학습</A></td>
-		<td><A href='/quiz/select'>퀴즈</A></td>
-		<td><A href='/member/myInfo'>내 정보</A></td>
-	</tr>
-</table>
-<A href='/learn/select'>학습</A>
+준비중입니다!
+
+<hr>
+<A href='/quiz/select'>목록</A> <br>
+
 </body>
 </html>
