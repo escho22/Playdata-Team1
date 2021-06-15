@@ -3,12 +3,46 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.SignLanEduService.dao.QuizMapper">
-
 	<insert id="create" parameterType="com.example.SignLanEduService.vo.QuizVO">
-		INSERT INTO quiz (q_num,
-		m_num, w_num, q_correct, q_percent, q_date)
-		VALUES (#{q_num},#{m_num}, #{w_num}, #{q_correct}, 
-		#{q_percent}, #{q_date})
+		INSERT INTO quiz (m_num, w_num, q_correct, q_percent)
+		VALUES (#{m_num}, #{w_num}, #{q_correct}, #{q_percent})
 	</insert>
+	
+	<select id="listquiz" resultType="com.example.SignLanEduService.vo.QuizVO">
+		SELECT * FROM quiz ORDER BY q_num ASC
+	</select>
+	
+	<select id="readQuiz" resultType="com.example.SignLanEduService.vo.QuizVO" parameterType="int">
+		SELECT * FROM quiz WHERE q_num = #{q_num}
+	</select>
+	
+	<select id="readQuizbyMember" resultType="com.example.SignLanEduService.vo.QuizVO" parameterType="int"> 
+		SELECT * FROM quiz WHERE m_num = #{m_num} ORDER BY q_num ASC
+	</select>
+	
+	<select id="readQuizbyWord" resultType="com.example.SignLanEduService.vo.QuizVO" parameterType="int">
+		SELECT * FROM quiz WHERE w_num = #{w_num} ORDER BY q_num ASC
+	</select>
+	
+	<select id="readQuizbyCorrect" resultType="com.example.SignLanEduService.vo.QuizVO">
+		SELECT * FROM quiz WHERE q_correct = 1 ORDER BY q_num ASC
+	</select>
+	
+	<select id="readQuizbyIncorrect" resultType="com.example.SignLanEduService.vo.QuizVO">
+		SELECT * FROM quiz WHERE q_correct = 0 ORDER BY q_num ASC
+	</select>
+	
+	<select id="readQuizbyDate" resultType="com.example.SignLanEduService.vo.QuizVO" parameterType="String">
+		SELECT * FROM quiz WHERE DATE(q_date)=#{q_date} ORDER BY q_num ASC
+	</select>
+	
+	<select id="readQuizbyDateBetween" resultType="com.example.SignLanEduService.vo.QuizVO" parameterType="HashMap">
+		SELECT * FROM quiz WHERE DATE(q_date) BETWEEN #{date_start} AND #{date_end} ORDER BY q_num ASC
+	</select>
+	
+	<delete id="deleteQuiz" parameterType="int">
+	    DELETE FROM quiz
+	    WHERE q_num=#{q_num}
+	</delete>
 
 </mapper>

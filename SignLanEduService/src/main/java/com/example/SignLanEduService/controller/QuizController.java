@@ -38,6 +38,55 @@ public class QuizController {
 	public QuizController() {
 		System.out.println("--> QuizController created.");
 	}
+	
+	@RequestMapping(value = "/quiz/select", method = RequestMethod.GET)
+	public ModelAndView selectQuiz() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/quiz/select");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/quiz/level1/choose", method = RequestMethod.GET)
+	public ModelAndView quizLevel1() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/quiz/level1/choose");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/quiz/level2/choose", method = RequestMethod.GET)
+	public ModelAndView quizLevel2() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/quiz/level2/choose");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/quiz/level3/choose", method = RequestMethod.GET)
+	public ModelAndView quizLevel3() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/quiz/level3/choose");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/quiz/level4/choose", method = RequestMethod.GET)
+	public ModelAndView quizLevel4() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/quiz/level4/choose");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/quiz/level4/quiz_4_1", method = RequestMethod.GET)
+	public ModelAndView quizLevel4_1() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/quiz/level4/quiz_4_1");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/quiz/level4/quiz_4_2", method = RequestMethod.GET)
+	public ModelAndView quizLevel4_2() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/quiz/level4/quiz_4_2");
+		return mav;
+	}
 
 	//quiz intro page로 이동 - 전체 levels 보여주기
 	@RequestMapping(value = "/quiz/intro", method = RequestMethod.GET)

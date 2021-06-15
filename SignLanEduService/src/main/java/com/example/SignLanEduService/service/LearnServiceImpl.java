@@ -15,9 +15,9 @@ public class LearnServiceImpl implements LearnService {
 	private LearnMapper lmapper;
 	
 	@Override
-	public int createLearn(LearnVO learnvo) {
+	public int createLearn(LearnVO vo) {
 		// TODO Auto-generated method stub
-		return lmapper.createLearn(learnvo);
+		return lmapper.createLearn(vo);
 	}
 
 	@Override
