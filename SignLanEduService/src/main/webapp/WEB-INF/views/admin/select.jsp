@@ -16,7 +16,6 @@
 </table>
 <br>
 <hr>
-<A href='/admin/select'>목록</A> <br>
 <A href='/'>Home</A>
 </body>
 </html>

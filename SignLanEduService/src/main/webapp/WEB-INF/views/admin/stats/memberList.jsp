@@ -4,9 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Admin - Member Statistics</title>
 </head>
 <body>
-
+<h2>Admin - Member Statistics</h2>
+<hr>
+Information in Here
+<hr>
+<A href='/admin/stats/choose'>통계</A> <br>
+<A href='/'>Home</A>
 </body>
 </html>

@@ -9,13 +9,13 @@
 <body>
 <h2>Admin - Control Select</h2>
 <hr>
-Member Update
-Meber Delete
-Word Create
+<A href='/admin/control/memberUpdate'>Member Update</A>
+<A href='/admin/control/memberDelete'>Meber Delete</A>
+<A href='/admin/control/wordCreate'>Word Create</A>
 <hr>
-Admin Member Create
+<A href='/admin/control/adminCreate'> Member Create</A>
 <hr>
-<A href='/admin/select'> 목록 </A>
+<A href='/admin/select'> 목록 </A> <br>
 <A href='/'>Home</A>
 </body>
 </html>

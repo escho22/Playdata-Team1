@@ -9,9 +9,9 @@
 <body>
 <h2>Admin - Statistics Select</h2>
 <hr>
-Member
-Learn
-Quiz
+<A href='/admin/stats/memberList'>Member</A>
+<A href='/admin/stats/learnList'>Learn</A>
+<A href='/admin/stats/quizList'>Quiz</A>
 <hr>
 <A href='/admin/select'>목록</A>
 <A href='/'>Home</A>

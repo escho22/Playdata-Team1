@@ -4,12 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin - Create Word</title>
+<title>Admin - Word List</title>
 </head>
 <body>
-Admin - Create Word
+<h2>Admin - Learn Statistics</h2>
 <hr>
-<A href='/admin/select'>목록</A> <br>
+Information in Here
+<hr>
+<A href='/admin/control/choose'>관리</A> <br>
 <A href='/'>Home</A>
 </body>
 </html>

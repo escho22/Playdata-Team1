@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin - Learn Statistics</title>
+<title>Admin - Create Admin</title>
 </head>
 <body>
-<h2>Admin - Learn Statistics</h2>
+<h2>Admin - Create Admin</h2>
 <hr>
-Information in Here
+need to made form 
 <hr>
-<A href='/admin/stats/choose'>통계</A> <br>
+<A href='/admin/control/choose'>관리</A> <br>
 <A href='/'>Home</A>
 </body>
 </html>
