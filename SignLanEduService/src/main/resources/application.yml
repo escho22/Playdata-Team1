@@ -1,8 +1,8 @@
 cloud:
   aws:
     credentials:
-      accessKey: YOUR_ACCESS_KEY
-      secretKey: YOUR_SECRET_KEY
+      accessKey: AKIA2WEO23CSTQACHB7O
+      secretKey: ZWGuKsybvVZE61V6BTVVzyJlmolk14UGbJxQq+Se
     s3:
       bucket: signedubucket
     region:
