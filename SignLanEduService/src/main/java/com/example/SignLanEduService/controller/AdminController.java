@@ -35,10 +35,31 @@ public class AdminController {
 		System.out.println("--> AdminController created.");
 	}
 	
-	@RequestMapping(value = "/admin", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin/select", method = RequestMethod.GET)
 	public ModelAndView admin() {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("/admin");
+		mav.setViewName("/admin/select");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/admin/select", method = RequestMethod.GET)
+	public ModelAndView adminSelect() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/admin/select");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/admin/control/choose", method = RequestMethod.GET)
+	public ModelAndView adminControl() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/admin/control/choose");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/admin/stats/choose", method = RequestMethod.GET)
+	public ModelAndView adminStats() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/admin/stats/choose");
 		return mav;
 	}
 	

@@ -11,13 +11,12 @@
 <hr>
 <br>
 <table>
-<tr><td><A href='/admin/memberList'> 회원통계 </A></td></tr>
-<tr><td><A href='/admin/learnList'> 학습통계 </A></td></tr>
-<tr><td><A href='/admin/quizList'> 퀴즈통계 </A></td></tr>
-<tr><td><A href='/admin/wordList'> 단어목록 </A></td></tr>
+<tr><td><A href='/admin/control/choose'>관리</A></td></tr>
+<tr><td><A href='/admin/stats/choose'>통계</A></td></tr>
 </table>
 <br>
 <hr>
-<A href='/'> Home </A>
+<A href='/admin/select'>목록</A> <br>
+<A href='/'>Home</A>
 </body>
 </html>

@@ -4,15 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin - Statics Select</title>
+<title>Admin - Create Word</title>
 </head>
 <body>
-Admin - Statics Select
+Admin - Create Word
 <hr>
-Member
-Learn
-Quiz
-<hr>
-Home
+<A href='/admin/select'>목록</A> <br>
+<A href='/'>Home</A>
 </body>
 </html>
