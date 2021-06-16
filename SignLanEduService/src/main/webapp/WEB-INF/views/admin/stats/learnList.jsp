@@ -4,15 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin - Statics Select</title>
+<title>Admin - Learn Statistics</title>
 </head>
 <body>
-Admin - Statics Select
+<h2>Admin - Learn Statistics</h2>
 <hr>
-Member
-Learn
-Quiz
+Information in Here
 <hr>
-Home
+<A href='/admin/stats/choose'>통계</A> <br>
+<A href='/'>Home</A>
 </body>
 </html>
