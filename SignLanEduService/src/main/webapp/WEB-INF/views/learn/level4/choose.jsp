@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,15 +11,30 @@
 <body>
 Learn - Level 4
 <hr>
-<A href='/learn/level4/learn_4_1'>처음부터</A> <br>
-<A href='/learn/level4/learn_4_1'>1번</A> <br>
-<A href='/learn/level4/learn_4_2'>2번</A> <br>
-<A href='/learn/level4/learn_4_3'>3번</A> <br>
-<A href='/learn/level4/learn_4_4'>4번</A> <br>
-<A href='/learn/level4/learn_4_5'>5번</A> <br>
-<A href='/learn/level4/learn_4_6'>6번</A>
+<table border="1">
+	<thead>
+		<tr>
+			<th colspan="2">단어 선택</th>
+		</tr>
+	</thead>
+	<tbody>
+		<c:forEach var="wordVO" items="${list}">
+		<tr>
+			<td>${wordVO.w_word }</td>
+			<td><A href='/learn/level4/learn_4_${wordVO.w_num }'>학습하기</A></td>
+		</tr>
+		</c:forEach>
+	</tbody>
+	<tfoot>
+		<tr>
+			<th colspan="2">
+				<A href='/learn/level4/learn_4_1'>처음부터</A>
+			</th>
+		</tr>
+	</tfoot>
+</table>
 <hr>
-<A href='/learn/select'>목록</A> <br>
-
+<A href='/learn/select'>목록</A>
+<hr>
 </body>
 </html>

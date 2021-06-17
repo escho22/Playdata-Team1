@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.SignLanEduService.service.LearnService;
+import com.example.SignLanEduService.service.WordService;
 import com.example.SignLanEduService.vo.LearnVO;
+import com.example.SignLanEduService.vo.WordVO;
 
 @Controller
 public class LearnController {
@@ -18,6 +20,10 @@ public class LearnController {
 	@Autowired
 	@Qualifier("com.example.SignLanEduService.service.LearnServiceImpl")
 	private LearnService lservice;
+	
+	@Autowired
+	@Qualifier("com.example.SignLanEduService.service.WordServiceImpl")
+	private WordService wservice;
 	
 	public LearnController() {
 		System.out.println("---> LearnController created");
@@ -54,6 +60,11 @@ public class LearnController {
 	@RequestMapping(value = "/learn/level4/choose", method = RequestMethod.GET)
 	public ModelAndView learnLevel4() {
 		ModelAndView mav = new ModelAndView();
+		
+		List<WordVO> list = this.wservice.readWordByDifficulty(4);
+		
+		mav.addObject("list",list);
+
 		mav.setViewName("/learn/level4/choose");
 		return mav;
 	}
@@ -61,13 +72,24 @@ public class LearnController {
 	@RequestMapping(value = "/learn/level4/learn_4_1", method = RequestMethod.GET)
 	public ModelAndView learnLevel4_1() {
 		ModelAndView mav = new ModelAndView();
+		
+		WordVO wordVO = this.wservice.readWord(1);
+		System.out.println(wordVO.getW_num());
+		
+		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_1");
+		
 		return mav;
 	}
 	
 	@RequestMapping(value = "/learn/level4/learn_4_2", method = RequestMethod.GET)
 	public ModelAndView learnLevel4_2() {
 		ModelAndView mav = new ModelAndView();
+		
+		WordVO wordVO = this.wservice.readWord(2);
+		System.out.println(wordVO.getW_num());
+		
+		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_2");
 		return mav;
 	}
@@ -75,6 +97,11 @@ public class LearnController {
 	@RequestMapping(value = "/learn/level4/learn_4_3", method = RequestMethod.GET)
 	public ModelAndView learnLevel4_3() {
 		ModelAndView mav = new ModelAndView();
+		
+		WordVO wordVO = this.wservice.readWord(3);
+		System.out.println(wordVO.getW_num());
+		
+		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_3");
 		return mav;
 	}
@@ -82,6 +109,11 @@ public class LearnController {
 	@RequestMapping(value = "/learn/level4/learn_4_4", method = RequestMethod.GET)
 	public ModelAndView learnLevel4_4() {
 		ModelAndView mav = new ModelAndView();
+		
+		WordVO wordVO = this.wservice.readWord(4);
+		System.out.println(wordVO.getW_num());
+		
+		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_4");
 		return mav;
 	}
@@ -89,6 +121,11 @@ public class LearnController {
 	@RequestMapping(value = "/learn/level4/learn_4_5", method = RequestMethod.GET)
 	public ModelAndView learnLevel4_5() {
 		ModelAndView mav = new ModelAndView();
+		
+		WordVO wordVO = this.wservice.readWord(5);
+		System.out.println(wordVO.getW_num());
+		
+		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_5");
 		return mav;
 	}
@@ -96,7 +133,21 @@ public class LearnController {
 	@RequestMapping(value = "/learn/level4/learn_4_6", method = RequestMethod.GET)
 	public ModelAndView learnLevel4_6() {
 		ModelAndView mav = new ModelAndView();
+		
+		WordVO wordVO = this.wservice.readWord(6);
+		System.out.println(wordVO.getW_num());
+		
+		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_6");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/learn_4_fin", method = RequestMethod.GET)
+	public ModelAndView learnFin() {
+		ModelAndView mav = new ModelAndView();
+		
+		mav.setViewName("/learn/level4/learn_4_fin");
+		
 		return mav;
 	}
 	
