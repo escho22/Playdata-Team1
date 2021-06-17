@@ -41,32 +41,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     WHERE w_num=#{w_num}
 </delete>
 
-<!-- 아래 쿼리문 수정필요 -->
+	<select id="list_levels" resultType="String">
+		SELECT DISTINCT w_difficulty
+		FROM word
+	</select>
 
-<!-- 	<select id="checkID" resultType="String" parameterType="int"> -->
-<!-- 		SELECT -->
-<!-- 		w_word -->
-<!-- 		FROM word -->
-<!-- 		WHERE =#{level} -->
-<!-- 	</select> -->
+	<select id="get_words" resultType="String" parameterType="int">
+		SELECT w_word
+		from word
+		WHERE w_difficulty = #{level}
+	</select>
 
-<!-- 	<select id="read" resultType="com.example.SignLanEduService.vo.MemberVO" -->
-<!-- 		parameterType="int"> -->
-<!-- 		SELECT m_num, m_id, m_pw, m_name, m_birth, m_sex, -->
-<!-- 		m_email, m_register, m_recent, m_point, m_is_admin -->
-<!-- 		FROM member -->
-<!-- 		WHERE -->
-<!-- 		m_num = #{m_num} -->
-<!-- 	</select> -->
-
-<!-- 	<select id="readById" resultType="com.example.SignLanEduService.vo.MemberVO" -->
-<!-- 		parameterType="String"> -->
-<!-- 		SELECT m_num, m_id, m_pw, m_name, m_birth, m_sex, -->
-<!-- 		m_email, m_register, m_recent, m_point, m_is_admin -->
-<!-- 		FROM member -->
-<!-- 		WHERE -->
-<!-- 		m_id = #{m_id} -->
-<!-- 	</select> -->
-
+	<select id="get_word" resultType="com.example.SignLanEduService.vo.WordVO" parameterType="int">
+		SELECT w_word
+		FROM word
+		WHERE w_num = #{w_num}
+	</select>
 
 </mapper>
