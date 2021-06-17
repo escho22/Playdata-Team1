@@ -104,6 +104,37 @@ public class QuizController {
 		mav.setViewName("/quiz/level4/quiz_4_2");
 		return mav;
 	}
+	
+	@RequestMapping(value = "/quiz/level4/quiz_4_3", method = RequestMethod.GET)
+	public ModelAndView quizLevel4_3() {
+		ModelAndView mav = new ModelAndView();
+		WordVO word = wservice.get_word(1); 
+		mav.addObject("word", word.getW_word());
+		mav.addObject("index", word.getW_index());
+		mav.setViewName("/quiz/level4/quiz_4_3");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/quiz/level4/quiz_4_4", method = RequestMethod.GET)
+	public ModelAndView quizLevel4_4() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/quiz/level4/quiz_4_4");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/quiz/level4/quiz_4_5", method = RequestMethod.GET)
+	public ModelAndView quizLevel4_5() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/quiz/level4/quiz_4_5");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/quiz/level4/quiz_4_6", method = RequestMethod.GET)
+	public ModelAndView quizLevel4_6() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/quiz/level4/quiz_4_6");
+		return mav;
+	}
 
 	
 	//quiz단어별 푼 결과 기록생성 - views/quiz/main.jsp로 어떻게 다시 돌아갈지???
