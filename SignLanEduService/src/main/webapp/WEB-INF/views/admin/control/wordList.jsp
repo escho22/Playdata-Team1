@@ -4,11 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SignEdu - Admin - Learn</title>
+<title>Admin - Word List</title>
 </head>
 <body>
-<h2>Learn Statistics</h2>
+<h2>Admin - Learn Statistics</h2>
 <hr>
-
+Information in Here
+<hr>
+<A href='/admin/control/choose'>관리</A> <br>
+<A href='/'>Home</A>
 </body>
 </html>
