@@ -2,7 +2,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
-
 <!--******* 홈화면 메인슬라이드 및 About페이지 템플릿 *******-->
 <html lang="ko">
     <head>
@@ -214,7 +213,6 @@
     </body>
 </html>
 
-
 <!-- <body>
   
   <DIV style='width: 100%; margin: 30px auto; text-align: center;'>
@@ -236,5 +234,3 @@
 <br>
 <video src='https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000227.avi' width='400' controls autoplay></video>
 <video width="400" controls>   <source src="https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000227.avi"  type="video/AVI"> </video> -->
-
-  

@@ -52,21 +52,34 @@ CREATE TABLE quiz(
 		m_num                         		INT(10)		 NOT NULL COMMENT '회원번호',
 		w_num                         		INT(10)		 NOT NULL COMMENT '단어번호',
 		q_correct                     		INT(1)		 DEFAULT 0		 NOT NULL COMMENT '정답여부',
-		q_percent                     		INT(1)		 DEFAULT 0		 NULL  COMMENT '일치도',
+		q_percent                     		DECIMAL(5,4)		 DEFAULT 0		 NULL  COMMENT '일치도',
 		q_date                        		DATETIME		 DEFAULT now()		 NOT NULL COMMENT '퀴즈푼날',
   FOREIGN KEY (m_num) REFERENCES member (m_num),
   FOREIGN KEY (w_num) REFERENCES word (w_num)
 ) COMMENT='퀴즈';
 
 
-INSERT INTO member (m_id, m_pw, m_name, m_birth, m_sex, m_email, m_is_admin) VALUES ('admin', 1234, '관리자1', '2021-05-03', 0, 'mattmingyu@gamil.com', 1);
+INSERT INTO member (m_id, m_pw, m_name, m_birth, m_sex, m_email, m_is_admin) VALUES ('admin', 1234, '관리자1', '2021-05-03', 0, 'matt@플데.com', 1);
 INSERT INTO member (m_id, m_pw, m_name, m_birth, m_sex, m_email) VALUES ('test1', 1234, '테스트계정', '2002-06-04', 0, '2002@피파.com');
 INSERT INTO member (m_id, m_pw, m_name, m_birth, m_sex, m_email) VALUES ('test2', 1234, '테스트계정2', '2002-06-10', 1, '2002@한국축협.com');
 
-INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('배고프다', '배고프다', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000227.avi', 12, 4);
-INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('병원', '병원', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000232.avi', 15, 4);
-INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('선생님', '선생님', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000256.avi', 21, 4);
-INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('아줌마', '아줌마', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000282.avi', 29, 4);
-INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('엘리베이터', '엘리베이터', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000298.avi', 37, 4);
-INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('택시', '택시', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000384.avi', 45, 4);
-INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('팔꿈치', '팔꿈치', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000393.avi', 46, 4);
+
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('배고프다', '배고프다', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000227.mp4', 12, 4);
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('병원', '병원', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000232.mp4', 15, 4);
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('선생님', '선생님', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000256.mp4', 21, 4);
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('아줌마', '아줌마', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000282.mp4', 29, 4);
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('엘리베이터', '엘리베이터', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000298.mp4', 37, 4);
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('택시', '택시', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000384.mp4', 45, 4);
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES ('팔꿈치', '팔꿈치', 'https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000393.mp4', 46, 4);
+
+
+INSERT INTO learn (m_num, w_num) VALUES (2, 1);
+INSERT INTO learn (m_num, w_num) VALUES (2, 2);
+INSERT INTO learn (m_num, w_num) VALUES (2, 3);
+INSERT INTO learn (m_num, w_num) VALUES (3, 1);
+INSERT INTO learn (m_num, w_num) VALUES (3, 3);
+
+INSERT INTO quiz (m_num, w_num, q_correct, q_percent) VALUES (2, 4, 1, 0.9826);
+INSERT INTO quiz (m_num, w_num, q_correct, q_percent) VALUES (2, 1, 0, 0);
+INSERT INTO quiz (m_num, w_num, q_correct, q_percent) VALUES (3, 2, 0, 0);
+INSERT INTO quiz (m_num, w_num, q_correct, q_percent) VALUES (3, 3, 1, 0.8826);
