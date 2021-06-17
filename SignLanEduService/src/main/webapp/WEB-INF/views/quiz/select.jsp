@@ -20,6 +20,6 @@
 <br>
 <hr>
 <A href='/'> Home </A>
-
+<hr>
 </body>
 </html>
