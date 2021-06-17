@@ -17,11 +17,11 @@
 	퀴즈페이지
 	<br>
 	<h1>Quiz Level 4 - 1</h1>
-	Quiz 단어: ${word}
 	<hr>
-	<p id="answer"/>
+
 	<table>
 		<tr>
+			<td>${word}</td>
 			<td><button id="capture">capture</button></td>
 			<td><button id="submit">submit</button></td>
 		</tr>
