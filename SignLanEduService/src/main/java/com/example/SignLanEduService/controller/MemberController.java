@@ -19,7 +19,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.SignLanEduService.service.LearnService;
 import com.example.SignLanEduService.service.MemberService;
+import com.example.SignLanEduService.vo.LearnVO;
 import com.example.SignLanEduService.vo.MemberVO;
 
 @Controller
@@ -28,6 +30,10 @@ public class MemberController {
 	@Autowired
 	@Qualifier("com.example.SignLanEduService.service.MemberServiceImpl")
 	private MemberService service;
+	
+	@Autowired
+	@Qualifier("com.example.SignLanEduService.service.LearnServiceImpl")
+	private LearnService lservice;
 
 	public MemberController() {
 		System.out.println("---> MemberController created");
@@ -78,6 +84,18 @@ public class MemberController {
 		ModelAndView mav = new ModelAndView();
 
 		List<MemberVO> list = service.list();
+		mav.addObject("list", list);
+
+		mav.setViewName("/member/list");
+
+		return mav;
+	}
+	
+	@RequestMapping(value = "/member/myLearnList", method = RequestMethod.GET)
+	public ModelAndView myLearn(HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+
+		List<LearnVO> list = lservice.readLearnbyMember(0);
 		mav.addObject("list", list);
 
 		mav.setViewName("/member/list");
