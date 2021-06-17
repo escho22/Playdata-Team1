@@ -4,19 +4,46 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-	<definition name="/quiz/intro" extends="main">
+	<definition name="/quiz/select" extends="main">
 		<put-attribute name="title" value="퀴즈시작페이지"></put-attribute>
 		<put-attribute name="body"
-			value="/WEB-INF/views/intro.jsp" />
+			value="/WEB-INF/views/select.jsp" />
 	</definition>
-	<definition name="/quiz/start" extends="main">
+	
+	<definition name="/learn/level1/choose" extends="main">
+		<put-attribute name="title" value="학습난이도1선택"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/quiz/level1/choose.jsp" />
+	</definition>
+	
+	<definition name="/learn/level2/choose" extends="main">
+		<put-attribute name="title" value="학습난이도2선택"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/quiz/level2/choose.jsp" />
+	</definition>
+	
+	<definition name="/learn/level3/choose" extends="main">
+		<put-attribute name="title" value="학습난이도3선택"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/quiz/level3/choose.jsp" />
+	</definition>
+	
+	<definition name="/learn/level4/choose" extends="main">
+		<put-attribute name="title" value="학습난이도4선택"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/quiz/level4/choose.jsp" />
+	</definition>
+	
+	<definition name="/quiz/level4/quiz_4_1" extends="main">
 		<put-attribute name="title" value="퀴즈페이지"></put-attribute>
 		<put-attribute name="body"
-			value="/WEB-INF/views/main.jsp" />
+			value="/WEB-INF/views/quiz/level4/quiz_4_1.jsp" />
 	</definition>
+	
+	
 	<definition name="/quiz/finish" extends="main">
 		<put-attribute name="title" value="퀴즈마침페이지"></put-attribute>
 		<put-attribute name="body"
-			value="/WEB-INF/views/finish.jsp" />
+			value="/WEB-INF/views/quiz/finish.jsp" />
 	</definition>
 </tiles-definitions>
