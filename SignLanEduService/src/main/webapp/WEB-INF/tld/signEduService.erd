@@ -195,12 +195,12 @@
                             <columnName>q_percent</columnName>
                             <logicalName>일치도</logicalName>
                             <columnType class="net.java.amateras.db.dialect.ColumnType">
-                              <name>INT</name>
-                              <logicalName>Integer</logicalName>
+                              <name>DECIMAL</name>
+                              <logicalName>Real</logicalName>
                               <supportSize>true</supportSize>
-                              <type>4</type>
+                              <type>3</type>
                             </columnType>
-                            <size>1</size>
+                            <size>5,4</size>
                             <notNull>false</notNull>
                             <primaryKey>false</primaryKey>
                             <description></description>
@@ -230,7 +230,10 @@
                           <green>255</green>
                           <blue>206</blue>
                         </backgroundColor>
-                        <sql></sql>
+                        <sql>INSERT INTO quiz (m_num, w_num, q_correct, q_percent) VALUES (2, 4, 1, 0.9826);&#xd;
+INSERT INTO quiz (m_num, w_num, q_correct, q_percent) VALUES (2, 1, 0, 0);&#xd;
+INSERT INTO quiz (m_num, w_num, q_correct, q_percent) VALUES (3, 2, 0, 0);&#xd;
+INSERT INTO quiz (m_num, w_num, q_correct, q_percent) VALUES (3, 3, 1, 0.8826);</sql>
                       </source>
                       <target class="net.java.amateras.db.visual.model.TableModel" reference="../../.."/>
                       <foreignKeyName>quiz_FK_2</foreignKeyName>
@@ -331,13 +334,13 @@
                     <green>255</green>
                     <blue>206</blue>
                   </backgroundColor>
-                  <sql>INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;배고프다&apos;, &apos;배고프다&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000227.avi&apos;, 12, 4);&#xd;
-INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;병원&apos;, &apos;병원&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000232.avi&apos;, 15, 4);&#xd;
-INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;선생님&apos;, &apos;선생님&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000256.avi&apos;, 21, 4);&#xd;
-INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;아줌마&apos;, &apos;아줌마&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000282.avi&apos;, 29, 4);&#xd;
-INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;엘리베이터&apos;, &apos;엘리베이터&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000298.avi&apos;, 37, 4);&#xd;
-INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;택시&apos;, &apos;택시&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000384.avi&apos;, 45, 4);&#xd;
-INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;팔꿈치&apos;, &apos;팔꿈치&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000393.avi&apos;, 46, 4);&#xd;
+                  <sql>INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;배고프다&apos;, &apos;배고프다&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000227.mp4&apos;, 12, 4);&#xd;
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;병원&apos;, &apos;병원&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000232.mp4&apos;, 15, 4);&#xd;
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;선생님&apos;, &apos;선생님&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000256.mp4&apos;, 21, 4);&#xd;
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;아줌마&apos;, &apos;아줌마&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000282.mp4&apos;, 29, 4);&#xd;
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;엘리베이터&apos;, &apos;엘리베이터&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000298.mp4&apos;, 37, 4);&#xd;
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;택시&apos;, &apos;택시&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000384.mp4&apos;, 45, 4);&#xd;
+INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apos;팔꿈치&apos;, &apos;팔꿈치&apos;, &apos;https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000393.mp4&apos;, 46, 4);&#xd;
 </sql>
                 </target>
                 <foreignKeyName>learn_FK_2</foreignKeyName>
@@ -402,7 +405,11 @@ INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apo
               <green>255</green>
               <blue>206</blue>
             </backgroundColor>
-            <sql></sql>
+            <sql>INSERT INTO learn (m_num, w_num) VALUES (2, 1);&#xd;
+INSERT INTO learn (m_num, w_num) VALUES (2, 2);&#xd;
+INSERT INTO learn (m_num, w_num) VALUES (2, 3);&#xd;
+INSERT INTO learn (m_num, w_num) VALUES (3, 1);&#xd;
+INSERT INTO learn (m_num, w_num) VALUES (3, 3);</sql>
           </source>
           <target class="net.java.amateras.db.visual.model.TableModel" reference="../../.."/>
           <foreignKeyName>learn_FK_1</foreignKeyName>
@@ -554,7 +561,7 @@ INSERT INTO word (w_word, w_explain, w_path, w_index, w_difficulty) VALUES (&apo
         <green>255</green>
         <blue>206</blue>
       </backgroundColor>
-      <sql>INSERT INTO member (m_id, m_pw, m_name, m_birth, m_sex, m_email, m_is_admin) VALUES (&apos;admin&apos;, 1234, &apos;관리자1&apos;, &apos;2021-05-03&apos;, 0, &apos;mattmingyu@gamil.com&apos;, 1);&#xd;
+      <sql>INSERT INTO member (m_id, m_pw, m_name, m_birth, m_sex, m_email, m_is_admin) VALUES (&apos;admin&apos;, 1234, &apos;관리자1&apos;, &apos;2021-05-03&apos;, 0, &apos;matt@플데.com&apos;, 1);&#xd;
 INSERT INTO member (m_id, m_pw, m_name, m_birth, m_sex, m_email) VALUES (&apos;test1&apos;, 1234, &apos;테스트계정&apos;, &apos;2002-06-04&apos;, 0, &apos;2002@피파.com&apos;);&#xd;
 INSERT INTO member (m_id, m_pw, m_name, m_birth, m_sex, m_email) VALUES (&apos;test2&apos;, 1234, &apos;테스트계정2&apos;, &apos;2002-06-10&apos;, 1, &apos;2002@한국축협.com&apos;);&#xd;
 </sql>
