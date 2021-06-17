@@ -8,7 +8,9 @@
 	<definition name="main"
 		template="/WEB-INF/views/menu/template.jsp">
 		<put-attribute name="header"
-			value="/WEB-INF/views/menu/top.jsp" />
+			value="/WEB-INF/views/menu/header.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/menu/footer.jsp" />
 	</definition>
 	<definition name="/index" extends="main">
 		<put-attribute name="title" value="기본페이지"></put-attribute>
