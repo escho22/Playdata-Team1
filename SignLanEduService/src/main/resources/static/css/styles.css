@@ -11197,6 +11197,15 @@ footer a:hover, footer a:active, footer a:focus {
   padding-bottom: 7rem;
 }
 
+.quiz {
+  position: relative;
+  background: linear-gradient(160deg, #ffff, #FAFFD1);
+  background-position: center;
+  background-size: cover;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
 .masthead {
   position: relative;
   background: linear-gradient(160deg, #ffff, #FAFFD1);

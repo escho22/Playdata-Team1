@@ -33,8 +33,8 @@
 	<!-- 확인 후 지우기 -->
 	<script type="text/javascript">
 	  function loadDefault() {
-	    $('#id').val('user1');
-	    $('#passwd').val('1234');
+	    $('#m_id').val('user1');
+	    $('#m_pw').val('1234');
 	  }  
 	</script> 
 
@@ -64,7 +64,7 @@
 											<i class="bi-person-fill" style="font-size: 1.5rem;"></i>
 										</span>
 										<div class="col-sm-9 mb-4 mb-sm-0">
-											<input type='text' class="form-control" name='id' id='id'
+											<input type='text' class="form-control" name='m_id' id='m_id'
 												value='${ck_id }' required="required" placeholder="* ID"
 												autofocus="autofocus">
 										</div>
@@ -80,8 +80,8 @@
 											<i class="bi bi-lock-fill" style="font-size: 1.5rem;"></i>
 										</span>
 										<div class="col-sm-9 mb-4 mb-sm-0">
-											<input type='password' class="form-control" name='passwd'
-												id='passwd' value='${ck_passwd }' required="required" placeholder="* Password"> 
+											<input type='password' class="form-control" name='m_pw'
+												id='m_pw' value='${ck_passwd }' required="required" placeholder="* Password"> 
 										<%-- <Label>
 												<input type='checkbox' name='passwd_save' value='Y'
 												${ck_passwd_save == 'Y' ? "checked='checked'" : "" }>저장
