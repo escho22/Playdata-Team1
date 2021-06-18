@@ -2,6 +2,8 @@ package com.example.SignLanEduService.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -10,12 +12,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.SignLanEduService.service.LearnService;
+import com.example.SignLanEduService.service.MemberService;
 import com.example.SignLanEduService.service.WordService;
 import com.example.SignLanEduService.vo.LearnVO;
+import com.example.SignLanEduService.vo.MemberVO;
 import com.example.SignLanEduService.vo.WordVO;
 
 @Controller
 public class LearnController {
+	
+	@Autowired
+	@Qualifier("com.example.SignLanEduService.service.MemberServiceImpl")
+	private MemberService mservice;
 	
 	@Autowired
 	@Qualifier("com.example.SignLanEduService.service.LearnServiceImpl")
@@ -74,7 +82,7 @@ public class LearnController {
 		ModelAndView mav = new ModelAndView();
 		
 		WordVO wordVO = this.wservice.readWord(1);
-		System.out.println(wordVO.getW_num());
+		//System.out.println(wordVO.getW_num());
 		
 		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_1");
@@ -83,12 +91,20 @@ public class LearnController {
 	}
 	
 	@RequestMapping(value = "/learn/level4/learn_4_1", method = RequestMethod.POST)
-	public ModelAndView learnLevel4_1(LearnVO learnVO) {
+	public ModelAndView learnLevel4_1(int w_num, HttpSession session) {
 		ModelAndView mav = new ModelAndView();
 		
+		int m_num = (int) session.getAttribute("usersno");
+
+		LearnVO learnVO = new LearnVO();
+		
+		learnVO.setM_num(m_num);
+		learnVO.setW_num(w_num);
+		
 	    int cnt = lservice.createLearn(learnVO);
+	    
 	    mav.addObject("cnt", cnt);
-	    mav.addObject("url", "create_msg");
+	    //mav.addObject("url", "create_msg");
 
 	    mav.setViewName("redirect:/learn/level4/learn_4_1");
 		
@@ -100,7 +116,7 @@ public class LearnController {
 		ModelAndView mav = new ModelAndView();
 		
 		WordVO wordVO = this.wservice.readWord(2);
-		System.out.println(wordVO.getW_num());
+		//System.out.println(wordVO.getW_num());
 		
 		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_2");
@@ -112,7 +128,7 @@ public class LearnController {
 		ModelAndView mav = new ModelAndView();
 		
 		WordVO wordVO = this.wservice.readWord(3);
-		System.out.println(wordVO.getW_num());
+		//System.out.println(wordVO.getW_num());
 		
 		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_3");

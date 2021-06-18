@@ -20,25 +20,30 @@ Level 4 - 1
 	<td> 
 		<div id="container">
 			<video autoplay width='640' height="360" id="videoElement"></video>
-		</div> 
-	</td> 
+		</div>
+	</td>
 </tr>
 </table>
 <hr>
 
-<form name='lfrm4_1' method='POST' action='/learn/level4/learn_4_1'>
-<c:choose>
-	<c:when test="${sessionScope.id == null"> 
-		<input type='hidden' name='m_num' id='m_num' value="${param.cateno }"> 
-	</c:when>
-	<c:otherwise>
-		<input type='hidden' name='m_num' id='m_num' value=2>
-	</c:otherwise>
-</c:choose>
-<input type='hidden' name='w_num' id='w_num' value="${wordVO.w_num }">
+<form action="/learn/level4/learn_4_1" method="POST" id="creatLearn" name='lfrm4_1'>
+	<input type='hidden' name='m_id' id='m_id' value="${sessionScope.id }">
+	<input type='hidden' name='w_num' id='w_num' value="${wordVO.w_num }">
 </form>
-
+<button type="submit" form="creatLearn">학습완료</button>
 <hr>
+<DIV class='message'>
+<c:choose>
+        <c:when test="${param.cnt == 1 }">
+          학습완료, 다음문제로 넘어가 주세요.
+          <hr>
+        </c:when>
+        <c:otherwise>
+          학습 미완료
+          <hr>
+        </c:otherwise>
+      </c:choose>
+</DIV>
 <table>
 <tr> <td>이전</td> <td><A href='/learn/level4/choose'>목록</A></td> <td><A href='/learn/level4/learn_4_2'>다음</A></td> </tr>
 </table>

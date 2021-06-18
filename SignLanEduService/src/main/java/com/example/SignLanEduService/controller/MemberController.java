@@ -21,8 +21,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.SignLanEduService.service.LearnService;
 import com.example.SignLanEduService.service.MemberService;
+import com.example.SignLanEduService.service.QuizService;
 import com.example.SignLanEduService.vo.LearnVO;
 import com.example.SignLanEduService.vo.MemberVO;
+import com.example.SignLanEduService.vo.QuizVO;
 
 @Controller
 public class MemberController {
@@ -34,6 +36,10 @@ public class MemberController {
 	@Autowired
 	@Qualifier("com.example.SignLanEduService.service.LearnServiceImpl")
 	private LearnService lservice;
+	
+	@Autowired
+	@Qualifier("com.example.SignLanEduService.service.QuizServiceImpl")
+	private QuizService qservice;
 
 	public MemberController() {
 		System.out.println("---> MemberController created");
@@ -91,25 +97,43 @@ public class MemberController {
 		return mav;
 	}
 	
-	@RequestMapping(value = "/member/myLearnList", method = RequestMethod.GET)
-	public ModelAndView myLearn(HttpSession session) {
+	@RequestMapping(value = "/member/myInfo", method = RequestMethod.GET)
+	public ModelAndView read(HttpSession session) {
 		ModelAndView mav = new ModelAndView();
 
-		List<LearnVO> list = lservice.readLearnbyMember(0);
-		mav.addObject("list", list);
-
-		mav.setViewName("/member/list");
-
-		return mav;
-	}
-
-	@RequestMapping(value = "/member/read", method = RequestMethod.GET)
-	public ModelAndView read(int m_num) {
-		ModelAndView mav = new ModelAndView();
-
+		int m_num = (int) session.getAttribute("usersno");
+		
 		MemberVO memberVO = this.service.read(m_num);
-		mav.addObject("usersVO", memberVO);
-		mav.setViewName("/member/read");
+		mav.addObject("memberVO", memberVO);
+		mav.setViewName("/member/myInfo");
+
+		return mav; // forward
+	}
+	
+	@RequestMapping(value = "/member/myLearnList", method = RequestMethod.GET)
+	public ModelAndView readMyLearn(HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+
+		List<LearnVO> list = this.lservice.readLearnbyMember(m_num);
+		mav.addObject("list", list);
+		
+		mav.setViewName("/member/myLearnList");
+
+		return mav; // forward
+	}
+	
+	@RequestMapping(value = "/member/myQuizList", method = RequestMethod.GET)
+	public ModelAndView readMyQuiz(HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+
+		List<QuizVO> list = this.qservice.readQuizbyMember(m_num);
+		mav.addObject("list", list);
+		
+		mav.setViewName("/member/myQuizList");
 
 		return mav; // forward
 	}
