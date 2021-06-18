@@ -1,6 +1,22 @@
 <%@ page contentType="text/html; charset=UTF-8" %> 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<!-- ***********
+custom 설정
+************* -->
+<c:set var="root" value="${pageContext.request.contextPath }"/>
+<c:choose>
+	<c:when test="${not empty sessionScope.m_id && sessionScope.m_is_admin == 1}">
+		<c:set var="str">관리자 페이지 입니다</c:set>
+	</c:when>
+	<c:when test="${not empty sessionScope.m_id && sessionScope.m_is_admin != 1}">
+		<c:set var='str'>안녕하세요  ${sessionScope.m_id } 님 !</c:set>
+	</c:when>
+	<c:otherwise>
+		<c:set var='str'><span class="pointer" onclick="location.href='/member/login'">Sign-in</span></c:set>
+	</c:otherwise>
+</c:choose>
+
 <!--*************
 Top ::
 페이지 맨위 상단에 들어갈 Navigation bar 및 모달창
@@ -18,16 +34,29 @@ Top ::
 						<li id="learn" class="nav-item"><a class="nav-link me-lg-4" href="/learn/select">Learn</a></li>
                    		<li id="Quiz" class="nav-item"><a class="nav-link me-lg-4" href="/quiz/select">Quiz</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-4" href="#download">beta+</a></li>
-                    </ul>
+                    </ul>                    
                     <ul class="navbar-nav ms-auto me-2 my-lg-0">
-                    	<li class="nav-item"><a class="nav-link me-lg-0" href='${root}/member/login'>Sign-in</a></li>
+                    	<li class="nav-item"><a class="nav-link me-lg-0">${str}</a></li>
                     </ul>
-                    <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" onclick="location.href='/member/create'">
-                        <span class="d-flex align-items-center">
-                            <i class="bi-person-fill me-2"></i>
-                            <span class="small">Create Account</span>
-                        </span>
-                    </button>
+                    
+                    <c:choose>
+				    	<c:when test="${empty sessionScope.id }">
+				    		<button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" onclick="location.href='/member/create'">
+		                        <span class="d-flex align-items-center">
+		                            <i class="bi-person-fill me-2"></i>
+		                            <span class="small">Create Account</span>
+		                        </span>
+                    		</button>
+				    </c:when>
+				    <c:otherwise>
+					    <li><a href="${root}/member/read">나의정보</a></li>
+					    <li><a href="${root}/member/update">회원수정</a></li>
+					    <li><a href="${root}/member/logout">로그아웃</a></li>
+					    </c:otherwise>
+					    </c:choose> 
+					    <c:if test="${not empty sessionScope.id && sessionScope.grade == 'A'}">
+					    <li><a href="${root}/admin/list">회원목록</a></li>
+					    </c:if>
                 </div>
             </div>
         </nav>
@@ -76,53 +105,9 @@ Top ::
 </html>
 
 
-<%-- <!-- 강사님이랑 했던 것 -->
-<DIV class='container_main' style='width: 100%;'>
-	<!-- 화면 상단 메뉴 -->
-	<DIV class='top_img'>
-		<DIV class='top_menu_label'>Resort 0.1 영화와 여행이있는 리조트</DIV>
-		<NAV class='top_menu'>
-			<span style='padding-left: 0.5%;'></span> <A class='menu_link'
-				href='/'>힐링 리조트</A><span class='top_menu_sep'>&nbsp;</span>
 
-			<c:choose>
-				<c:when test="${sessionScope.id == null}">
-					<A class='menu_link' href='${root}/users/login'>Login</A>
-					<span class='top_menu_sep'> </span>
-				</c:when>
-				<c:otherwise>
-					<A class='menu_link' href='/categrp/list'>카테고리 그룹</A>
-					<span class='top_menu_sep'>&nbsp;</span>
-					<A class='menu_link' href='/users/list'>회원 목록</A>
-					<span class='top_menu_sep'>&nbsp;</span>
-          ${sessionScope.id } <A class='menu_link'
-						href='${root}/users/logout'>Logout</A>
-					<span class='top_menu_sep'> </span>
-				</c:otherwise>
-			</c:choose>
-		</NAV>
-	</DIV>
-
-	<!-- 화면을 2개로 분할하여 좌측은 메뉴, 우측은 내용으로 구성 -->
-	<DIV class="row" style='margin-top: 2px;'>
-		<DIV class="col-sm-3 col-md-2">
-			<!-- 메뉴 출력 컬럼 -->
-			<img src='/menu/images/myimage.png' style='width: 100%;'>
-			<div style='margin-top: 5px;'>
-				<img src='/menu/images/myface.png'>힐링 리조트
-			</div>
-			<!-- Spring 출력 카테고리 그룹 / 카테고리 -->
-			<jsp:include page="/cate/list_index_left.do" flush='false' /> // ERROR
-			<c:import url="/cate/list_index_left" />
-		</div>
-
-		<DIV class="col-sm-9 col-md-10 cont">
-			<!-- 내용 출력 컬럼 -->
-
-			<DIV class='content'> --%>
-
-
-<%-- <c:set var="root" value="${pageContext.request.contextPath }"/>
+<%-- 
+<c:set var="root" value="${pageContext.request.contextPath }"/>
 <c:choose>
 	<c:when test="${not empty sessionScope.m_id && sessionScope.m_is_admin == 1}">
 		<c:set var="str">관리자 페이지 입니다.</c:set>
@@ -173,6 +158,7 @@ Top ::
         <li><a href="${root}/quiz/level4/choose">Level 4</a></li>
       </ul>
     </li>
+    
     <c:choose>
     <c:when test="${empty sessionScope.id }">
     <li><a href="${root}/member/create">회원가입</a></li>
