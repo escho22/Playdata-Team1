@@ -49,7 +49,7 @@ public class QuizController {
 		ModelAndView mav = new ModelAndView();
 		// 로그인여부 확인
 		if (!mservice.isMember(session)) {
-			mav.setViewName("redirect:/member/login_ck_form"); // login 페이지로 이동
+			mav.setViewName("redirect:/member/login_ck_form");
 		} else {
 			mav.setViewName("/quiz/select");
 		}
@@ -94,6 +94,9 @@ public class QuizController {
 		WordVO word = wservice.get_word(1); 
 		mav.addObject("word", word.getW_word());
 		mav.addObject("index", word.getW_index());
+		
+		System.out.println(word.getW_word());
+		System.out.println(word.getW_index());
 		mav.setViewName("/quiz/level4/quiz_4_1");
 		return mav;
 	}
