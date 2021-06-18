@@ -21,7 +21,7 @@ Level 4 - 1
 </table>
 
 <div id="container">
-<video autoplay="true" id="video" width="800" ></video>
+<video autoplay="true" id="videoElement"></video>
 </div>
 
 <script src="/js/webcam_learn.js"></script>
