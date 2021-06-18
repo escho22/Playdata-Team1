@@ -21,10 +21,10 @@ Level 4 - 1
 </table>
 
 <div id="container">
-<video autoplay="true" id="video" width="800"></video>
+	<video autoplay="true" id="videoElement"></video>
 </div>
 
-<script src="${pageContext.request.contextPath}js/webcam_learn.js"></script>
+<script src="/js/webcam_learn.js"></script>
 
 <table>
 <tr> <td>이전</td> <td><A href='/learn/level4/choose'>목록</A></td> <td><A href='/learn/level4/learn_4_2'>다음</A></td> </tr>
