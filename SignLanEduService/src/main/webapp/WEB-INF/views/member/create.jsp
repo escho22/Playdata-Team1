@@ -66,7 +66,7 @@
 			$('#modal_panel').modal(); // 다이얼로그 출력
 			return false;
 		} else { // when ID is entered
-			params = 'm_id=' + m_id;
+			params = 'm_id' + m_id;
 			// var params = $('#frm').serialize(); // 직렬화, 폼의 데이터를 키와 값의 구조로 조합
 			// alert('params: ' + params);
 
@@ -91,7 +91,7 @@
 								$('#modal_content').attr('class',
 										'alert alert-success'); // Bootstrap CSS 변경
 								msg = "사용 가능한 ID 입니다.";
-								$('#btn_close').attr("data-focus", "passwd");
+								$('#btn_close').attr("data-focus", "m_pw");
 							}
 
 							$('#modal_title').html('ID 중복 확인'); // 제목 
@@ -116,7 +116,7 @@
 	}
 
 	function send() {
-		if ($('#passwd').val() != $('#passwd2').val()) {
+		if ($('#m_pw').val() != $('#m_pw2').val()) {
 			msg = '입력된 패스워드가 일치하지 않습니다.<br>';
 			msg += "패스워드를 다시 입력해주세요.<br>";
 
@@ -208,12 +208,12 @@
 									<div class="form-group row">
 										<div class="col-sm-6 mb-3 mb-sm-0">
 											<input type='password' class="form-control form-control-user"
-												name='passwd' id='passwd' value='' required="required"
+												name='m_pw' id='m_pw' value='' required="required"
 												placeholder="* Password">
 										</div>
 										<div class="col-sm-6">
 											<input type='password' class="form-control form-control-user"
-												name='passwd2' id='passwd2' value='' required="required"
+												name='m_pw2' id='m_pw2' value='' required="required"
 												placeholder="* Repeat Password">
 										</div>
 									</div>

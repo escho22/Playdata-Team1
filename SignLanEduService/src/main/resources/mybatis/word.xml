@@ -53,7 +53,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 
 	<select id="get_word" resultType="com.example.SignLanEduService.vo.WordVO" parameterType="int">
-		SELECT w_word
+		SELECT *
 		FROM word
 		WHERE w_num = #{w_num}
 	</select>
