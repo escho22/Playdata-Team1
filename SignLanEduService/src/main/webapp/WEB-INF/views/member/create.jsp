@@ -53,11 +53,11 @@
 	// jQuery ajax 요청
 	function checkID() {
 		var frm = $('#frm'); // id가 frm인 태그 검색
-		var id = $('#id', frm).val(); // frm 폼에서 id가 'id'인 태그 검색
+		var id = $('#m_id', frm).val(); // frm 폼에서 id가 'id'인 태그 검색
 		var params = '';
 		var msg = '';
 
-		if ($.trim(id).length == 0) { // id를 입력받지 않은 경우
+		if ($.trim(m_id).length == 0) { // id를 입력받지 않은 경우
 			msg = 'ID를 입력하세요.<br>ID 입력은 필수 입니다.<br>ID는 3자이상 권장합니다.';
 
 			$('#modal_content').attr('class', 'alert alert-danger'); // Bootstrap CSS 변경
@@ -66,7 +66,7 @@
 			$('#modal_panel').modal(); // 다이얼로그 출력
 			return false;
 		} else { // when ID is entered
-			params = 'id=' + id;
+			params = 'm_id=' + m_id;
 			// var params = $('#frm').serialize(); // 직렬화, 폼의 데이터를 키와 값의 구조로 조합
 			// alert('params: ' + params);
 
@@ -86,7 +86,7 @@
 										'alert alert-danger'); // Bootstrap CSS 변경
 								msg = "이미 사용중인 ID 입니다.";
 								// $('#btn_close').attr("data-focus", "이동할 태그 지정"); 
-								$('#btn_close').attr("data-focus", "id");
+								$('#btn_close').attr("data-focus", "m_id");
 							} else {
 								$('#modal_content').attr('class',
 										'alert alert-success'); // Bootstrap CSS 변경
@@ -179,7 +179,7 @@
 									<div class="form-group row">
 										<div class="col-sm-6 mb-4 mb-sm-0">
 											<input type='text' class="form-control form-control-user"
-												name='id' id='id' value='' required="required"
+												name='m_id' id='m_id' value='' required="required"
 												placeholder="* ID" autofocus="autofocus">
 										</div>
 										<div class="col-sm-6">

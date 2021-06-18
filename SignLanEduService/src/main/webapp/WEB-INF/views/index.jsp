@@ -22,6 +22,8 @@
 	    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet" />
 	    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
 	    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
+	    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,700&display=swap" rel="stylesheet" />
+
 	     
 	    <!-- Core theme CSS (includes Bootstrap)-->
 	    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
@@ -58,7 +60,7 @@
 	                <div class="col-lg-6">
 	                    <!--******* Mashead text and app badges *******-->
 	                    <div class="mb-5 mb-lg-0 text-center text-lg-start">
-	                        <h3 class="display-1 lh-1 mb-3 font-alt">
+	                        <h3 class="display-1 lh-1 mb-3 font-slide">
 	                        	Stop waiting,
 	                    		<br/>
 	                    		Start learning!</h3>

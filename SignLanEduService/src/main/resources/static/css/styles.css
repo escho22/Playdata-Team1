@@ -207,7 +207,7 @@ sup {
   top: -0.5em;
 }
 
-a {
+a:not(.ctag]) {
   color: #2937f0;
   text-decoration: underline;
 }
@@ -2177,7 +2177,8 @@ progress {
 .form-control[type=file] {
   overflow: hidden;
 }
-.form-control[type=file]:not(:disabled):not([readonly]) {
+.form-control[type=file]:not(:disabled):not([readonly]),
+.pointer {
   cursor: pointer;
 }
 .form-control:focus {
@@ -2190,6 +2191,7 @@ progress {
 .form-control::-webkit-date-and-time-value {
   height: 1.2em;
 }
+
 .form-control::-moz-placeholder {
   color: #6c757d;
   opacity: 1;
@@ -10935,6 +10937,10 @@ html {
 
 .font-card {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font-slide {
+  font-family: "Rubik", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .text-gradient {
