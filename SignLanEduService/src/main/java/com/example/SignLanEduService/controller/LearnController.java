@@ -82,6 +82,19 @@ public class LearnController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "/learn/level4/learn_4_1", method = RequestMethod.POST)
+	public ModelAndView learnLevel4_1(LearnVO learnVO) {
+		ModelAndView mav = new ModelAndView();
+		
+	    int cnt = lservice.createLearn(learnVO);
+	    mav.addObject("cnt", cnt);
+	    mav.addObject("url", "create_msg");
+
+	    mav.setViewName("redirect:/learn/level4/learn_4_1");
+		
+		return mav;
+	}
+	
 	@RequestMapping(value = "/learn/level4/learn_4_2", method = RequestMethod.GET)
 	public ModelAndView learnLevel4_2() {
 		ModelAndView mav = new ModelAndView();
