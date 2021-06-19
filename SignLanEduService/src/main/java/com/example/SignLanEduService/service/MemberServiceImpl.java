@@ -96,7 +96,7 @@ public class MemberServiceImpl implements MemberService {
 	//quiz 풀고 member의 point update
 	@Override
 	public int update_point(int m_num, int point) {
-		// TODO Auto-generated method stub
+		mapper.update_point(m_num, point);
 		return 0;
 	}
 

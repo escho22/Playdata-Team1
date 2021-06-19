@@ -104,7 +104,6 @@ public class LearnController {
 	    int cnt = lservice.createLearn(learnVO);
 	    
 	    mav.addObject("cnt", cnt);
-	    //mav.addObject("url", "create_msg");
 
 	    mav.setViewName("redirect:/learn/level4/learn_4_1");
 		
@@ -123,6 +122,26 @@ public class LearnController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "/learn/level4/learn_4_2", method = RequestMethod.POST)
+	public ModelAndView learnLevel4_2(int w_num, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+
+		LearnVO learnVO = new LearnVO();
+		
+		learnVO.setM_num(m_num);
+		learnVO.setW_num(w_num);
+		
+	    int cnt = lservice.createLearn(learnVO);
+	    
+	    mav.addObject("cnt", cnt);
+
+	    mav.setViewName("redirect:/learn/level4/learn_4_2");
+		
+		return mav;
+	}
+	
 	@RequestMapping(value = "/learn/level4/learn_4_3", method = RequestMethod.GET)
 	public ModelAndView learnLevel4_3() {
 		ModelAndView mav = new ModelAndView();
@@ -132,6 +151,26 @@ public class LearnController {
 		
 		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_3");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/learn_4_3", method = RequestMethod.POST)
+	public ModelAndView learnLevel4_3(int w_num, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+
+		LearnVO learnVO = new LearnVO();
+		
+		learnVO.setM_num(m_num);
+		learnVO.setW_num(w_num);
+		
+	    int cnt = lservice.createLearn(learnVO);
+	    
+	    mav.addObject("cnt", cnt);
+
+	    mav.setViewName("redirect:/learn/level4/learn_4_3");
+		
 		return mav;
 	}
 	
@@ -147,6 +186,26 @@ public class LearnController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "/learn/level4/learn_4_4", method = RequestMethod.POST)
+	public ModelAndView learnLevel4_4(int w_num, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+
+		LearnVO learnVO = new LearnVO();
+		
+		learnVO.setM_num(m_num);
+		learnVO.setW_num(w_num);
+		
+	    int cnt = lservice.createLearn(learnVO);
+	    
+	    mav.addObject("cnt", cnt);
+
+	    mav.setViewName("redirect:/learn/level4/learn_4_4");
+		
+		return mav;
+	}
+	
 	@RequestMapping(value = "/learn/level4/learn_4_5", method = RequestMethod.GET)
 	public ModelAndView learnLevel4_5() {
 		ModelAndView mav = new ModelAndView();
@@ -159,6 +218,26 @@ public class LearnController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "/learn/level4/learn_4_5", method = RequestMethod.POST)
+	public ModelAndView learnLevel4_5(int w_num, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+
+		LearnVO learnVO = new LearnVO();
+		
+		learnVO.setM_num(m_num);
+		learnVO.setW_num(w_num);
+		
+	    int cnt = lservice.createLearn(learnVO);
+	    
+	    mav.addObject("cnt", cnt);
+
+	    mav.setViewName("redirect:/learn/level4/learn_4_5");
+		
+		return mav;
+	}
+	
 	@RequestMapping(value = "/learn/level4/learn_4_6", method = RequestMethod.GET)
 	public ModelAndView learnLevel4_6() {
 		ModelAndView mav = new ModelAndView();
@@ -168,6 +247,26 @@ public class LearnController {
 		
 		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_6");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/learn_4_6", method = RequestMethod.POST)
+	public ModelAndView learnLevel4_6(int w_num, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+
+		LearnVO learnVO = new LearnVO();
+		
+		learnVO.setM_num(m_num);
+		learnVO.setW_num(w_num);
+		
+	    int cnt = lservice.createLearn(learnVO);
+	    
+	    mav.addObject("cnt", cnt);
+
+	    mav.setViewName("redirect:/learn/level4/learn_4_6");
+		
 		return mav;
 	}
 	
