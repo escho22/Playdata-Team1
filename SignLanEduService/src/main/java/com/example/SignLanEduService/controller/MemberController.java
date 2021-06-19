@@ -311,8 +311,9 @@ public class MemberController {
 			ck_passwd_save.setMaxAge(60 * 60 * 72 * 10); // 30 day
 			response.addCookie(ck_passwd_save);
 			// -------------------------------------------------------------------
-
+			
 			mav.setViewName("redirect:/");
+			service.recent_update(memberVO.getM_num());
 		} else {
 			mav.addObject("url", "login_fail_msg");
 			mav.setViewName("redirect:/member/msg");

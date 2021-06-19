@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -33,6 +33,7 @@
 	    <script src="<%=request.getContextPath()%>/js/scripts.js"></script>
 	</head>
 <body>
+<section class="masthead">
 학습페이지<br>
 Level 4 - 2
 <hr>
@@ -48,12 +49,28 @@ Level 4 - 2
 	</td> 
 </tr>
 </table>
-
+<hr>
+<form action="/learn/level4/learn_4_2" method="POST" id="creatLearn" name='lfrm4_2'>
+	<input type='hidden' name='m_id' id='m_id' value="${sessionScope.id }">
+	<input type='hidden' name='w_num' id='w_num' value="${wordVO.w_num }">
+</form>
+<button type="submit" form="creatLearn">학습완료</button>
+<hr>
+<DIV class='message'>
+<c:choose>
+        <c:when test="${param.cnt == 1 }">
+          학습완료, 다음문제로 넘어가 주세요.
+        </c:when>
+        <c:otherwise>
+          학습 미완료
+        </c:otherwise>
+      </c:choose>
+</DIV>
 <hr>
 <table>
 <tr> <td><A href='/learn/level4/learn_4_1'>이전</A></td> <td><A href='/learn/level4/choose'>목록</A></td> <td><A href='/learn/level4/learn_4_3'>다음</A></td> </tr>
 </table>
-
+</section>
 <script src="/js/webcam_learn.js"></script>
 </body>
 </html>
