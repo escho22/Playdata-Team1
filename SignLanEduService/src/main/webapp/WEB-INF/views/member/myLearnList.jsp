@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SignEdu - My Learn</title>
+<title>SignEdu - My Learn Record</title>
 </head>
 <body>
 <h2>${memberVO.m_id } 님의 학습 이력</h2>
@@ -15,14 +15,14 @@
 	<thead>
 		<tr>
 			<th>학습 단어</th>
-			<th>학습 일</th>
+			<th>일시</th>
 		</tr>
 	</thead>
 	<tbody>
 		<c:forEach var="learnVO" items="${list}">
 		<tr>
-			<td>${learnVO.w_num }</td>
-			<td>${learnVO.l_date }</td>		
+			<td>${wlist[learnVO.w_num-1].w_word }</td>
+			<td>${learnVO.l_date }</td>
 		</tr>
 		</c:forEach>
 	</tbody>
@@ -34,6 +34,7 @@
 </table>
 
 <hr>
+<A href='/member/myInfo'> myInfo </A> <br>
 <A href='/'> Home </A>
 </body>
 </html>
