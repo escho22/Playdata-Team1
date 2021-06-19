@@ -82,7 +82,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE m_id=#{m_id} AND m_pw=#{m_pw}
 	</select>
 	
-	<update id="update_point" parameterType="int">
+	<update id="update_point" parameterType="Map">
 		UPDATE member
 		SET
 		m_point= m_point + #{point}
