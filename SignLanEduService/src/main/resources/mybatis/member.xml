@@ -20,8 +20,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- m_num로 회원 정보 조회 -->
 	<select id="read" resultType="com.example.SignLanEduService.vo.MemberVO"
 		parameterType="int">
-		SELECT m_num, m_id, m_pw, m_name, m_birth, m_sex,
-		m_email, m_register, m_recent, m_point, m_is_admin
+		SELECT *
 		FROM member
 		WHERE
 		m_num = #{m_num}

@@ -12,6 +12,7 @@
 		<put-attribute name="footer"
 			value="/WEB-INF/views/menu/footer.jsp" />
 	</definition>
+
 	<definition name="/index" extends="main">
 		<put-attribute name="title" value="기본페이지"></put-attribute>
 		<put-attribute name="body"

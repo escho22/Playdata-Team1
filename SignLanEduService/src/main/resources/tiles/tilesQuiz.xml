@@ -7,7 +7,7 @@
 	<definition name="/quiz/select" extends="main">
 		<put-attribute name="title" value="퀴즈시작페이지"></put-attribute>
 		<put-attribute name="body"
-			value="/WEB-INF/views/select.jsp" />
+			value="/WEB-INF/views/quiz/select.jsp" />
 	</definition>
 	
 	<definition name="/learn/level1/choose" extends="main">
@@ -38,6 +38,12 @@
 		<put-attribute name="title" value="퀴즈페이지"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/quiz/level4/quiz_4_1.jsp" />
+	</definition>
+	
+	<definition name="/quiz/level4/quiz_4_1/error" extends="main">
+		<put-attribute name="title" value="퀴즈페이지"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/quiz/level4/error.jsp" />
 	</definition>
 	
 	<definition name="/quiz/finish" extends="main">

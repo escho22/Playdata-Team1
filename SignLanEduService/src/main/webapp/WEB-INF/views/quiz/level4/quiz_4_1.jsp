@@ -83,34 +83,56 @@
 		</script>
 	</head>
 	
+
 <body>
-<div id="progressbar"></div>
 
 	<p id="answer" style="display: none; height: 100px;">${index}</p>
-	
+
 	<script src="/js/webcam_detection.js"></script>
+
 	<h1>Quiz Level 4 - 1</h1>
 	<hr>
 	<div id="problem">Quiz 단어: ${word}</div>
 	<div id="message"></div>
-	<hr>
-	<table>
-		<tr>
-			<td><button id="capture">capture</button></td>
-			<td><button id="submit">submit</button></td>
-		</tr>
-	</table>
-
-	<div id="circle"></div>
 
 	<hr>
 	<table>
 		<tr>
-			<td>이전</td>
-			<td><A href='/quiz/level4/choose'>목록</A></td>
-			<td><A href='/quiz/level4/quiz_4_2'>다음</A></td>
+			<td><button id="capture" class="btn btn-info">capture</button></td>
+			<td><button id="submit" class="btn btn-info">submit</button></td>
 		</tr>
 	</table>
-	
+	<div id="container-canvas1"></div>
+	<div id="container-canvas2"></div>
+
+
+	<hr>
+	<form name='frm' method='POST' action='./quiz/level4/quiz_4_1'
+		class="form-horizontal">
+		<input type='hidden' name='m_num' id='m_num' class="form-control" 
+			value='${sessionScope.m_num}'> 
+		<input type="hidden" name="q_correct" class="form-control" 
+			 id="q_correct"> 
+		<input type="hidden" name="q_percent" class="form-control" 
+			 id="q_percent">
+
+		<div class='content_bottom_menu'>
+			<button type="submit" class="btn btn-info">저장</button>
+			<button id="btn_list" type="button" onclick="location.href='/quiz/level4/choose'"
+				class="btn btn-info">목록</button>
+			<button id="btn_next" type="button" onclick="location.href='/quiz/level4/quiz_4_2'"
+				class="btn btn-info">다음</button>
+		</div>
+
+
+	</form>
+
+<!-- 	<table> -->
+<!-- 		<tr> -->
+<!-- 			<td>이전</td> -->
+<!-- 			<td><A href='/quiz/level4/choose'>목록</A></td> -->
+<!-- 			<td><A href='/quiz/level4/quiz_4_2'>다음</A></td> -->
+<!-- 		</tr> -->
+<!-- 	</table> -->
 </body>
 </html>
