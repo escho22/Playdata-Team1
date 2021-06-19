@@ -46,7 +46,6 @@
 			value="/WEB-INF/views/quiz/level4/error.jsp" />
 	</definition>
 	
-	
 	<definition name="/quiz/finish" extends="main">
 		<put-attribute name="title" value="퀴즈마침페이지"></put-attribute>
 		<put-attribute name="body"
