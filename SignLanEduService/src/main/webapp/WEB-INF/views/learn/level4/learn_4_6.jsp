@@ -68,7 +68,7 @@ Level 4 - 6
 </DIV>
 <hr>
 <table>
-<tr> <td><A href='/learn/level4/learn_4_5'>이전</A></td> <td><A href='/learn/level4/choose'>목록</A></td> <td>다음</td> </tr>
+<tr> <td><A href='/learn/level4/learn_4_5'>이전</A></td> <td><A href='/learn/level4/choose'>목록</A></td> <td><A href='/learn/level4/learn_4_fin'>다음</A></td> </tr>
 </table>
 </section>
 <script src="/js/webcam_learn.js"></script>

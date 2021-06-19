@@ -34,6 +34,11 @@
 	    <script src="<%=request.getContextPath()%>/js/scripts.js"></script> 
 	</head>
 <body>
-학습 완료!
+<section class="masthead">
+<h2>Level 4 학습 완료!</h2> <br>
+<hr>
+${memberVO.m_id }님의 현재 포인트 <br>
+<h2>${memberVO.m_point }</h2>
+</section>
 </body>
 </html>
