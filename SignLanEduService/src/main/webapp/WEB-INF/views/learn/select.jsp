@@ -24,16 +24,17 @@
 
 	     
 	    <!-- Core theme CSS (includes Bootstrap)-->
-	    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+	    <link href="<%=request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css"/>
 	
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
 		
 		<!-- Bootstrap core JS-->
 	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-	    <script src="js/scripts.js"></script>
+	    <script src="<%=request.getContextPath()%>/js/scripts.js"></script>
 	</head>
 <body>
+<section class="masthead">
 Learn - Select Level
 <hr>
 
@@ -45,5 +46,6 @@ Learn - Select Level
 </table>
 <hr>
 <A href='/'> Home </A>
+</section>
 </body>
 </html>

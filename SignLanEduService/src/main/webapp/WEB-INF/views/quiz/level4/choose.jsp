@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -33,6 +33,7 @@
 		<script src="<%=request.getContextPath()%>/js/scripts.js"></script> 
 	</head>
 <body>
+<section class="masthead">
 <h2>Quiz - Level 4</h2>
 <hr>
 <A href='/quiz/level4/quiz_4_1'>처음부터</A> <br>
@@ -44,7 +45,6 @@
 <A href='/quiz/level4/quiz_4_6'>6번</A>
 <hr>
 <A href='/quiz/select'>목록</A> <br>
-</body>
-
+</section>
 </body>
 </html>

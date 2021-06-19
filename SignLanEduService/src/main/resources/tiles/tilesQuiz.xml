@@ -10,25 +10,25 @@
 			value="/WEB-INF/views/quiz/select.jsp" />
 	</definition>
 	
-	<definition name="/learn/level1/choose" extends="main">
+	<definition name="/quiz/level1/choose" extends="main">
 		<put-attribute name="title" value="학습난이도1선택"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/quiz/level1/choose.jsp" />
 	</definition>
 	
-	<definition name="/learn/level2/choose" extends="main">
+	<definition name="/quiz/level2/choose" extends="main">
 		<put-attribute name="title" value="학습난이도2선택"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/quiz/level2/choose.jsp" />
 	</definition>
 	
-	<definition name="/learn/level3/choose" extends="main">
+	<definition name="/quiz/level3/choose" extends="main">
 		<put-attribute name="title" value="학습난이도3선택"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/quiz/level3/choose.jsp" />
 	</definition>
 	
-	<definition name="/learn/level4/choose" extends="main">
+	<definition name="/quiz/level4/choose" extends="main">
 		<put-attribute name="title" value="학습난이도4선택"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/quiz/level4/choose.jsp" />

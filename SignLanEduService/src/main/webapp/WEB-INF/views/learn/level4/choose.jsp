@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -23,7 +22,6 @@
 	    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
 	    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,700&display=swap" rel="stylesheet" />
 
-	     
 	    <!-- Core theme CSS (includes Bootstrap)-->
 	    <link href="<%=request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css"/>
 	
@@ -35,6 +33,7 @@
 	    <script src="<%=request.getContextPath()%>/js/scripts.js"></script> 
 	</head>
 <body>
+<section class="masthead">
 Learn - Level 4
 <hr>
 <table border="1">
@@ -61,6 +60,6 @@ Learn - Level 4
 </table>
 <hr>
 <A href='/learn/select'>목록</A>
-<hr>
+</section>
 </body>
 </html>
