@@ -107,7 +107,7 @@
 										</div>
 									</div>
 								</form>
-								<!-- <div class="col-lg-6 d-none d-lg-block bg-register-image"></div> -->
+								<div class="col-lg-6 d-none d-lg-block bg-register-image"></div>
 							</div>
 						</div>
 					</div>
