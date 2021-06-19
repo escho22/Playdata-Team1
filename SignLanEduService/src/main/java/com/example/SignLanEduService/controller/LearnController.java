@@ -1,5 +1,6 @@
 package com.example.SignLanEduService.controller;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -15,7 +16,6 @@ import com.example.SignLanEduService.service.LearnService;
 import com.example.SignLanEduService.service.MemberService;
 import com.example.SignLanEduService.service.WordService;
 import com.example.SignLanEduService.vo.LearnVO;
-import com.example.SignLanEduService.vo.MemberVO;
 import com.example.SignLanEduService.vo.WordVO;
 
 @Controller
@@ -97,11 +97,15 @@ public class LearnController {
 		int m_num = (int) session.getAttribute("usersno");
 
 		LearnVO learnVO = new LearnVO();
-		
 		learnVO.setM_num(m_num);
 		learnVO.setW_num(w_num);
+		int cnt = lservice.createLearn(learnVO);
 		
-	    int cnt = lservice.createLearn(learnVO);
+		WordVO wordVO = this.wservice.readWord(w_num);
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", wordVO.getW_difficulty());
+	    mservice.update_point(map);
 	    
 	    mav.addObject("cnt", cnt);
 
