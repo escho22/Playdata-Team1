@@ -22,9 +22,11 @@ import org.springframework.web.servlet.ModelAndView;
 import com.example.SignLanEduService.service.LearnService;
 import com.example.SignLanEduService.service.MemberService;
 import com.example.SignLanEduService.service.QuizService;
+import com.example.SignLanEduService.service.WordService;
 import com.example.SignLanEduService.vo.LearnVO;
 import com.example.SignLanEduService.vo.MemberVO;
 import com.example.SignLanEduService.vo.QuizVO;
+import com.example.SignLanEduService.vo.WordVO;
 
 @Controller
 public class MemberController {
@@ -32,6 +34,10 @@ public class MemberController {
 	@Autowired
 	@Qualifier("com.example.SignLanEduService.service.MemberServiceImpl")
 	private MemberService service;
+	
+	@Autowired
+	@Qualifier("com.example.SignLanEduService.service.WordServiceImpl")
+	private WordService wservice;
 	
 	@Autowired
 	@Qualifier("com.example.SignLanEduService.service.LearnServiceImpl")
@@ -115,9 +121,14 @@ public class MemberController {
 		ModelAndView mav = new ModelAndView();
 		
 		int m_num = (int) session.getAttribute("usersno");
-
+		
+		MemberVO memberVO = this.service.read(m_num);
 		List<LearnVO> list = this.lservice.readLearnbyMember(m_num);
+		List<WordVO> wlist = this.wservice.listWord();
+		
+		mav.addObject("memberVO", memberVO);
 		mav.addObject("list", list);
+		mav.addObject("wlist", wlist);
 		
 		mav.setViewName("/member/myLearnList");
 
@@ -130,8 +141,13 @@ public class MemberController {
 		
 		int m_num = (int) session.getAttribute("usersno");
 
+		MemberVO memberVO = this.service.read(m_num);
 		List<QuizVO> list = this.qservice.readQuizbyMember(m_num);
+		List<WordVO> wlist = this.wservice.listWord();
+		
+		mav.addObject("memberVO", memberVO);
 		mav.addObject("list", list);
+		mav.addObject("wlist", wlist);
 		
 		mav.setViewName("/member/myQuizList");
 
@@ -295,8 +311,9 @@ public class MemberController {
 			ck_passwd_save.setMaxAge(60 * 60 * 72 * 10); // 30 day
 			response.addCookie(ck_passwd_save);
 			// -------------------------------------------------------------------
-
+			
 			mav.setViewName("redirect:/");
+			service.recent_update(memberVO.getM_num());
 		} else {
 			mav.addObject("url", "login_fail_msg");
 			mav.setViewName("redirect:/member/msg");
