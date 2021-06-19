@@ -15,7 +15,7 @@ function getFrame(webcam){
 	//draw capture_show only on canvas
 	webcam.hide();
 	
-	mycanvas = createCanvas(1280, 720);
+	mycanvas = createCanvas(1280+155, 720);
 	mycanvas.parent("container-canvas2");
 	
 	image(capture, 155, 0, 1280, 720);
