@@ -158,6 +158,7 @@ public class MemberController {
 	public ModelAndView update(MemberVO memberVO) {
 		ModelAndView mav = new ModelAndView();
 
+		
 		int cnt = service.update(memberVO);
 		mav.addObject("cnt", cnt);
 		mav.addObject("usersno", memberVO.getM_num());

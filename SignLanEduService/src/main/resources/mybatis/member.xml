@@ -39,8 +39,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<update id="update" parameterType="com.example.SignLanEduService.vo.MemberVO">
 		UPDATE member
 		SET
-		m_name=#{m_name}, m_birth=#{m_birth}, m_sex=#{m_sex},
-		m_email=#{m_email}
+		m_pw=#{m_pw}, m_name=#{m_name}, m_birth=#{m_birth}, m_email=#{m_email}
 		WHERE m_num = #{m_num}
 	</update>
 	
