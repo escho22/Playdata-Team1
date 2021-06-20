@@ -207,7 +207,7 @@
 									</div>
 									<div class="form-group">
 										<input type='text' class="form-control form-control-user"
-											name='name' id='name' value='' required="required"
+											name='m_name' id='m_name' value='' required="required"
 											placeholder="* Name">
 									</div>
 									<div class="form-group row">
@@ -261,4 +261,3 @@
 	</section>
 </body>
 </html>
-

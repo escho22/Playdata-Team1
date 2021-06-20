@@ -281,6 +281,8 @@ public class MemberController {
 			session.setAttribute("usersno", memberVO.getM_num());
 			session.setAttribute("m_id", m_id);
 			session.setAttribute("m_name", memberVO.getM_name());
+			session.setAttribute("m_is_admin", memberVO.getM_is_admin());
+			System.out.println(memberVO.getM_is_admin());
 
 			if (id_save.equals("Y")) {
 				Cookie ck_id = new Cookie("ck_id", m_id);
