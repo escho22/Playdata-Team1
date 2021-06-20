@@ -30,7 +30,7 @@ Top ::
 				<a class="navbar-brand fw-bold" href="/#page-top">lantern</a>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav me-auto mb-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link me-lg-4" href="#features">About</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-4" href="<%=request.getContextPath()%>/#features">About</a></li>
 						<li id="learn" class="nav-item"><a class="nav-link me-lg-4" href="/learn/select">Learn</a></li>
                    		<li id="Quiz" class="nav-item"><a class="nav-link me-lg-4" href="/quiz/select">Quiz</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-4" href="/member/myInfo">MyInfo</a></li>

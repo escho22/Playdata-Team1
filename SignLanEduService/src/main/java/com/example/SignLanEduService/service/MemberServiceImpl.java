@@ -98,6 +98,7 @@ public class MemberServiceImpl implements MemberService {
 	public int update_point(Map map) {
 		// TODO Auto-generated method stub
 		return mapper.update_point(map);
+
 	}
 
 }

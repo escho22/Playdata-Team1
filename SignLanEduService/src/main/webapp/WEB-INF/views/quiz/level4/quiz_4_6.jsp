@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -36,10 +36,11 @@
 	    
 	    <!-- Webcam - p5 Js -->
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
-		  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
-		</script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+		
 	</head>
- <body>
+<body>
 
  <p id="answer" style="display: none; height: 100px;">${index}</p>
 
@@ -57,6 +58,12 @@
 			<td><button id="submit" class="btn btn-info">submit</button></td>
 		</tr>
 	</table>
+	
+			<br>
+	<div id="myProgress">
+		<div id="myBar">10%</div>
+	</div>
+	
 	<div id="container-canvas1"></div>
 	<div id="container-canvas2"></div>
 
