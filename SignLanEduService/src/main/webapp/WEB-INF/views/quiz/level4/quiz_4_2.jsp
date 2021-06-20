@@ -57,6 +57,12 @@
 			<td><button id="submit" class="btn btn-info">submit</button></td>
 		</tr>
 	</table>
+	
+		<br>
+	<div id="myProgress">
+		<div id="myBar">10%</div>
+	</div>
+	
 	<div id="container-canvas1"></div>
 	<div id="container-canvas2"></div>
 
