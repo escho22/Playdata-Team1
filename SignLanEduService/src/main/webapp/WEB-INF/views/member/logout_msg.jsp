@@ -3,7 +3,7 @@
  
 <!DOCTYPE html> 
 <html lang="ko"> 
-<head> 
+	<head> 
 		<meta charset="UTF-8"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<meta name="description" content="" />
@@ -21,40 +21,51 @@
 	    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
 	    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,700&display=swap" rel="stylesheet" />
 		
-	    
-	    <!-- Core theme CSS (includes Bootstrap)-->
-	    <link href="<%=request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css"/>
-		
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
-		
-		<!-- Bootstrap core JS-->
-	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-	    <script src="<%=request.getContextPath()%>/js/scripts.js"></script>
-	    
-<script type="text/javascript">
-  $(function(){ 
-    $('#btn_home').on('click', function() {
-      location.href="${pageContext.request.contextPath}/";
-    });
-  });
-</script>
-</head> 
-<body>
-<section class="masthead">
-<DIV class='title_line'>알림</DIV>
-  <DIV class='message'>
-    <fieldset class='fieldset_basic'>
-      <ul>
-        <li class='li_none'>이용해 주셔서 감사합니다.</li>
-        <li class='li_none'>
-          <button type="button" id="btn_home" class="btn btn-primary btn-md">확인</button>
-        </li>
-        
-      </ul>
-    </fieldset>    
-  </DIV>
-</section>
-</body>
+	</head>
+	
+	<body>
+	<section class="msg">
+		<div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+			<div class="container">
+				<div class="card o-hidden border-0 shadow-lg my-5">
+					<div class="card-body p-6 text-center ">
+						<h1 class="h3 text-gray-900 mb-5 font-card"> Success to Sign Out </h1>
+					    <div class="fs-3">	
+					    See you again!
+					    <br/>
+					    Please, remember our service
+					    <br/>
+					    Thank you!				  	
+					    </div>
+					    <br/>
+					    <hr>
+					    <br/>
+					    <button type="button" id="btn_home" class="btn btn-primary rounded-pill mb-lg-0 mx-1 px-3">go to main</button>
+					</div>
+				</div>
+			</div>
+	</section>
+	</body>
+	
+	
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="<%=request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css" />
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<!-- Bootstrap core JS-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="<%=request.getContextPath()%>/js/scripts.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){ 
+	    $('#btn_home').on('click', function() {
+	      location.href="${pageContext.request.contextPath}/";
+	    });
+	  });
+	</script>
+	
+	
 </html>
 

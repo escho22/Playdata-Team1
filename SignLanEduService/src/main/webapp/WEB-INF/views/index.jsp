@@ -11,7 +11,7 @@
 	    <meta name="author" content="" />
 	    <!-- 페이지 탭에 표시될 아이콘 및 페이지명 -->
 	    <title>lantern</title>
-	    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+	    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
 	     
 	    <!-- Bootstrap icons-->
 	   	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
@@ -23,16 +23,6 @@
 	    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
 	    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,700&display=swap" rel="stylesheet" />
 
-	     
-	    <!-- Core theme CSS (includes Bootstrap)-->
-	    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
-	
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
-		
-		<!-- Bootstrap core JS-->
-	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-	    <script src="js/scripts.js"></script>
 	</head>
 	
 	
@@ -60,22 +50,25 @@
 	                    <!--******* Mashead text and app badges *******-->
 	                    <div class="mb-5 mb-lg-0 text-center text-lg-start">
 	                        <h3 class="display-1 lh-1 mb-3 font-slide">
-	                        	Stop waiting,
+	                        	Stop
+	                        	<br/> 
+	                        	waiting,
 	                    		<br/>
-	                    		Start lanterning!</h3>
+	                    		Start 
+	                    		<br/> 
+	                    		lanterning!</h3>
 	                        <p class="lead fw-normal text-muted mb-5">Do you want to learn sign language? Come join us! If you are worried, click try button.</p>
 	                        <div class="d-flex flex-column flex-lg-row align-items-center">
-	                            <a class="me-lg-3 mb-4 mb-lg-0" href="#!">
-	                            <img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
-	                            <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
+	                       		 <a class="btn btn-primary py-3 px-4 rounded-pill me-3" href="/member/login" target="_blank">Sign-in</a>                   
+	                             <button class="btn btn-primary py-3 px-4 rounded-pill" onclick="location.href='https://startbootstrap.com/theme/new-age'">Try our service</button> 
 	                        </div>
 	                    </div>
 	                </div>
-	                <div class="col-lg-6">
-	                
+	                <div class="col-lg-6">	                
 					<!--******* Masthead device mockup feature :: 아이폰 및 도형 목업 *******-->
 					<div class="masthead-device-mockup">
-						<svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+					<img src="assets/img/hands.png" width="500" height="500" alt="hand" style="transform:rotate(340deg);" />
+						<%-- <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 	                            <defs>
 	                                <linearGradient id="circleGradient" gradientTransform="rotate(45)">
 	                                    <stop class="gradient-start-color" offset="0%"></stop>
@@ -90,7 +83,7 @@
 							<circle cx="50" cy="50" r="50"></circle></svg>
 						<div class="device-wrapper">
 							<div class="device" data-device="iPhoneX" ata-orientation="portrait" data-color="black"></div>
-						</div>
+						</div> --%>
 					</div>
 				</div>
 	            </div>
@@ -102,7 +95,7 @@
 	        <div class="container px-5">
 	            <div class="row gx-5 justify-content-center">
 	                <div class="col-xl-8">
-	                    <div class="h2 fs-1 text-white mb-4">"A fun way to learn and master basic sign language words!"</div>
+	                    <div class="h2 fs-1 text-white mb-2">"A fun way to learn and master basic <br/> sign language words!"</div>
 	                </div>
 	            </div>
 	        </div>
@@ -113,11 +106,10 @@
 	        <div class="cta-content">
 	            <div class="container px-5">
 	                <h2 class="text-white display-1 lh-1 mb-4">
-	                    Stop waiting.
+	                    about ::
 	                    <br />
-	                    Start lanterning.
+	                    LANTERN 
 	                </h2>
-	                <a class="btn btn-outline-light py-3 px-4 rounded-pill" href="https://startbootstrap.com/theme/new-age" target="_blank">Practice everyday</a>
 	            </div>
 	        </div>
 	    </section>
@@ -146,7 +138,7 @@
 	    </section>
 	    
 	    <!--******* App features section :: ABOUT 슬라이드 3 *******-->
-<!-- 	    <section> -->
+<%-- <!-- 	    <section> -->
 <!-- 	        <div class="container px-5"> -->
 <!-- 	            <div class="row gx-5 align-items-center"> -->
 <!-- 	                <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0"> -->
@@ -199,11 +191,11 @@
 <!-- 	                                    <stop class="gradient-end-color" offset="100%"></stop> -->
 <!-- 	                                </linearGradient> -->
 <!-- 	                            </defs> -->
-<%-- 	                            <circle cx="50" cy="50" r="50"></circle></svg --%>
+	                            <circle cx="50" cy="50" r="50"></circle></svg
 <!-- 	                        ><svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg"> -->
 <!-- 	                            <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect> -->
 <!-- 	                            <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect></svg -->
-<%-- 	                        ><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg> --%>
+	                        ><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
 <!-- 	                        <div class="device-wrapper"> -->
 <!-- 	                            <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black"> -->
 <!-- 	                                <div class="screen bg-black"> -->
@@ -219,28 +211,17 @@
 <!-- 	                </div> -->
 <!-- 	            </div> -->
 <!-- 	        </div> -->
-<!-- 	    </section> -->
+<!-- 	    </section> --> --%>
     </body>
+    
+   	<!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+	
+	<!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    
 </html>
-
-<!-- <body>
-  
-  <DIV style='width: 100%; margin: 30px auto; text-align: center;'>
-    <IMG src='/menu/images/resort01.jpg' style='width: 60%;'>
-  </DIV>
-  
-  <DIV style='margin: 0px auto; width: 90%;'>
-    <DIV style='float: left; width: 50%;'>
-     </DIV>
-     <DIV style='float: left; width: 50%;'>
-    </DIV>  
-  </DIV>
- 
-  <DIV style='width: 94.8%; margin: 0px auto;'>
-  </DIV>  -->
-
-<!-- **** 민규님 video tag ****
-<video src='https://signedubucket.s3.ap-northeast-2.amazonaws.com/test.mp4' width='400' controls autoplay></video>
-<br>
-<video src='https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000227.avi' width='400' controls autoplay></video>
-<video width="400" controls>   <source src="https://signedubucket.s3.ap-northeast-2.amazonaws.com/KETI_SL_0000000227.avi"  type="video/AVI"> </video> -->
