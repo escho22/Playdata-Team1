@@ -22,13 +22,15 @@
 			value="/WEB-INF/views/admin/control/adminCreate.jsp" />
 	</definition>
 
-	<definition name="/admin/control/memberDelete" extends="main">
+	<definition name="/admin/control/memberDelete"
+		extends="main">
 		<put-attribute name="title" value="회원삭제"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/admin/control/memberDelete.jsp" />
 	</definition>
 
-	<definition name="/admin/control/memberUpdate" extends="main">
+	<definition name="/admin/control/memberUpdate"
+		extends="main">
 		<put-attribute name="title" value="회원수정"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/admin/control/memberUpdate.jsp" />
@@ -51,12 +53,12 @@
 		<put-attribute name="body"
 			value="/WEB-INF/views/admin/stats/choose.jsp" />
 	</definition>
-	
+
 	<definition name="/admin/stats/learnList" extends="main">
 		<put-attribute name="title" value="전체학습목록"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/admin/stats/learnList.jsp" />
-	</definition>	
+	</definition>
 
 	<definition name="/admin/stats/memberList" extends="main">
 		<put-attribute name="title" value="전체회원목록"></put-attribute>
@@ -69,6 +71,7 @@
 		<put-attribute name="body"
 			value="/WEB-INF/views/admin/stats/quizList.jsp" />
 	</definition>
+	
 </tiles-definitions>
 
 
