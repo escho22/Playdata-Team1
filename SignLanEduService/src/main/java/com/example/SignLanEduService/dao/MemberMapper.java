@@ -18,6 +18,6 @@ public interface MemberMapper {
 	int recent_update(int m_num);
 	int login(Map map);
 
-	int update_point(int m_num, int point);//quiz풀고 point update
-	
+	int update_point(Map map);//quiz풀고 point update
+
 }

@@ -1,6 +1,8 @@
 package com.example.SignLanEduService.controller;
 
 
+import java.util.HashMap;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -123,8 +125,12 @@ public class QuizController {
 		System.out.println(vo.getQ_correct());
 		System.out.println(vo.getQ_percent());
 		
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", point_per_word);
+		
 		int flag1 = service.create(vo);
-		int flag2 = mservice.update_point(m_num, point_per_word);
+		int flag2 = mservice.update_point(map);
 		if (flag1==1 && flag2==1) {
 			mav.setViewName("/quiz/level4/quiz_4_1");
 		}
@@ -211,8 +217,13 @@ public class QuizController {
 			QuizVO vo, int m_num, int correct_cnt, @PathVariable("w_num") int w_num) {
 		
 		int point_per_word = 5; //단어별 점수지정
+		
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", correct_cnt*point_per_word);
+		
 		int flag1 = service.create(vo);
-		int flag2 = mservice.update_point(m_num, correct_cnt*point_per_word); //member service에 추가 필요
+		int flag2 = mservice.update_point(map); //member service에 추가 필요
 		
 		return (flag1==1 && flag2==1)?new ResponseEntity<String>("success",HttpStatus.OK)
 				:new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

@@ -1,5 +1,6 @@
 package com.example.SignLanEduService.controller;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -97,11 +98,15 @@ public class LearnController {
 		int m_num = (int) session.getAttribute("usersno");
 
 		LearnVO learnVO = new LearnVO();
-		
 		learnVO.setM_num(m_num);
 		learnVO.setW_num(w_num);
+		int cnt = lservice.createLearn(learnVO);
 		
-	    int cnt = lservice.createLearn(learnVO);
+		WordVO wordVO = this.wservice.readWord(w_num);
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", wordVO.getW_difficulty());
+	    mservice.update_point(map);
 	    
 	    mav.addObject("cnt", cnt);
 
@@ -129,11 +134,15 @@ public class LearnController {
 		int m_num = (int) session.getAttribute("usersno");
 
 		LearnVO learnVO = new LearnVO();
-		
 		learnVO.setM_num(m_num);
 		learnVO.setW_num(w_num);
+		int cnt = lservice.createLearn(learnVO);
 		
-	    int cnt = lservice.createLearn(learnVO);
+		WordVO wordVO = this.wservice.readWord(w_num);
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", wordVO.getW_difficulty());
+	    mservice.update_point(map);
 	    
 	    mav.addObject("cnt", cnt);
 
@@ -161,11 +170,15 @@ public class LearnController {
 		int m_num = (int) session.getAttribute("usersno");
 
 		LearnVO learnVO = new LearnVO();
-		
 		learnVO.setM_num(m_num);
 		learnVO.setW_num(w_num);
+		int cnt = lservice.createLearn(learnVO);
 		
-	    int cnt = lservice.createLearn(learnVO);
+		WordVO wordVO = this.wservice.readWord(w_num);
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", wordVO.getW_difficulty());
+	    mservice.update_point(map);
 	    
 	    mav.addObject("cnt", cnt);
 
@@ -193,11 +206,15 @@ public class LearnController {
 		int m_num = (int) session.getAttribute("usersno");
 
 		LearnVO learnVO = new LearnVO();
-		
 		learnVO.setM_num(m_num);
 		learnVO.setW_num(w_num);
+		int cnt = lservice.createLearn(learnVO);
 		
-	    int cnt = lservice.createLearn(learnVO);
+		WordVO wordVO = this.wservice.readWord(w_num);
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", wordVO.getW_difficulty());
+	    mservice.update_point(map);
 	    
 	    mav.addObject("cnt", cnt);
 
@@ -225,11 +242,15 @@ public class LearnController {
 		int m_num = (int) session.getAttribute("usersno");
 
 		LearnVO learnVO = new LearnVO();
-		
 		learnVO.setM_num(m_num);
 		learnVO.setW_num(w_num);
+		int cnt = lservice.createLearn(learnVO);
 		
-	    int cnt = lservice.createLearn(learnVO);
+		WordVO wordVO = this.wservice.readWord(w_num);
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", wordVO.getW_difficulty());
+	    mservice.update_point(map);
 	    
 	    mav.addObject("cnt", cnt);
 
@@ -257,11 +278,15 @@ public class LearnController {
 		int m_num = (int) session.getAttribute("usersno");
 
 		LearnVO learnVO = new LearnVO();
-		
 		learnVO.setM_num(m_num);
 		learnVO.setW_num(w_num);
+		int cnt = lservice.createLearn(learnVO);
 		
-	    int cnt = lservice.createLearn(learnVO);
+		WordVO wordVO = this.wservice.readWord(w_num);
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", wordVO.getW_difficulty());
+	    mservice.update_point(map);
 	    
 	    mav.addObject("cnt", cnt);
 
@@ -271,8 +296,13 @@ public class LearnController {
 	}
 	
 	@RequestMapping(value = "/learn/level4/learn_4_fin", method = RequestMethod.GET)
-	public ModelAndView learnFin() {
+	public ModelAndView learnFin(HttpSession session) {
 		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+		MemberVO memberVO = this.mservice.read(m_num);
+		
+		mav.addObject("memberVO", memberVO);
 		
 		mav.setViewName("/learn/level4/learn_4_fin");
 		
