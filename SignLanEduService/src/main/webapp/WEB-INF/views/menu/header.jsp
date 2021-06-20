@@ -33,7 +33,6 @@ Top ::
                         <li class="nav-item"><a class="nav-link me-lg-4" href="<%=request.getContextPath()%>/#features">About</a></li>
 						<li id="learn" class="nav-item"><a class="nav-link me-lg-4" href="/learn/select">Learn</a></li>
                    		<li id="Quiz" class="nav-item"><a class="nav-link me-lg-4" href="/quiz/select">Quiz</a></li>
-                        <li class="nav-item"><a class="nav-link me-lg-4" href="/member/myInfo">MyInfo</a></li>
                     </ul>                    
                     <ul class="navbar-nav ms-auto me-2 my-lg-0">
                     	<li class="nav-item"><a class="nav-link me-lg-0">${str}</a></li>
@@ -41,12 +40,12 @@ Top ::
                     
                     <c:choose>
                     	<c:when test="${not empty sessionScope.m_id && sessionScope.m_is_admin == 1}">
-							<li><a href="/admin/select">관리자페이지</a></li>
+							<li class="nav-item"><a href="/admin/select" class="nav-link me-lg-4">관리자페이지</a></li>
+							<li class="nav-item"><a href="/member/logout" class="nav-link me-lg-4">로그아웃</a></li>
 						</c:when>
 						<c:when test="${not empty sessionScope.m_id && sessionScope.m_is_admin != 1}">
 							<ul class="navbar-nav me-auto mb-2 my-lg-0">
-							<li class="nav-item"><a href="/member/myInfo" class="nav-link me-lg-4">나의정보</a></li>
-						    <li class="nav-item"><a href="/member/update" class="nav-link me-lg-4">회원수정</a></li>
+							<li class="nav-item"><a href="/member/myInfo" class="nav-link me-lg-4">나의정보</a></li> 
 						    <li class="nav-item"><a href="/member/logout" class="nav-link me-lg-4">로그아웃</a></li>
 						    </ul>
 						</c:when>
