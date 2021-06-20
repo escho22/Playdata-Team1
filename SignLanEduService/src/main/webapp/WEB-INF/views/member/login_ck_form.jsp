@@ -33,7 +33,7 @@
 	<!-- 확인 후 지우기 -->
 	<script type="text/javascript">
 	  function loadDefault() {
-	    $('#m_id').val('user1');
+	    $('#m_id').val('test1');
 	    $('#m_pw').val('1234');
 	  }  
 	</script> 

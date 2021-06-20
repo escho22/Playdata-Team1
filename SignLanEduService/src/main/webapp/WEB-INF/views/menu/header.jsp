@@ -7,7 +7,7 @@ custom 설정
 <c:set var="root" value="${pageContext.request.contextPath }"/>
 <c:choose>
 	<c:when test="${not empty sessionScope.m_id && sessionScope.m_is_admin == 1}">
-		<c:set var="str">관리자 페이지 입니다</c:set>
+		<c:set var="str">관리자 ${sessionScope.m_id }</c:set>
 	</c:when>
 	<c:when test="${not empty sessionScope.m_id && sessionScope.m_is_admin != 1}">
 		<c:set var='str'>안녕하세요  ${sessionScope.m_id } 님 !</c:set>
@@ -41,7 +41,7 @@ Top ::
                     
                     <c:choose>
                     	<c:when test="${not empty sessionScope.m_id && sessionScope.m_is_admin == 1}">
-							<li><a href="${root}/admin/list">회원목록</a></li>
+							<li><a href="/admin/select">관리자페이지</a></li>
 						</c:when>
 						<c:when test="${not empty sessionScope.m_id && sessionScope.m_is_admin != 1}">
 							<ul class="navbar-nav me-auto mb-2 my-lg-0">
