@@ -1,5 +1,7 @@
 package com.example.SignLanEduService.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -11,6 +13,10 @@ import com.example.SignLanEduService.service.LearnService;
 import com.example.SignLanEduService.service.MemberService;
 import com.example.SignLanEduService.service.QuizService;
 import com.example.SignLanEduService.service.WordService;
+import com.example.SignLanEduService.vo.LearnVO;
+import com.example.SignLanEduService.vo.MemberVO;
+import com.example.SignLanEduService.vo.QuizVO;
+import com.example.SignLanEduService.vo.WordVO;
 
 @Controller
 public class AdminController {
@@ -91,6 +97,11 @@ public class AdminController {
 	@RequestMapping(value = "/admin/stats/memberList", method = RequestMethod.GET)
 	public ModelAndView adminMemberList() {
 		ModelAndView mav = new ModelAndView();
+		
+		List<MemberVO> list = this.mservice.list();
+		
+		mav.addObject("list",list);
+		
 		mav.setViewName("/admin/stats/memberList");
 		return mav;
 	}
@@ -98,6 +109,15 @@ public class AdminController {
 	@RequestMapping(value = "/admin/stats/learnList", method = RequestMethod.GET)
 	public ModelAndView adminLearnList() {
 		ModelAndView mav = new ModelAndView();
+		
+		List<LearnVO> llist = this.lservice.listLearn();
+		List<MemberVO> mlist = this.mservice.list();
+		List<WordVO> wlist = this.wservice.listWord();
+		
+		mav.addObject("llist",llist);
+		mav.addObject("mlist",mlist);
+		mav.addObject("wlist",wlist);
+		
 		mav.setViewName("/admin/stats/learnList");
 		return mav;
 	}
@@ -105,6 +125,15 @@ public class AdminController {
 	@RequestMapping(value = "/admin/stats/quizList", method = RequestMethod.GET)
 	public ModelAndView adminQuizList() {
 		ModelAndView mav = new ModelAndView();
+		
+		List<QuizVO> qlist = this.qservice.listquiz();
+		List<MemberVO> mlist = this.mservice.list();
+		List<WordVO> wlist = this.wservice.listWord();
+				
+		mav.addObject("qlist",qlist);
+		mav.addObject("mlist",mlist);
+		mav.addObject("wlist",wlist);
+		
 		mav.setViewName("/admin/stats/quizList");
 		return mav;
 	}
