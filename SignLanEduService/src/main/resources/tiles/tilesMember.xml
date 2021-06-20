@@ -24,5 +24,24 @@
 		<put-attribute name="body"
 			value="/WEB-INF/views/member/login_ck_form.jsp" />
 	</definition>
-
+	<definition name="/member/myInfo" extends="main">
+		<put-attribute name="title" value="회원정보"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/myInfo.jsp" />
+	</definition>
+	<definition name="/member/myLearnList" extends="main">
+		<put-attribute name="title" value="회원학습이력"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/myLearnList.jsp" />
+	</definition>
+	<definition name="/member/myQuizList" extends="main">
+		<put-attribute name="title" value="회원퀴즈이력"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/myQuizList.jsp" />
+	</definition>
+	<definition name="/member/logout_msg" extends="main">
+		<put-attribute name="title" value="로그아웃"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/logout_msg.jsp" />
+	</definition>
 </tiles-definitions>       

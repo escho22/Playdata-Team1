@@ -7,28 +7,28 @@
 	<definition name="/quiz/select" extends="main">
 		<put-attribute name="title" value="퀴즈시작페이지"></put-attribute>
 		<put-attribute name="body"
-			value="/WEB-INF/views/select.jsp" />
+			value="/WEB-INF/views/quiz/select.jsp" />
 	</definition>
 	
-	<definition name="/learn/level1/choose" extends="main">
+	<definition name="/quiz/level1/choose" extends="main">
 		<put-attribute name="title" value="학습난이도1선택"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/quiz/level1/choose.jsp" />
 	</definition>
 	
-	<definition name="/learn/level2/choose" extends="main">
+	<definition name="/quiz/level2/choose" extends="main">
 		<put-attribute name="title" value="학습난이도2선택"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/quiz/level2/choose.jsp" />
 	</definition>
 	
-	<definition name="/learn/level3/choose" extends="main">
+	<definition name="/quiz/level3/choose" extends="main">
 		<put-attribute name="title" value="학습난이도3선택"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/quiz/level3/choose.jsp" />
 	</definition>
 	
-	<definition name="/learn/level4/choose" extends="main">
+	<definition name="/quiz/level4/choose" extends="main">
 		<put-attribute name="title" value="학습난이도4선택"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/quiz/level4/choose.jsp" />
@@ -40,9 +40,46 @@
 			value="/WEB-INF/views/quiz/level4/quiz_4_1.jsp" />
 	</definition>
 	
+	<definition name="/quiz/level4/quiz_4_2" extends="main">
+		<put-attribute name="title" value="퀴즈페이지"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/quiz/level4/quiz_4_2.jsp" />
+	</definition>
+
+	<definition name="/quiz/level4/quiz_4_3" extends="main">
+		<put-attribute name="title" value="퀴즈페이지"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/quiz/level4/quiz_4_3.jsp" />
+	</definition>
+	
+	<definition name="/quiz/level4/quiz_4_4" extends="main">
+		<put-attribute name="title" value="퀴즈페이지"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/quiz/level4/quiz_4_4.jsp" />
+	</definition>
+	
+	<definition name="/quiz/level4/quiz_4_5" extends="main">
+		<put-attribute name="title" value="퀴즈페이지"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/quiz/level4/quiz_4_5.jsp" />
+	</definition>
+	
+	<definition name="/quiz/level4/quiz_4_6" extends="main">
+		<put-attribute name="title" value="퀴즈페이지"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/quiz/level4/quiz_4_6.jsp" />
+	</definition>
+	
 	<definition name="/quiz/finish" extends="main">
 		<put-attribute name="title" value="퀴즈마침페이지"></put-attribute>
 		<put-attribute name="body"
 			value="/WEB-INF/views/quiz/finish.jsp" />
 	</definition>
+	
+	<definition name="/quiz/error" extends="main">
+		<put-attribute name="title" value="퀴즈페이지"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/quiz/error.jsp" />
+	</definition>
+	
 </tiles-definitions>

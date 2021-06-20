@@ -11,7 +11,8 @@ public class TilesConfiguration {
 	@Bean
 	public TilesConfigurer tilesConfigurer() {
 		final TilesConfigurer configurer = new TilesConfigurer();
-		configurer.setDefinitions(new String[] { "classpath:/tiles/tiles.xml", 
+		configurer.setDefinitions(new String[] { "classpath:/tiles/tiles.xml",
+												 "classpath:/tiles/tilesAdmin.xml",
 												 "classpath:/tiles/tilesMember.xml",
 												 "classpath:/tiles/tilesQuiz.xml",
 												 "classpath:/tiles/tilesLearn.xml"});

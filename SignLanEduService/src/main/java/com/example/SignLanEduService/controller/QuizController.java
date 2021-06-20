@@ -1,6 +1,9 @@
 package com.example.SignLanEduService.controller;
 
 
+import java.util.HashMap;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +52,7 @@ public class QuizController {
 		ModelAndView mav = new ModelAndView();
 		// 로그인여부 확인
 		if (!mservice.isMember(session)) {
-			mav.setViewName("redirect:/member/login_ck_form");
+			mav.setViewName("/member/login_ck_form");
 		} else {
 			mav.setViewName("/quiz/select");
 		}
@@ -89,21 +92,64 @@ public class QuizController {
 	}
 	
 	@RequestMapping(value = "/quiz/level4/quiz_4_1", method = RequestMethod.GET)
-	public ModelAndView quizLevel4_1() {
+	public ModelAndView quizLevel4_1(HttpSession session) {
 		ModelAndView mav = new ModelAndView();
 		WordVO word = wservice.get_word(1); 
 		mav.addObject("word", word.getW_word());
 		mav.addObject("index", word.getW_index());
-		
-		System.out.println(word.getW_word());
-		System.out.println(word.getW_index());
+		//mav.addObject("word_num", word.getW_num());
+//		if (!mservice.isMember(session)) {
+//			mav.setViewName("redirect:/member/login_ck_form");
+//		}
+//		else {
+//			mav.setViewName("/quiz/level4/quiz_4_1");
+//		}
 		mav.setViewName("/quiz/level4/quiz_4_1");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/quiz/level4/quiz_4_1", method = RequestMethod.POST)
+	public ModelAndView quizLevel4_1_save(HttpServletRequest request, QuizVO vo) {
+		ModelAndView mav = new ModelAndView();
+		int point_per_word = 5;
+		
+		//get sessions' member number m_num
+		int m_num=2;
+//		vo.setM_num(m_num);
+//		vo.setW_num(1);
+//		vo.setQ_correct(q_correct);
+//		vo.setQ_percent(q_percent);
+		
+		System.out.println(vo.getM_num());
+		System.out.println(vo.getW_num());
+		System.out.println(vo.getQ_correct());
+		System.out.println(vo.getQ_percent());
+		
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", point_per_word);
+		
+		int flag1 = service.create(vo);
+		int flag2 = mservice.update_point(map);
+		if (flag1==1 && flag2==1) {
+			mav.setViewName("/quiz/level4/quiz_4_1");
+		}
+		else {
+			System.out.println("error occurred");
+			mav.setViewName("/quiz/error");
+		}
 		return mav;
 	}
 	
 	@RequestMapping(value = "/quiz/level4/quiz_4_2", method = RequestMethod.GET)
 	public ModelAndView quizLevel4_2() {
 		ModelAndView mav = new ModelAndView();
+		WordVO word = wservice.get_word(2); 
+		mav.addObject("word", word.getW_word());
+		mav.addObject("index", word.getW_index());
+		
+		System.out.println(word.getW_word());
+		System.out.println(word.getW_index());
 		mav.setViewName("/quiz/level4/quiz_4_2");
 		return mav;
 	}
@@ -111,16 +157,28 @@ public class QuizController {
 	@RequestMapping(value = "/quiz/level4/quiz_4_3", method = RequestMethod.GET)
 	public ModelAndView quizLevel4_3() {
 		ModelAndView mav = new ModelAndView();
-		WordVO word = wservice.get_word(1); 
+		WordVO word = wservice.get_word(3); 
 		mav.addObject("word", word.getW_word());
 		mav.addObject("index", word.getW_index());
+		
+		System.out.println(word.getW_word());
+		System.out.println(word.getW_index());
 		mav.setViewName("/quiz/level4/quiz_4_3");
 		return mav;
 	}
 	
+	
+	
+	
 	@RequestMapping(value = "/quiz/level4/quiz_4_4", method = RequestMethod.GET)
 	public ModelAndView quizLevel4_4() {
 		ModelAndView mav = new ModelAndView();
+		WordVO word = wservice.get_word(4); 
+		mav.addObject("word", word.getW_word());
+		mav.addObject("index", word.getW_index());
+		
+		System.out.println(word.getW_word());
+		System.out.println(word.getW_index());
 		mav.setViewName("/quiz/level4/quiz_4_4");
 		return mav;
 	}
@@ -128,6 +186,12 @@ public class QuizController {
 	@RequestMapping(value = "/quiz/level4/quiz_4_5", method = RequestMethod.GET)
 	public ModelAndView quizLevel4_5() {
 		ModelAndView mav = new ModelAndView();
+		WordVO word = wservice.get_word(5); 
+		mav.addObject("word", word.getW_word());
+		mav.addObject("index", word.getW_index());
+		
+		System.out.println(word.getW_word());
+		System.out.println(word.getW_index());
 		mav.setViewName("/quiz/level4/quiz_4_5");
 		return mav;
 	}
@@ -135,6 +199,12 @@ public class QuizController {
 	@RequestMapping(value = "/quiz/level4/quiz_4_6", method = RequestMethod.GET)
 	public ModelAndView quizLevel4_6() {
 		ModelAndView mav = new ModelAndView();
+		WordVO word = wservice.get_word(6); 
+		mav.addObject("word", word.getW_word());
+		mav.addObject("index", word.getW_index());
+		
+		System.out.println(word.getW_word());
+		System.out.println(word.getW_index());
 		mav.setViewName("/quiz/level4/quiz_4_6");
 		return mav;
 	}
@@ -147,8 +217,13 @@ public class QuizController {
 			QuizVO vo, int m_num, int correct_cnt, @PathVariable("w_num") int w_num) {
 		
 		int point_per_word = 5; //단어별 점수지정
+		
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", correct_cnt*point_per_word);
+		
 		int flag1 = service.create(vo);
-		int flag2 = mservice.update_point(m_num, correct_cnt*point_per_word); //member service에 추가 필요
+		int flag2 = mservice.update_point(map); //member service에 추가 필요
 		
 		return (flag1==1 && flag2==1)?new ResponseEntity<String>("success",HttpStatus.OK)
 				:new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -157,12 +232,11 @@ public class QuizController {
 	
 	//quiz outro page로 이동 - 전체 결과 보여주기
 	@RequestMapping(value = "/quiz/finish", method = RequestMethod.GET)
-	public ModelAndView finish(int correct_cnt, int level) {//sessionScope.m_num으로 m_num 전달받으면됨.
+	public ModelAndView finish(int level) {//sessionScope.m_num으로 m_num 전달받으면됨.
 		
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("level", level);
 		//make a problem counter as an attribute in session?
-		mav.addObject("correct_cnt", correct_cnt);
 		mav.setViewName("/quiz/finish");
 
 		return mav;

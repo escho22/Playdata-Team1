@@ -1,6 +1,9 @@
 package com.example.SignLanEduService.controller;
 
+import java.util.HashMap;
 import java.util.List;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -10,12 +13,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.SignLanEduService.service.LearnService;
+import com.example.SignLanEduService.service.MemberService;
 import com.example.SignLanEduService.service.WordService;
 import com.example.SignLanEduService.vo.LearnVO;
+import com.example.SignLanEduService.vo.MemberVO;
 import com.example.SignLanEduService.vo.WordVO;
 
 @Controller
 public class LearnController {
+	
+	@Autowired
+	@Qualifier("com.example.SignLanEduService.service.MemberServiceImpl")
+	private MemberService mservice;
 	
 	@Autowired
 	@Qualifier("com.example.SignLanEduService.service.LearnServiceImpl")
@@ -74,10 +83,34 @@ public class LearnController {
 		ModelAndView mav = new ModelAndView();
 		
 		WordVO wordVO = this.wservice.readWord(1);
-		System.out.println(wordVO.getW_num());
+		//System.out.println(wordVO.getW_num());
 		
 		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_1");
+		
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/learn_4_1", method = RequestMethod.POST)
+	public ModelAndView learnLevel4_1(int w_num, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+
+		LearnVO learnVO = new LearnVO();
+		learnVO.setM_num(m_num);
+		learnVO.setW_num(w_num);
+		int cnt = lservice.createLearn(learnVO);
+		
+		WordVO wordVO = this.wservice.readWord(w_num);
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", wordVO.getW_difficulty());
+	    mservice.update_point(map);
+	    
+	    mav.addObject("cnt", cnt);
+
+	    mav.setViewName("redirect:/learn/level4/learn_4_1");
 		
 		return mav;
 	}
@@ -87,10 +120,34 @@ public class LearnController {
 		ModelAndView mav = new ModelAndView();
 		
 		WordVO wordVO = this.wservice.readWord(2);
-		System.out.println(wordVO.getW_num());
+		//System.out.println(wordVO.getW_num());
 		
 		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_2");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/learn_4_2", method = RequestMethod.POST)
+	public ModelAndView learnLevel4_2(int w_num, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+
+		LearnVO learnVO = new LearnVO();
+		learnVO.setM_num(m_num);
+		learnVO.setW_num(w_num);
+		int cnt = lservice.createLearn(learnVO);
+		
+		WordVO wordVO = this.wservice.readWord(w_num);
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", wordVO.getW_difficulty());
+	    mservice.update_point(map);
+	    
+	    mav.addObject("cnt", cnt);
+
+	    mav.setViewName("redirect:/learn/level4/learn_4_2");
+		
 		return mav;
 	}
 	
@@ -99,10 +156,34 @@ public class LearnController {
 		ModelAndView mav = new ModelAndView();
 		
 		WordVO wordVO = this.wservice.readWord(3);
-		System.out.println(wordVO.getW_num());
+		//System.out.println(wordVO.getW_num());
 		
 		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_3");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/learn_4_3", method = RequestMethod.POST)
+	public ModelAndView learnLevel4_3(int w_num, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+
+		LearnVO learnVO = new LearnVO();
+		learnVO.setM_num(m_num);
+		learnVO.setW_num(w_num);
+		int cnt = lservice.createLearn(learnVO);
+		
+		WordVO wordVO = this.wservice.readWord(w_num);
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", wordVO.getW_difficulty());
+	    mservice.update_point(map);
+	    
+	    mav.addObject("cnt", cnt);
+
+	    mav.setViewName("redirect:/learn/level4/learn_4_3");
+		
 		return mav;
 	}
 	
@@ -118,6 +199,30 @@ public class LearnController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "/learn/level4/learn_4_4", method = RequestMethod.POST)
+	public ModelAndView learnLevel4_4(int w_num, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+
+		LearnVO learnVO = new LearnVO();
+		learnVO.setM_num(m_num);
+		learnVO.setW_num(w_num);
+		int cnt = lservice.createLearn(learnVO);
+		
+		WordVO wordVO = this.wservice.readWord(w_num);
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", wordVO.getW_difficulty());
+	    mservice.update_point(map);
+	    
+	    mav.addObject("cnt", cnt);
+
+	    mav.setViewName("redirect:/learn/level4/learn_4_4");
+		
+		return mav;
+	}
+	
 	@RequestMapping(value = "/learn/level4/learn_4_5", method = RequestMethod.GET)
 	public ModelAndView learnLevel4_5() {
 		ModelAndView mav = new ModelAndView();
@@ -127,6 +232,30 @@ public class LearnController {
 		
 		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_5");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/learn_4_5", method = RequestMethod.POST)
+	public ModelAndView learnLevel4_5(int w_num, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+
+		LearnVO learnVO = new LearnVO();
+		learnVO.setM_num(m_num);
+		learnVO.setW_num(w_num);
+		int cnt = lservice.createLearn(learnVO);
+		
+		WordVO wordVO = this.wservice.readWord(w_num);
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", wordVO.getW_difficulty());
+	    mservice.update_point(map);
+	    
+	    mav.addObject("cnt", cnt);
+
+	    mav.setViewName("redirect:/learn/level4/learn_4_5");
+		
 		return mav;
 	}
 	
@@ -142,9 +271,38 @@ public class LearnController {
 		return mav;
 	}
 	
-	@RequestMapping(value = "/learn/level4/learn_4_fin", method = RequestMethod.GET)
-	public ModelAndView learnFin() {
+	@RequestMapping(value = "/learn/level4/learn_4_6", method = RequestMethod.POST)
+	public ModelAndView learnLevel4_6(int w_num, HttpSession session) {
 		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+
+		LearnVO learnVO = new LearnVO();
+		learnVO.setM_num(m_num);
+		learnVO.setW_num(w_num);
+		int cnt = lservice.createLearn(learnVO);
+		
+		WordVO wordVO = this.wservice.readWord(w_num);
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("m_num", m_num);
+		map.put("point", wordVO.getW_difficulty());
+	    mservice.update_point(map);
+	    
+	    mav.addObject("cnt", cnt);
+
+	    mav.setViewName("redirect:/learn/level4/learn_4_6");
+		
+		return mav;
+	}
+	
+	@RequestMapping(value = "/learn/level4/learn_4_fin", method = RequestMethod.GET)
+	public ModelAndView learnFin(HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+		MemberVO memberVO = this.mservice.read(m_num);
+		
+		mav.addObject("memberVO", memberVO);
 		
 		mav.setViewName("/learn/level4/learn_4_fin");
 		

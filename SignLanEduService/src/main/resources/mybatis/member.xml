@@ -20,8 +20,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- m_num로 회원 정보 조회 -->
 	<select id="read" resultType="com.example.SignLanEduService.vo.MemberVO"
 		parameterType="int">
-		SELECT m_num, m_id, m_pw, m_name, m_birth, m_sex,
-		m_email, m_register, m_recent, m_point, m_is_admin
+		SELECT *
 		FROM member
 		WHERE
 		m_num = #{m_num}
@@ -40,11 +39,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<update id="update" parameterType="com.example.SignLanEduService.vo.MemberVO">
 		UPDATE member
 		SET
-		m_name=#{m_name}, m_birth=#{m_birth}, m_sex=#{m_sex},
-		m_email=#{m_email}
+		m_pw=#{m_pw}, m_name=#{m_name}, m_birth=#{m_birth}, m_email=#{m_email}
 		WHERE m_num = #{m_num}
 	</update>
-
+	
 	<delete id="delete" parameterType="int">
 		DELETE FROM member
 		WHERE m_num
@@ -83,7 +81,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE m_id=#{m_id} AND m_pw=#{m_pw}
 	</select>
 	
-	<update id="update_point" parameterType="int">
+	<update id="update_point" parameterType="Map">
 		UPDATE member
 		SET
 		m_point= m_point + #{point}

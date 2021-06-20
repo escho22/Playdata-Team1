@@ -1,18 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-	    <meta charset="utf-8" />
-	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	    <meta name="description" content="" />
-	    <meta name="author" content="" />
-	    <!-- 페이지 탭에 표시될 아이콘 및 페이지명 -->
-	  	<title>Learn - Level 4</title>
-	    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-	     
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<title>SignEdu - My Quiz Record</title>
+		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+			     
 	    <!-- Bootstrap icons-->
 	   	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 	     
@@ -23,6 +22,7 @@
 	    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
 	    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,700&display=swap" rel="stylesheet" />
 
+	     
 	    <!-- Core theme CSS (includes Bootstrap)-->
 	    <link href="<%=request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css"/>
 	
@@ -31,14 +31,37 @@
 		
 		<!-- Bootstrap core JS-->
 	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-	    <script src="<%=request.getContextPath()%>/js/scripts.js"></script> 
+	    <script src="<%=request.getContextPath()%>/js/scripts.js"></script>
 	</head>
 <body>
 <section class="masthead">
-<h2>Level 4 학습 완료!</h2> <br>
+<h2>${memberVO.m_id } 님의 퀴즈 이력</h2>
 <hr>
-${memberVO.m_id }님의 현재 포인트 <br>
-<h2>${memberVO.m_point }</h2>
+<table border="1">
+	<thead>
+		<tr>
+			<th>퀴즈 단어</th>
+			<th>일시</th>
+		</tr>
+	</thead>
+	<tbody>
+		<c:forEach var="quizVO" items="${list}">
+		<tr>
+			<td>${wlist[quizVO.w_num-1].w_word }</td>
+			<td>${quizVO.q_date }</td>
+		</tr>
+		</c:forEach>
+	</tbody>
+	<tfoot>
+		<tr>
+			<th colspan="2">총 ${fn:length(list) }건</th>
+		</tr>
+	</tfoot>
+</table>
+
+<hr>
+<A href='/member/myInfo'> myInfo </A> <br>
+<A href='/'> Home </A>
 </section>
 </body>
 </html>
