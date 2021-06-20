@@ -8,7 +8,7 @@ public class QuizVO {
 	private int m_num;
 	private int w_num;
 	private int q_correct; //correct여부인가요? boolean 대신 int 사용한 이유?
-	private int q_percent;
+	private double q_percent;
 	private String q_date;
 
 }
