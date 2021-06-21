@@ -62,8 +62,8 @@
 </table>
 
 <hr>
-<A href='/admin/stats/choose'>통계</A> <br>
-<A href='/'>Home</A>
+<A href='<%=request.getContextPath()%>/admin/stats/choose'>통계</A> <br>
+<A href='<%=request.getContextPath()%>/'>Home</A>
 </section>
 </body>
 </html>

@@ -10,7 +10,7 @@
 	    <meta name="description" content="" />
 	    <meta name="author" content="" />
 	    <!-- 페이지 탭에 표시될 아이콘 및 페이지명 -->
-	  	<title>Quiz - Level 4-2</title>
+	  	<title>Quiz - Level 4-1</title>
 	    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 	     
 	    <!-- Bootstrap icons-->
@@ -49,8 +49,8 @@
 	
 		<p id="answer" style="display: none; height: 100px;">${index}</p>
 
-		<script src="/js/webcam_detection.js"></script>
-		<script src="/js/quiz_result.js"></script>
+		<script src="<%=request.getContextPath()%>/js/webcam_detection.js"></script>
+		<script src="<%=request.getContextPath()%>/js/quiz_result.js"></script>
 		
 		<h1>Quiz Level 4 - 1</h1>
 		<hr>
@@ -84,9 +84,9 @@
 			<tr>
 				<td><button type="button" id="save_btn" class="btn btn-info">저장</button></td>
 				<td><button id="btn_list" type="button"
-							onclick="location.href='/quiz/level4/choose'" class="btn btn-info">목록</button></td>
+							onclick="location.href='<%=request.getContextPath()%>/quiz/level4/choose'" class="btn btn-info">목록</button></td>
 				<td><button id="btn_next" type="button"
-							onclick="location.href='/quiz/level4/quiz_4_2'" class="btn btn-info">다음</button></td>
+							onclick="location.href='<%=request.getContextPath()%>/quiz/level4/quiz_4_2'" class="btn btn-info">다음</button></td>
 			</tr>
 		</table>
 		</div>

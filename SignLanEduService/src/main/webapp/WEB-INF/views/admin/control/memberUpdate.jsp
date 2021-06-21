@@ -60,7 +60,7 @@
 								</div>
 								
 								<form class="user" name='frm' id='frm' method='POST'
-									action='/admin/control/memberUpdate' class="form-horizontal">
+									action='<%=request.getContextPath()%>/admin/control/memberUpdate' class="form-horizontal">
 									
 									<div class="form-group row">
 										<div class="col-sm-6 mb-4 mb-sm-0">
@@ -188,22 +188,12 @@
 										<div class="col-sm-12 mb-3" align="right">
 											<button id='btn_send'
 												class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">Update</button>
-											<button type="button" onclick="location.href='/'"
+											<button type="button" onclick="location.href='<%=request.getContextPath()%>/admin/control/choose'"
 												class="btn btn-primary rounded-pill mb-lg-0">Cancel</button>
 										</div>
 										<hr>
 									</div>
 									</form>
-									<div class="form-group row">
-										<div class="col-sm-12 mb-3" align="right">															
-											<button type="button" onclick="location.href='/admin/select'"
-												class="btn btn-primary rounded-pill mb-lg-0">관리자홈</button>
-												
-											<button type="button" onclick="location.href='/admin/control/choose'"
-												class="btn btn-primary rounded-pill mb-lg-0">관리페이지</button>
-										</div>
-									</div>
-									
 								<div class="col-lg-6 d-none d-lg-block bg-register-image"></div>
 							</div>
 						</div>

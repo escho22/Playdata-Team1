@@ -19,9 +19,9 @@
 						<a class="nav-link dropdown text-decoration-none fs-7" data-toggle="dropdown" href="#">
 						<i class="bi bi-megaphone me-1" style="font-size: 1rem;"></i> 관리자 계정, ${sessionScope.m_id } <i class="bi bi-caret-down-fill ms-1" style="font-size: 1rem;"></i></a>
 						<div class="dropdown-menu text-decoration-none" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 60px);">
-							<a class="dropdown-item text-decoration-none fs-7 ctag" href="/admin/select"><i class="bi bi-cone-striped me-2" style="font-size: 1rem;"></i> Management  </a>
+							<a class="dropdown-item text-decoration-none fs-7 ctag" href="<%=request.getContextPath()%>/admin/select"><i class="bi bi-cone-striped me-2" style="font-size: 1rem;"></i> Management  </a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item text-decoration-none fs-7 ctag" href="/member/logout"><i class="bi bi-box-arrow-right me-2" style="font-size: 1rem;"></i> Sign Out </a>
+							<a class="dropdown-item text-decoration-none fs-7 ctag" href="<%=request.getContextPath()%>/member/logout"><i class="bi bi-box-arrow-right me-2" style="font-size: 1rem;"></i> Sign Out </a>
 						</div>
 					</li>
 				</c:set>
@@ -32,10 +32,10 @@
 						<a class="nav-link dropdown text-decoration-none fs-7" data-toggle="dropdown" href="#">
 						<i class="bi bi-emoji-laughing me-1" style="font-size: 1rem;"></i> 안녕하세요.  ${sessionScope.m_id } 님 ! <i class="bi bi-caret-down-fill ms-1" style="font-size: 1rem;"></i></a>
 						<div class="dropdown-menu text-decoration-none shadow-sm" style="position: absolute; inset: 0px auto auto 10px; margin: 0px; transform: translate(0px, 60px);">
-							<a class="dropdown-item text-decoration-none fs-7 ctag me-2" href="/member/myHistory"><i class="bi bi-brush me-2" style="font-size: 1rem;"></i> My History  </a>
-							<a class="dropdown-item text-decoration-none fs-7 ctag me-2" href="/member/myInfo"><i class="bi bi-person-circle me-2" style="font-size: 1rem;"></i> Profile  </a>
+							<a class="dropdown-item text-decoration-none fs-7 ctag me-2" href="<%=request.getContextPath()%>/member/myHistory"><i class="bi bi-brush me-2" style="font-size: 1rem;"></i> My History  </a>
+							<a class="dropdown-item text-decoration-none fs-7 ctag me-2" href="<%=request.getContextPath()%>/member/myInfo"><i class="bi bi-person-circle me-2" style="font-size: 1rem;"></i> Profile  </a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item text-decoration-none fs-7 ctag me-2" href="/member/logout"><i class="bi bi-box-arrow-right me-2" style="font-size: 1rem;"></i> Sign Out </a>
+							<a class="dropdown-item text-decoration-none fs-7 ctag me-2" href="<%=request.getContextPath()%>/member/logout"><i class="bi bi-box-arrow-right me-2" style="font-size: 1rem;"></i> Sign Out </a>
 						</div>
 					</li>
 				</c:set>
@@ -43,11 +43,11 @@
 			<c:otherwise>
 				<c:set var='str'>
 					<a class="nav-link me-lg-0 me-2"> 
-					<span class="pointer" onclick="location.href='/member/login'">Sign-in</span>
+					<span class="pointer" onclick="location.href='<%=request.getContextPath()%>/member/login'">Sign-in</span>
 					</a>
 				</c:set>
 				<c:set var='signup'>
-	             	<button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" onclick="location.href='/member/create'">
+	             	<button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" onclick="location.href='<%=request.getContextPath()%>/member/create'">
 	         			<span class="d-flex align-items-center">
 	          				<i class="bi-person-fill me-2"></i>
 	          				<span class="small">Create Account</span>
@@ -61,12 +61,12 @@
     	<!--******* Navigation :: 네비게이션 바 (브랜드 아이콘, 페이지 카테고리, 로그인 창, 회원가입버튼 포함) *******-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
             <div class="container px-5">
-				<a class="navbar-brand fw-bold" href="/#page-top">lantern</a>
+				<a class="navbar-brand fw-bold" href="<%=request.getContextPath()%>/#page-top">lantern</a>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav me-auto mb-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link me-lg-4" href="<%=request.getContextPath()%>/#features">About</a></li>
-						<li id="learn" class="nav-item"><a class="nav-link me-lg-4" href="/learn/select">Learn</a></li>
-                   		<li id="Quiz" class="nav-item"><a class="nav-link me-lg-4" href="/quiz/select">Quiz</a></li>
+						<li id="learn" class="nav-item"><a class="nav-link me-lg-4" href="<%=request.getContextPath()%>/learn/select">Learn</a></li>
+                   		<li id="Quiz" class="nav-item"><a class="nav-link me-lg-4" href="<%=request.getContextPath()%>/quiz/select">Quiz</a></li>
                     </ul>
                     <ul class="navbar-nav ms-auto me-2 my-lg-0">                 
                     	<li class="nav-item"><span>${str}</span><li>

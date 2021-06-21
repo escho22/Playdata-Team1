@@ -54,26 +54,34 @@
 	<thead>
 		<tr>
 			<th>퀴즈 단어</th>
-			<th>일시</th>
+			<th>정답여부</th>
+			<th>일치도</th>
+			<th>일자</th>
 		</tr>
 	</thead>
 	<tbody>
 		<c:forEach var="quizVO" items="${qlist}">
+		<c:choose>
+		<c:when test="${quizVO.q_correct == 0 }"> <c:set var="correct" value="X"/> </c:when>
+		<c:otherwise> <c:set var="correct" value="O"/> </c:otherwise>
+		</c:choose>
 		<tr>
 			<td>${wlist[quizVO.w_num-1].w_word }</td>
+			<td>${correct }</td>
+			<td>${quizVO.q_percent }</td>
 			<td>${quizVO.q_date }</td>
 		</tr>
 		</c:forEach>
 	</tbody>
 	<tfoot>
 		<tr>
-			<th colspan="2">총 ${fn:length(qlist) }건</th>
+			<th colspan="4">총 ${fn:length(qlist) }건</th>
 		</tr>
 	</tfoot>
 </table>
 <hr>
-<A href='/member/myInfo'> myInfo </A> <br>
-<A href='/'> Home </A>
+<A href='<%=request.getContextPath()%>/member/myInfo'> myInfo </A> <br>
+<A href='<%=request.getContextPath()%>/'> Home </A>
 </section>
 </body>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -50,7 +50,7 @@ Level 4 - 4
 </tr>
 </table>
 <hr>
-<form action="/learn/level4/learn_4_4" method="POST" id="creatLearn" name='lfrm4_4'>
+<form action="<%=request.getContextPath()%>/learn/level4/learn_4_4" method="POST" id="creatLearn" name='lfrm4_4'>
 	<input type='hidden' name='m_id' id='m_id' value="${sessionScope.id }">
 	<input type='hidden' name='w_num' id='w_num' value="${wordVO.w_num }">
 </form>
@@ -68,9 +68,9 @@ Level 4 - 4
 </DIV>
 <hr>
 <table>
-<tr> <td><A href='/learn/level4/learn_4_3'>이전</A></td> <td><A href='/learn/level4/choose'>목록</A></td> <td><A href='/learn/level4/learn_4_5'>다음</A></td> </tr>
+<tr> <td><A href='<%=request.getContextPath()%>/learn/level4/learn_4_3'>이전</A></td> <td><A href='<%=request.getContextPath()%>/learn/level4/choose'>목록</A></td> <td><A href='<%=request.getContextPath()%>/learn/level4/learn_4_5'>다음</A></td> </tr>
 </table>
 </section>
-<script src="/js/webcam_learn.js"></script>
+<script src="<%=request.getContextPath()%>/js/webcam_learn.js"></script>
 </body>
 </html>

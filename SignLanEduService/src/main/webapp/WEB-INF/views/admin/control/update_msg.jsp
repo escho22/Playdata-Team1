@@ -35,10 +35,10 @@
           </LI>
           <LI class='li_none'>
             <button type='button' 
-                        onclick="location.href='./read?usersno=${param.usersno}'"
-                        class="btn btn-info">변경 확인</button>
+                        onclick="location.href='<%=request.getContextPath()%>/admin/stats/memberList'"
+                        class="btn btn-info">전체회원목록</button>
             <button type='button' 
-                        onclick="location.href='./list'"
+                        onclick="location.href='<%=request.getContextPath()%>/admin/control/choose'"
                         class="btn btn-info">목록</button>                        
           </LI>
         </c:when>
@@ -51,7 +51,7 @@
                         onclick="history.back();"
                         class="btn btn-info">재시도</button>
             <button type='button' 
-                        onclick="location.href='/admin/control/choose'"
+                        onclick="location.href='<%=request.getContextPath()%>/admin/control/choose'"
                         class="btn btn-info">관리페이지</button>                        
           </LI>
         </c:otherwise>
