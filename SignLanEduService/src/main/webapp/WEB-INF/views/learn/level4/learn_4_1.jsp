@@ -53,15 +53,14 @@
 							</div>
 						</div>
 					</div>					
-					<form action="/learn/level4/learn_4_1" method="POST" id="creatLearn" name='lfrm4_1'>
+					<form action="<%=request.getContextPath()%>/learn/level4/learn_4_1" method="POST" id="creatLearn" name='lfrm4_1'>
 						<input type='hidden' name='m_id' id='m_id' value="${sessionScope.id }">
 						<input type='hidden' name='w_num' id='w_num' value="${wordVO.w_num }">
-					</form>
 					<hr>
-					<div class="justify-content-center text-center mt-3">
+					<div class="justify-content-center text-center mt-45">
 					<c:choose>
 						<c:when test="${param.cnt == 1 }">
-       					  	<span><i class="bi bi-check2-all me-1"></i>다음문제로 넘어가 주세요.</span>
+       					  	<span><i class="bi bi-check2-all me-1"></i>다음문제로 넘어가 주세요!</span>
        					</c:when>
 						<c:otherwise>
 							<span>학습미완료</span>
@@ -72,14 +71,14 @@
 						<div class="col-lg-3 py-4 text-lg-end pt-lg-45">
 							<span class="pointer fs-6 mt-lg-4" onclick="location.href='<%=request.getContextPath()%>/learn/level4/choose'"><i class="bi bi-justify me-2 style="style="font-size: 1rem;"></i>목록</span>
 						</div>
-						<form class="col-lg-3 py-4 text-lg-center">
+						<div class="col-lg-3 py-4 text-lg-center">
 							<button class="btn btn-outline-primary rounded-pill mb-lg-0 mx-1 px-3 fs-6 alertNext" type="submit" form="creatLearn">학습완료</button>
-						</form>
+						</div>
 						<div class="col-lg-3 py-4 text-lg-start pt-lg-45">
 							<span class="pointer fs-6 mt-lg-4" onclick="location.href='<%=request.getContextPath()%>/learn/level4/learn_4_2'">다음<i class="bi bi-chevron-right ms-2 style="style="font-size: 1rem;"></i></span>				 
 						</div>
 					</div>
-					<hr>
+					</form>
 				 </div>
 			   </div>
 			</section>
