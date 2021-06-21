@@ -68,8 +68,8 @@
 </table>
 
 <hr>
-<A href='/member/myInfo'> myInfo </A> <br>
-<A href='/'> Home </A>
+<A href='<%=request.getContextPath()%>/member/myInfo'> myInfo </A> <br>
+<A href='<%=request.getContextPath()%>/'> Home </A>
 </section>
 </body>
 </html>

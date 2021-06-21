@@ -46,20 +46,20 @@ Learn - Level 4
 		<c:forEach var="wordVO" items="${list}">
 		<tr>
 			<td>${wordVO.w_word }</td>
-			<td><A href='/learn/level4/learn_4_${wordVO.w_num }'>학습하기</A></td>
+			<td><A href='<%=request.getContextPath()%>/learn/level4/learn_4_${wordVO.w_num }'>학습하기</A></td>
 		</tr>
 		</c:forEach>
 	</tbody>
 	<tfoot>
 		<tr>
 			<th colspan="2">
-				<A href='/learn/level4/learn_4_1'>처음부터</A>
+				<A href='<%=request.getContextPath()%>/learn/level4/learn_4_1'>처음부터</A>
 			</th>
 		</tr>
 	</tfoot>
 </table>
 <hr>
-<A href='/learn/select'>목록</A>
+<A href='<%=request.getContextPath()%>/learn/select'>목록</A>
 </section>
 </body>
 </html>

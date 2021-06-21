@@ -12,7 +12,7 @@
 	    <meta name="author" content="" />
 	    <!-- 페이지 탭에 표시될 아이콘 및 페이지명 -->
 	  	<title>Quiz - Level 4-5</title>
-	    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+	    <link rel="icon" type="image/x-icon" href="<%=request.getContextPath()%>/assets/favicon.ico" />
 	     
 	    <!-- Bootstrap icons-->
 	   	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
@@ -49,8 +49,8 @@
 	<div class="container px-5">
 		<p id="answer" style="display: none; height: 100px;">${index}</p>
 	
-		<script src="/js/webcam_detection.js"></script>
-		<script src="/js/quiz_result.js"></script>
+		<script src="<%=request.getContextPath()%>/js/webcam_detection.js"></script>
+		<script src="<%=request.getContextPath()%>/js/quiz_result.js"></script>
 	
 		<h1>Quiz Level 4 - 5</h1>
 		<hr>
@@ -84,12 +84,12 @@
 			<tr>
 				<td><button type="button" id="save_btn" class="btn btn-info">저장</button></td>
 				<td><button id="btn_next" type="button"
-						onclick="location.href='/quiz/level4/quiz_4_4'"
+						onclick="location.href='<%=request.getContextPath()%>/quiz/level4/quiz_4_4'"
 						class="btn btn-info">이전</button></td>
 				<td><button id="btn_list" type="button"
-						onclick="location.href='/quiz/level4/choose'" class="btn btn-info">목록</button></td>
+						onclick="location.href='<%=request.getContextPath()%>/quiz/level4/choose'" class="btn btn-info">목록</button></td>
 				<td><button id="btn_next" type="button"
-						onclick="location.href='/quiz/level4/quiz_4_6'"
+						onclick="location.href='<%=request.getContextPath()%>/quiz/level4/quiz_4_6'"
 						class="btn btn-info">다음</button></td>
 			</tr>
 		</table>

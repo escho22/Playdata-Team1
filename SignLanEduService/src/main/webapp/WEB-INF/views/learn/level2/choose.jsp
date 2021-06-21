@@ -19,7 +19,7 @@
 <!-- <A href='/learn/level4/learn_4_5'>5번</A> <br> -->
 <!-- <A href='/learn/level4/learn_4_6'>6번</A> -->
 <hr>
-<A href='/learn/select'>목록</A> <br>
+<A href='<%=request.getContextPath()%>/learn/select'>목록</A> <br>
 
 </body>
 </html>

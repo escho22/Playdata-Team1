@@ -239,10 +239,7 @@
 								<hr>
 								<div class="form-group">
 									<div class="text-center">
-										<a class="small" href="forgot-password.html">Forgot Password?</a>
-									</div>
-									<div class="text-center">
-										<a class="small" href='${root}/users/login'>Already have an account? Sign-in!</a>
+										<a class="small" href='<%=request.getContextPath()%>/member/login'>Already have an account? Sign-in!</a>
 									</div>
 								</div>
 								<div class="col-lg-6 d-none d-lg-block bg-register-image"></div>
@@ -252,14 +249,6 @@
 				</div>
 			</div>
 		</div>
-
-
-		<!-- 	<aside class="aside_right">
-		<a href="javascript:location.reload();">새로고침</a> 
-		<span class='menu_divide'>│</span> <A href='./create'>회원 가입</a> 
-		<span class='menu_divide'>│</span> <A href='./list'>목록</a>
-		</aside> -->
-
 	</section>
 </body>
 </html>

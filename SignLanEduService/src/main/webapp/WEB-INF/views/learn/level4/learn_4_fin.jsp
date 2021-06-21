@@ -39,6 +39,8 @@
 <hr>
 ${memberVO.m_id }님의 현재 포인트 <br>
 <h2>${memberVO.m_point }</h2>
+<hr>
+<A href='<%=request.getContextPath()%>/learn/select'>목록</A>
 </section>
 </body>
 </html>
