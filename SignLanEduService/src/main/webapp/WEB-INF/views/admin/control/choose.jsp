@@ -73,7 +73,7 @@
 						<div class="form-group row">
 							<div class="col-sm-12 mb-3" align="right">
 								<A href='/admin/control/wordCreate' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">단어생성</A>
-								<A href='/admin/control/adminCreate' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">관리자추가</A>
+								<A href='/admin/control/wordList' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">단어목록</A>
 							</div>
 						</div>
 						

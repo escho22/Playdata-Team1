@@ -35,10 +35,10 @@
           </LI>
           <LI class='li_none'>
             <button type='button' 
-                        onclick="location.href='./read?usersno=${param.usersno}'"
-                        class="btn btn-info">변경 확인</button>
+                        onclick="location.href='/admin/stats/memberList'"
+                        class="btn btn-info">전체회원목록</button>
             <button type='button' 
-                        onclick="location.href='./list'"
+                        onclick="location.href='/admin/control/choose'"
                         class="btn btn-info">목록</button>                        
           </LI>
         </c:when>
