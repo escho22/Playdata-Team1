@@ -18,7 +18,7 @@ function progress_move() {
 	if (i == 0) {
 		i = 1;
 		var elem = document.getElementById("myBar");
-		var width = 10;
+		var width = 0;
 		var id = setInterval(move, 1000);
 		function move() {
 			if (width >= 100) {
@@ -26,7 +26,7 @@ function progress_move() {
 				i = 0;
 			} else {
 				width += 10;
-				elem.style.width = width + "%";
+				elem.style.width = width*0.97 + "%";
 				//elem.innerHTML = width;
 			}
 		}

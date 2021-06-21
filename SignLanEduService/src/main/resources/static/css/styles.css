@@ -6907,6 +6907,10 @@ form.user .btn-user {
    object-fit: cover;
 }
 
+.font-blue {
+	color: #0049D6
+}
+
 /* .videoContainer
 {
    position:absolute;
@@ -7007,6 +7011,11 @@ form.user .btn-user {
 .my-4 {
   margin-top: 1.5rem !important;
   margin-bottom: 1.5rem !important;
+}
+
+.my-45 {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
 }
 
 .my-5 {
