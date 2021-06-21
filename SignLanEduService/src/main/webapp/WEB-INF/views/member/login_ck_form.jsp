@@ -50,12 +50,6 @@
 													value='${ck_id }' required="required" placeholder="* ID"
 													autofocus="autofocus">
 											</div>
-											<%--<div class="col-sm-3 mb-4 mb-sm-0">
-										        <label>   
-										        	<input type='checkbox' name='id_save' value='Y' 
-										                    ${ck_id_save == 'Y' ? "checked='checked'" : "" }> 저장
-										        </label>                   
-										    </div> --%>
 										</div>
 										<div class="form-group row justify-content-center">
 											<span class="d-flex align-items-center col-sm-1 me-lg-2"> 

@@ -8131,6 +8131,11 @@ form.user .btn-user {
     padding-right: 3rem !important;
     padding-left: 3rem !important;
   }
+  
+  .px-sm-6 {
+    padding-right: 5rem !important;
+    padding-left: 5rem !important;
+  }
 
   .py-sm-0 {
     padding-top: 0 !important;
@@ -11231,8 +11236,10 @@ footer a:hover, footer a:active, footer a:focus {
   background: linear-gradient(160deg, #ffff, #FAFFD1);
   background-position: center;
   background-size: cover;
-  padding-top: 10.5rem;
-  padding-bottom: 10.5rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  padding-right: 15rem;
+  padding-left: 15rem;
 }
 
 .masthead {
@@ -11243,6 +11250,7 @@ footer a:hover, footer a:active, footer a:focus {
   padding-top: 9rem;
   padding-bottom: 9rem;
 }
+
 .masthead .masthead-device-mockup {
   display: flex;
   align-items: center;
