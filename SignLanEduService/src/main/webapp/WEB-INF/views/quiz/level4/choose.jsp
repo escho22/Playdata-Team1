@@ -33,6 +33,7 @@
 		<script src="<%=request.getContextPath()%>/js/scripts.js"></script> 
 	</head>
 <body>
+<div class="container px-5">
 <section class="masthead">
 <h2>Quiz - Level 4</h2>
 <hr>
@@ -46,5 +47,6 @@
 <hr>
 <A href='/quiz/select'>목록</A> <br>
 </section>
+</div>
 </body>
 </html>

@@ -10,6 +10,9 @@ var correct = 0;
 var conf = 0;
 var quiz_data;
 
+//text꺼내기
+var word_txt;
+
 var i = 0;
 function progress_move() {
 	if (i == 0) {
@@ -35,10 +38,11 @@ function getFrame() {
 	//draw capture_show only on canvas
 	webcam.hide();
 
-	mycanvas = createCanvas(1280 + 155, 720);
+	mycanvas = createCanvas(1280, 720);
+	//mycanvas.position(48+155,0,'fixed')
 	mycanvas.parent("container-canvas2");
-
-	image(capture, 155, 0, 1280, 720);
+	
+	image(capture, 0, 0, 1280, 720);
 	return capture;
 }
 
@@ -91,20 +95,26 @@ function setup() {
 		if(json_object && word_idx === answer_key){
 			word_txt = document.getElementById("problem_word").innerHTML;
 			correct = 1;
+			
 		}
 		else{
 			word_txt = "TRY AGAIN"
 		}
 			
-		textSize(32);
-		text(word_txt, 10, 30);
-		text(conf, 10, 60);
+		//textSize(32);
+		//text(word_txt, 10, 30);
+		//text(conf, 10, 60);
 		fill(0, 102, 153, 51);
-		rect((box[0] * ratio + 155), (box[1] * ratio), (box[2] * ratio), (box[3] * ratio));
-
+		rect((box[0] * ratio), (box[1] * ratio), (box[2] * ratio), (box[3] * ratio));
+		conf = parseFloat(conf)
+		
+		document.getElementById("display_word").innerHTML = word_txt;
+		document.getElementById("display_word").style.visibility = "visible";
+		document.getElementById("display_conf").innerHTML = conf;
+		document.getElementById("display_conf").style.visibility = "visible";
+		
 		check();
 		
-		conf = parseFloat(conf)
 		quiz_data = {
 			q_correct: correct,
 			q_percent: conf
@@ -131,5 +141,5 @@ function check() {
 
 
 function showResult(){
-	//alert("Keep up the good work!");
+	alert("저장되었습니다. 퀴즈이력은 회원님의 history에서 확인해주세요!");
 }
