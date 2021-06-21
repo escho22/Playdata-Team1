@@ -63,19 +63,13 @@
 											</span>
 											<div class="col-sm-9 mb-4 mb-sm-0">
 												<input type='password' class="form-control" name='m_pw'
-													id='m_pw' value='${ck_passwd }' required="required" placeholder="* Password"> 
-											<%-- <Label>
-													<input type='checkbox' name='passwd_save' value='Y'
-													${ck_passwd_save == 'Y' ? "checked='checked'" : "" }>저장
-												</Label> --%>
+													id='m_pw' value='${ck_passwd }' required="required" placeholder="* Password">
 											</div>
 										</div>
 										<div class="form-group row justify-content-center">
 											<div class="col-sm-10 mb-3 p-2" align="right">
-												<button type="button" onclick="loadDefault();"
-														class="btn btn-secondary rounded-pill mb-lg-0 mx-1">Test ID</button>
-												<button type="submit"
-													class="btn btn-primary rounded-pill px-3 mb-lg-0">Sign-in</button>
+												<button type="button" onclick="loadDefault();" class="btn btn-secondary rounded-pill mb-lg-0 mx-1">Test ID</button>
+												<button type="submit" class="btn btn-primary rounded-pill px-3 mb-lg-0">Sign-in</button>
 											</div>
 										</div>
 										<hr>
