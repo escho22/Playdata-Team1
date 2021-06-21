@@ -110,7 +110,7 @@ public class QuizController {
 	public ResponseEntity<String> create(@RequestBody QuizVO vo, 
 			@PathVariable("w_num") int w_num, HttpSession session){
 		int m_num = (int) session.getAttribute("usersno");
-		float q_percent =0;
+		double q_percent =0;
 		int point_per_word = 0;
 		
 		int result = vo.getQ_correct();
@@ -141,118 +141,5 @@ public class QuizController {
 		return mav;
 	}
 	
-//	@RequestMapping(value = "/quiz/level4/quiz_4_1", method = RequestMethod.POST)
-//	public ModelAndView quizLevel4_1_save(HttpSession session) {
-//		ModelAndView mav = new ModelAndView();		
-//		int m_num = (int) session.getAttribute("usersno");
-//		int point_per_word = 5;
-//		
-//		QuizVO vo = new QuizVO();
-//		vo.setM_num(m_num);
-//		vo.setW_num(1);
-//		vo.setQ_correct(q_correct);
-//		vo.setQ_percent(q_percent);
-//		
-//		HashMap<Object, Object> map = new HashMap<Object, Object>();
-//		map.put("m_num", m_num);
-//		map.put("point", point_per_word);
-//		
-//		int flag1 = service.create(vo);
-//		int flag2 = mservice.update_point(map);
-//		if (flag1==1 && flag2==1) {
-//			mav.setViewName("/quiz/level4/quiz_4_1");
-//		}
-//		else {
-//			System.out.println("error occurred");
-//			mav.setViewName("/quiz/error");
-//		}
-//		return mav;
-//	}
 	
-//	@RequestMapping(value = "/quiz/level4/quiz_4_2", method = RequestMethod.GET)
-//	public ModelAndView quizLevel4_2() {
-//		ModelAndView mav = new ModelAndView();
-//		WordVO word = wservice.get_word(2); 
-//		mav.addObject("word", word.getW_word());
-//		mav.addObject("index", word.getW_index());
-//		
-//		System.out.println(word.getW_word());
-//		System.out.println(word.getW_index());
-//		mav.setViewName("/quiz/level4/quiz_4_2");
-//		return mav;
-//	}
-//	
-//	@RequestMapping(value = "/quiz/level4/quiz_4_3", method = RequestMethod.GET)
-//	public ModelAndView quizLevel4_3() {
-//		ModelAndView mav = new ModelAndView();
-//		WordVO word = wservice.get_word(3); 
-//		mav.addObject("word", word.getW_word());
-//		mav.addObject("index", word.getW_index());
-//		
-//		System.out.println(word.getW_word());
-//		System.out.println(word.getW_index());
-//		mav.setViewName("/quiz/level4/quiz_4_3");
-//		return mav;
-//	}
-
-//	@RequestMapping(value = "/quiz/level4/quiz_4_4", method = RequestMethod.GET)
-//	public ModelAndView quizLevel4_4() {
-//		ModelAndView mav = new ModelAndView();
-//		WordVO word = wservice.get_word(4); 
-//		mav.addObject("word", word.getW_word());
-//		mav.addObject("index", word.getW_index());
-//		
-//		System.out.println(word.getW_word());
-//		System.out.println(word.getW_index());
-//		mav.setViewName("/quiz/level4/quiz_4_4");
-//		return mav;
-//	}
-//	
-//	@RequestMapping(value = "/quiz/level4/quiz_4_5", method = RequestMethod.GET)
-//	public ModelAndView quizLevel4_5() {
-//		ModelAndView mav = new ModelAndView();
-//		WordVO word = wservice.get_word(5); 
-//		mav.addObject("word", word.getW_word());
-//		mav.addObject("index", word.getW_index());
-//		
-//		System.out.println(word.getW_word());
-//		System.out.println(word.getW_index());
-//		mav.setViewName("/quiz/level4/quiz_4_5");
-//		return mav;
-//	}
-//	
-//	@RequestMapping(value = "/quiz/level4/quiz_4_6", method = RequestMethod.GET)
-//	public ModelAndView quizLevel4_6() {
-//		ModelAndView mav = new ModelAndView();
-//		WordVO word = wservice.get_word(6); 
-//		mav.addObject("word", word.getW_word());
-//		mav.addObject("index", word.getW_index());
-//		
-//		System.out.println(word.getW_word());
-//		System.out.println(word.getW_index());
-//		mav.setViewName("/quiz/level4/quiz_4_6");
-//		return mav;
-//	}
-//	
-//	@ResponseBody
-//	@RequestMapping(value = "/quiz/level4/quiz_4_1/result", method = RequestMethod.GET)
-//	public ResponseEntity<String> create(
-//			QuizVO vo, int m_num, int correct_cnt, @PathVariable("w_num") int w_num) {
-//		
-//		int point_per_word = 5; //단어별 점수지정
-//		
-//		HashMap<Object, Object> map = new HashMap<Object, Object>();
-//		map.put("m_num", m_num);
-//		map.put("point", correct_cnt*point_per_word);
-//		
-//		int flag1 = service.create(vo);
-//		int flag2 = mservice.update_point(map); //member service에 추가 필요
-//		
-//		return (flag1==1 && flag2==1)?new ResponseEntity<String>("success",HttpStatus.OK)
-//				:new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-//
-//	}
-	
-	
-		
 }
