@@ -31,7 +31,7 @@
 					<li class="dropdown">
 						<a class="nav-link dropdown text-decoration-none fs-7" data-toggle="dropdown" href="#">
 						<i class="bi bi-emoji-laughing me-1" style="font-size: 1rem;"></i> 안녕하세요.  ${sessionScope.m_id } 님 ! <i class="bi bi-caret-down-fill ms-1" style="font-size: 1rem;"></i></a>
-						<div class="dropdown-menu text-decoration-none" style="position: absolute; inset: 0px auto auto 10px; margin: 0px; transform: translate(0px, 60px);">
+						<div class="dropdown-menu text-decoration-none shadow-sm" style="position: absolute; inset: 0px auto auto 10px; margin: 0px; transform: translate(0px, 60px);">
 							<a class="dropdown-item text-decoration-none fs-7 ctag me-2" href="/member/myHistory"><i class="bi bi-brush me-2" style="font-size: 1rem;"></i> My History  </a>
 							<a class="dropdown-item text-decoration-none fs-7 ctag me-2" href="/member/myInfo"><i class="bi bi-person-circle me-2" style="font-size: 1rem;"></i> Profile  </a>
 							<div class="dropdown-divider"></div>
