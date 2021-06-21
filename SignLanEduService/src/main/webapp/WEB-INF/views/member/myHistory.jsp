@@ -55,6 +55,7 @@
 		<tr>
 			<th>퀴즈 단어</th>
 			<th>일시</th>
+			<th>정답:1/오답:0</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -62,6 +63,7 @@
 		<tr>
 			<td>${wlist[quizVO.w_num-1].w_word }</td>
 			<td>${quizVO.q_date }</td>
+			<td>${quizVO.q_correct }</td>
 		</tr>
 		</c:forEach>
 	</tbody>
