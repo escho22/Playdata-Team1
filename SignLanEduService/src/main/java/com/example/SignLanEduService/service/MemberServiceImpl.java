@@ -34,6 +34,12 @@ public class MemberServiceImpl implements MemberService {
 		// TODO Auto-generated method stub
 		return mapper.update(vo);
 	}
+	
+	@Override
+	public int memberUpdate(MemberVO vo) {
+		// TODO Auto-generated method stub
+		return mapper.memberUpdate(vo);
+	}
 
 	@Override
 	public int delete(int m_num) {
@@ -100,5 +106,7 @@ public class MemberServiceImpl implements MemberService {
 		return mapper.update_point(map);
 
 	}
+
+	
 
 }

@@ -154,7 +154,7 @@
 											<label class="form-control form-control-user" style="background-color:#e9ecef" >${memberVO.m_recent }</label>
 										</div>
 									</div>
-									<input type="hidden" name='m_register' id="m_register" value='${memberVO.m_recent }'>
+									<input type="hidden" name='m_recent' id="m_recent" value='${memberVO.m_recent }'>
 
 									<div class="form-group row">
 										<div class="col-sm-6">
@@ -164,7 +164,7 @@
 											<label class="form-control form-control-user" style="background-color:#e9ecef" >${memberVO.m_point }점</label>
 										</div>
 									</div>
-									<input type="hidden" name='m_register' id="m_register" value='${memberVO.m_point }'>
+									<input type="hidden" name='m_point' id="m_point" value='${memberVO.m_point }'>
 									
 									<div class="form-group row">
 										<div class="col-sm-12 mb-3" align="right">

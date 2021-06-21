@@ -32,17 +32,63 @@
 	    <script src="<%=request.getContextPath()%>/js/scripts.js"></script>
 </head>
 <body>
-<section class="masthead">
-<h2>Admin - Control Select</h2>
-<hr>
-<A href='/admin/control/memberUpdate'>Member Update</A>
-<A href='/admin/control/memberDelete'>Meber Delete</A>
-<A href='/admin/control/wordCreate'>Word Create</A>
-<hr>
-<A href='/admin/control/adminCreate'> Member Create</A>
-<hr>
-<A href='/admin/select'> 목록 </A> <br>
-<A href='/'>Home</A>
+<section class="signup">
+<div class="container px-6">
+	<div class="card o-hidden border-0 shadow-lg my-5">
+		<div class="card-body p-0">
+			<!-- Nested Row within Card Body -->
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="p-6">
+						<div class="text-center">
+							<h1 class="h3 text-gray-900 mb-5 font-card">Admin - Control Select</h1>
+						</div>
+						
+						<div class="form-group row">
+						<form action="/admin/control/memberUpdate" method="get">
+							<div class="col-sm-6 mb-3 mb-sm-0">
+								<input type='text' class="form-control form-control-user"
+									name='m_num' id='m_num' value=''
+									required="required" placeholder="* m_num">
+							</div>
+							<div class="col-sm-12 mb-3" align="right">
+								<button id='btn_send' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">회원수정</button>
+							</div>
+						</form>
+						</div>
+						
+						<div class="form-group row">
+						<form action="/admin/control/memberDelete" method="get">
+							<div class="col-sm-6 mb-3 mb-sm-0">
+								<input type='text' class="form-control form-control-user"
+									name='m_num' id='m_num' value=''
+									required="required" placeholder="* m_num">
+							</div>
+							<div class="col-sm-12 mb-3" align="right">
+								<button id='btn_send' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">회원삭제</button>
+							</div>
+						</form>
+						</div>
+						
+						<div class="form-group row">
+							<div class="col-sm-12 mb-3" align="right">
+								<A href='/admin/control/wordCreate' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">단어생성</A>
+								<A href='/admin/control/adminCreate' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">관리자추가</A>
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<div class="col-sm-12 mb-3" align="right">
+								<A href='/admin/select' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1"> 목록 </A>
+								<A href='/' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">Home</A>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 </section>
 </body>
 </html>

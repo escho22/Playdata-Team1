@@ -153,6 +153,28 @@ public class MemberController {
 
 		return mav; // forward
 	}
+	
+	@RequestMapping(value = "/member/myHistory", method = RequestMethod.GET)
+	public ModelAndView readMyHistory(HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		int m_num = (int) session.getAttribute("usersno");
+
+		MemberVO memberVO = this.service.read(m_num);
+		List<QuizVO> qlist = this.qservice.readQuizbyMember(m_num);
+		List<LearnVO> llist = this.lservice.readLearnbyMember(m_num);
+		List<WordVO> wlist = this.wservice.listWord();
+		
+		mav.addObject("memberVO", memberVO);
+		mav.addObject("qlist", qlist);
+		mav.addObject("list", llist);
+		mav.addObject("wlist", wlist);
+		
+		mav.setViewName("/member/myQuizList");
+
+		return mav; // forward
+	}
+	
 
 	@RequestMapping(value = "/member/update", method = RequestMethod.POST)
 	public ModelAndView update(MemberVO memberVO) {

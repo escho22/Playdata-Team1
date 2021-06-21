@@ -39,6 +39,11 @@
 		<put-attribute name="body"
 			value="/WEB-INF/views/member/myQuizList.jsp" />
 	</definition>
+	<definition name="/member/myHistory" extends="main">
+		<put-attribute name="title" value="회원전체이력"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/myHistory.jsp" />
+	</definition>
 	<definition name="/member/logout_msg" extends="main">
 		<put-attribute name="title" value="로그아웃"></put-attribute>
 		<put-attribute name="body"

@@ -43,6 +43,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE m_num = #{m_num}
 	</update>
 	
+	<update id="memberUpdate" parameterType="com.example.SignLanEduService.vo.MemberVO">
+		UPDATE member
+		SET
+		m_pw=#{m_pw}, m_name=#{m_name}, m_birth=#{m_birth}, m_sex=#{m_sex}, 
+		m_email=#{m_email}, m_point=#{m_point}, m_is_admin=#{m_is_admin}
+		WHERE m_num = #{m_num}
+	</update>
+	
 	<delete id="delete" parameterType="int">
 		DELETE FROM member
 		WHERE m_num
