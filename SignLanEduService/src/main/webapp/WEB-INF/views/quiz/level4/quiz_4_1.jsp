@@ -45,6 +45,8 @@
 	</head>
 
 	<body>
+	<div class="container px-5">
+	
 		<p id="answer" style="display: none; height: 100px;">${index}</p>
 
 		<script src="/js/webcam_detection.js"></script>
@@ -55,7 +57,7 @@
 		<div id="w_num" style="display: none;">${w_num} </div>
 		<div id="problem">Quiz 단어: </div>
 		<div id="problem_word">${word}</div>
-		<div id="message"></div>
+		
 	
 		<hr>
 		<table>
@@ -64,6 +66,9 @@
 				<td><button id="submit" class="btn btn-info">submit</button></td>
 			</tr>
 		</table>
+		<div id="message" style="text-align:center;"></div>
+		<div id="display_word" style="visibility:hidden; text-align:center;"></div>
+		<div id="display_conf" style="visibility:hidden; text-align:center;"></div>
 	
 		<br>
 		<div id="myProgress">
@@ -84,6 +89,7 @@
 							onclick="location.href='/quiz/level4/quiz_4_2'" class="btn btn-info">다음</button></td>
 			</tr>
 		</table>
+		</div>
 	</body>
 	
 	<!-- Core theme CSS (includes Bootstrap)-->

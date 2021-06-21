@@ -33,6 +33,7 @@
 	    <script src="<%=request.getContextPath()%>/js/scripts.js"></script>
 </head>
 <body>
+<div class="container px-5">
 <section class="masthead">
 <h2>Quiz - Select Level</h2>
 <hr>
@@ -47,5 +48,6 @@
 <hr>
 <A href='/'> Home </A>
 </section>
+</div>
 </body>
 </html>
