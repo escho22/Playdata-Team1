@@ -48,10 +48,10 @@ public class AdminController {
 		return mav;
 	}
 	
-	@RequestMapping(value = "/admin/msg", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin/control/msg", method = RequestMethod.GET)
 	public ModelAndView msg(String url) {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("/admin/" + url); // forward
+		mav.setViewName("/admin/control/" + url); // forward
 
 		return mav; // forward
 	}
@@ -101,10 +101,52 @@ public class AdminController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "/admin/control/memberDelete", method = RequestMethod.POST)
+	public ModelAndView adminMemberDelete_proc(int m_num) {
+		ModelAndView mav = new ModelAndView();
+		
+		MemberVO memberVO = this.mservice.read(m_num);
+		int cnt = this.mservice.delete(m_num);
+		
+		mav.addObject("cnt", cnt);
+		mav.addObject("name",memberVO.getM_id());
+		mav.addObject("url", "delete_msg");
+		
+		mav.setViewName("redirect:/admin/control/msg");
+		
+		return mav;
+	}
+	
 	@RequestMapping(value = "/admin/control/wordCreate", method = RequestMethod.GET)
 	public ModelAndView adminWordCreate() {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("/admin/control/wordCreate");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/admin/control/wordCreate", method = RequestMethod.POST)
+	public ModelAndView adminWordCreate(WordVO wordvo) {
+		ModelAndView mav = new ModelAndView();
+		
+		int cnt = this.wservice.createWord(wordvo);
+		
+		mav.addObject("cnt", cnt);
+		mav.addObject("name",wordvo.getW_word());
+		mav.addObject("url", "create_msg");
+		
+		mav.setViewName("redirect:/admin/control/msg");
+		return mav;
+	}
+	
+	
+	@RequestMapping(value = "/admin/control/wordList", method = RequestMethod.GET)
+	public ModelAndView adminWordList() {
+		ModelAndView mav = new ModelAndView();
+		
+		List<WordVO> list = this.wservice.listWord();
+		mav.addObject("list", list);
+		
+		mav.setViewName("/admin/control/wordList");
 		return mav;
 	}
 	
