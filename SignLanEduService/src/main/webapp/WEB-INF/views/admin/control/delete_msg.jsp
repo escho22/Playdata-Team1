@@ -8,7 +8,7 @@
 <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, width=device-width" /> 
 <title>Resort world</title>
  
-<link href="/css/style.css" rel="Stylesheet" type="text/css">
+<link href="<%=request.getContextPath()%>/css/style.css" rel="Stylesheet" type="text/css">
  
 <script type="text/JavaScript"
           src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -45,8 +45,8 @@
         </c:choose>
      
         <li class='li_none'>
-          [<A href='/admin/control/choose'>목록</A>]
-          [<A href='/'>확인</A>]
+          [<A href='<%=request.getContextPath()%>/admin/control/choose'>목록</A>]
+          [<A href='<%=request.getContextPath()%>/'>확인</A>]
         </li>
         
       </ul>

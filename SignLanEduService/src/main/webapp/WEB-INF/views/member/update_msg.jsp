@@ -8,7 +8,7 @@
 <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, width=device-width" /> 
 <title>Resort world</title>
  
-<link href="/css/style.css" rel="Stylesheet" type="text/css">
+<link href="<%=request.getContextPath()%>/css/style.css" rel="Stylesheet" type="text/css">
 <script type="text/JavaScript"
           src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  
@@ -28,7 +28,7 @@
     <span class='menu_divide' >│</span> 
     <A href='./create'>회원 가입</A>
     <span class='menu_divide' >│</span> 
-    <A href='/'>Home</A>
+    <A href='../'>Home</A>
   </ASIDE> 
 
   <div class='menu_line'></div>
@@ -43,11 +43,11 @@
           </LI>
           <LI class='li_none'>
             <button type='button' 
-                        onclick="location.href='./read?usersno=${param.usersno}'"
+                        onclick="location.href='<%=request.getContextPath()%>/member/myInfo'"
                         class="btn btn-info">변경 확인</button>
             <button type='button' 
-                        onclick="location.href='./list'"
-                        class="btn btn-info">목록</button>                        
+                        onclick="location.href='<%=request.getContextPath()%>/'"
+                        class="btn btn-info">Home</button>                        
           </LI>
         </c:when>
         <c:otherwise>
@@ -59,7 +59,7 @@
                         onclick="history.back();"
                         class="btn btn-info">재시도</button>
             <button type='button' 
-                        onclick="location.href='./list'"
+                        onclick="location.href='<%=request.getContextPath()%>/member/myInfo'"
                         class="btn btn-info">목록</button>                        
           </LI>
         </c:otherwise>

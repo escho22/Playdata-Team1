@@ -37,8 +37,8 @@
       </c:choose>
       <LI class='li_none'>
         <br>
-        <button type='button' onclick="location.href='./create'">회원 등록</button>
-        <button type='button' onclick="location.href='./'">Home</button>
+        <button type='button' onclick="location.href='<%=request.getContextPath()%>/member/create'">회원 등록</button>
+        <button type='button' onclick="location.href='<%=request.getContextPath()%>/'">Home</button>
       </LI>
      </UL>
   </fieldset>

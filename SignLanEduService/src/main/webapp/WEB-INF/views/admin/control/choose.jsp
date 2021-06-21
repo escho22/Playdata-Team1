@@ -45,7 +45,7 @@
 						</div>
 						
 						<div class="form-group row">
-						<form action="/admin/control/memberUpdate" method="get">
+						<form action="<%=request.getContextPath()%>/admin/control/memberUpdate" method="get">
 							<div class="col-sm-6 mb-3 mb-sm-0">
 								<input type='text' class="form-control form-control-user"
 									name='m_num' id='m_num' value=''
@@ -58,7 +58,7 @@
 						</div>
 						
 						<div class="form-group row">
-						<form action="/admin/control/memberDelete" method="get">
+						<form action="<%=request.getContextPath()%>/admin/control/memberDelete" method="get">
 							<div class="col-sm-6 mb-3 mb-sm-0">
 								<input type='text' class="form-control form-control-user"
 									name='m_num' id='m_num' value=''
@@ -72,15 +72,15 @@
 						
 						<div class="form-group row">
 							<div class="col-sm-12 mb-3" align="right">
-								<A href='/admin/control/wordCreate' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">단어생성</A>
-								<A href='/admin/control/wordList' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">단어목록</A>
+								<A href='<%=request.getContextPath()%>/admin/control/wordCreate' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">단어생성</A>
+								<A href='<%=request.getContextPath()%>/admin/control/wordList' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">단어목록</A>
 							</div>
 						</div>
 						
 						<div class="form-group row">
 							<div class="col-sm-12 mb-3" align="right">
-								<A href='/admin/select' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1"> 목록 </A>
-								<A href='/' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">Home</A>
+								<A href='<%=request.getContextPath()%>/admin/select' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1"> 목록 </A>
+								<A href='<%=request.getContextPath()%>/' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">Home</A>
 							</div>
 						</div>
 					</div>

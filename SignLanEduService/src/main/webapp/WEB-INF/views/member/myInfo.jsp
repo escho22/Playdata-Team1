@@ -67,7 +67,7 @@
 								</div>
 								
 								<form class="user" name='frm' id='frm' method='POST'
-									action='/member/update' class="form-horizontal">
+									action='<%=request.getContextPath()%>/member/update' class="form-horizontal">
 									<input type="hidden" name='m_num' id="m_num" value='${memberVO.m_num }'>
 									<div class="form-group row">
 										<div class="col-sm-6 mb-4 mb-sm-0">
@@ -173,10 +173,10 @@
 											<button type="button" onclick="location.href='../'"
 												class="btn btn-primary rounded-pill mb-lg-0">Cancel</button>
 												
-											<button type="button" onclick="location.href='/member/myLearnList'"
+											<button type="button" onclick="location.href='<%=request.getContextPath()%>/member/myLearnList'"
 												class="btn btn-primary rounded-pill mb-lg-0">학습이력</button>
 												
-											<button type="button" onclick="location.href='/member/myQuizList'"
+											<button type="button" onclick="location.href='<%=request.getContextPath()%>/member/myQuizList'"
 												class="btn btn-primary rounded-pill mb-lg-0">퀴즈이력</button>
 										</div>
 									</div>
