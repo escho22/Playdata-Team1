@@ -39,8 +39,8 @@
 <thead>
 <tr>
 	<th>번호</th>
-	<th>ID</th>
 	<th>단어</th>
+	<th>단어내용</th>
 	<th>정답여부</th>
 	<th>일치도</th>
 	<th>날짜</th>
