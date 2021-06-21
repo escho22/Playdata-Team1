@@ -48,6 +48,14 @@ public class AdminController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "/admin/msg", method = RequestMethod.GET)
+	public ModelAndView msg(String url) {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/admin/" + url); // forward
+
+		return mav; // forward
+	}
+	
 	//control page-------------------------------------------------------
 	
 	@RequestMapping(value = "/admin/control/choose", method = RequestMethod.GET)
@@ -58,16 +66,38 @@ public class AdminController {
 	}
 		
 	@RequestMapping(value = "/admin/control/memberUpdate", method = RequestMethod.GET)
-	public ModelAndView adminMemberUpdate() {
+	public ModelAndView adminMemberUpdate(int m_num) {
 		ModelAndView mav = new ModelAndView();
+		
+		MemberVO memberVO = this.mservice.read(m_num);
+		mav.addObject("memberVO",memberVO);
+		
 		mav.setViewName("/admin/control/memberUpdate");
 		return mav;
 	}
 	
-	@RequestMapping(value = "/admin/control/memberDelete", method = RequestMethod.GET)
-	public ModelAndView adminMemberDelete() {
+	@RequestMapping(value = "/admin/control/memberUpdate", method = RequestMethod.POST)
+	public ModelAndView adminMemberUpdate(MemberVO memberVO) {
 		ModelAndView mav = new ModelAndView();
+		
+		int cnt = this.mservice.memberUpdate(memberVO);
+		mav.addObject("cnt", cnt);
+		mav.addObject("usersno", memberVO.getM_num());
+		mav.addObject("url", "update_msg");
+		
+		mav.setViewName("redirect:/admin/control/msg");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/admin/control/memberDelete", method = RequestMethod.GET)
+	public ModelAndView adminMemberDelete(int m_num) {
+		ModelAndView mav = new ModelAndView();
+		
+		MemberVO memberVO = this.mservice.read(m_num);
+		mav.addObject("memberVO",memberVO);
+		
 		mav.setViewName("/admin/control/memberDelete");
+
 		return mav;
 	}
 	

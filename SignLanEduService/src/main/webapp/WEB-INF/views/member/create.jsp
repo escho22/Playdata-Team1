@@ -212,17 +212,19 @@
 									</div>
 									<div class="form-group row">
 										<div class="col-sm-6">
-											<input type="text" class="form-control form-control-user"
+											<input type="text" class="form-control form-control-user" name='m_birth'
 												id="exampleInputEmail" placeholder="Birth">
-										</div>
+										</div>									
 										<div class="col-sm-6">
-											<input type="email" class="form-control form-control-user"
-												id="exampleInputEmail" placeholder="Gender">
+											<div class="form-control form-control-user">
+												<input type="radio" name="m_sex" id="m_sex0" value="0" checked="checked">남성
+												<input type="radio" name="m_sex" id="m_sex1" value="1">여성
+											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<input type='text' class="form-control form-control-user"
-											name='email' id='email' value='' required="required"
+											name='m_email' id='email' value='' required="required"
 											placeholder="* Email Address">
 									</div>
 									<div class="form-group row">

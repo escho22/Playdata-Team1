@@ -9,6 +9,7 @@ public interface MemberMapper {
 	int create(MemberVO vo);
 	MemberVO read(int m_num);
 	int update(MemberVO vo);
+	int memberUpdate(MemberVO vo);
 	int delete(int m_num);
 	List<MemberVO> list();
 	int checkID(String id);
