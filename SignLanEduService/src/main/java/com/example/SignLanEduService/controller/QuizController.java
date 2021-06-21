@@ -50,7 +50,7 @@ public class QuizController {
 	@RequestMapping(value = "/quiz/select", method = RequestMethod.GET)
 	public ModelAndView selectQuiz(HttpSession session) {
 		ModelAndView mav = new ModelAndView();
-		// 로그인여부 확인
+		// 濡쒓렇�씤�뿬遺� �솗�씤
 		if (!mservice.isMember(session)) {
 			mav.setViewName("/member/login_ck_form");
 		} else {
@@ -210,29 +210,29 @@ public class QuizController {
 	}
 
 	
-	//quiz단어별 푼 결과 기록생성 - views/quiz/main.jsp로 어떻게 다시 돌아갈지???
+	//quiz�떒�뼱蹂� �뫜 寃곌낵 湲곕줉�깮�꽦 - views/quiz/main.jsp濡� �뼱�뼸寃� �떎�떆 �룎�븘媛덉�???
 	@ResponseBody
 	@RequestMapping(value = "/quiz/level4/quiz_4_1/result", method = RequestMethod.GET)
 	public ResponseEntity<String> create(
 			QuizVO vo, int m_num, int correct_cnt, @PathVariable("w_num") int w_num) {
 		
-		int point_per_word = 5; //단어별 점수지정
+		int point_per_word = 5; //�떒�뼱蹂� �젏�닔吏��젙
 		
 		HashMap<Object, Object> map = new HashMap<Object, Object>();
 		map.put("m_num", m_num);
 		map.put("point", correct_cnt*point_per_word);
 		
 		int flag1 = service.create(vo);
-		int flag2 = mservice.update_point(map); //member service에 추가 필요
+		int flag2 = mservice.update_point(map); //member service�뿉 異붽� �븘�슂
 		
 		return (flag1==1 && flag2==1)?new ResponseEntity<String>("success",HttpStatus.OK)
 				:new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 
 	}
 	
-	//quiz outro page로 이동 - 전체 결과 보여주기
+	//quiz outro page濡� �씠�룞 - �쟾泥� 寃곌낵 蹂댁뿬二쇨린
 	@RequestMapping(value = "/quiz/finish", method = RequestMethod.GET)
-	public ModelAndView finish(int level) {//sessionScope.m_num으로 m_num 전달받으면됨.
+	public ModelAndView finish(int level) {//sessionScope.m_num�쑝濡� m_num �쟾�떖諛쏆쑝硫대맖.
 		
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("level", level);
