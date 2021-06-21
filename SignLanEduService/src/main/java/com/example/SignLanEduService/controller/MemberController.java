@@ -167,10 +167,10 @@ public class MemberController {
 		
 		mav.addObject("memberVO", memberVO);
 		mav.addObject("qlist", qlist);
-		mav.addObject("list", llist);
+		mav.addObject("llist", llist);
 		mav.addObject("wlist", wlist);
 		
-		mav.setViewName("/member/myQuizList");
+		mav.setViewName("/member/myHistory");
 
 		return mav; // forward
 	}
