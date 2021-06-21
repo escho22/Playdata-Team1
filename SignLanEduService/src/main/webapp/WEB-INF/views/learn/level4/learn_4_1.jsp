@@ -32,45 +32,71 @@
 	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 	    <script src="<%=request.getContextPath()%>/js/scripts.js"></script> 
 	</head>
-<body>
-<section class="masthead">
-학습페이지<br>
-Level 4 - 1
-<hr>
+	<body>
+	<section class="learn">
+			<div class="container">
+				<div class="mb-5 mb-lg-0 text-lg-start fs-3 pb-3">
+					 Learn :: level 4-1
+				</div>
+				<div class="card o-hidden border-0 shadow-lg">
+					<div class="form-group text-center">
+						<h1 class="h3 text-gray-900 mb-5 font-card mt-5 fs-2"> ${wordVO.w_word} </h1>
+						<hr>
+					</div>
+					<div class="card-body px-5">
+						<div class="row">
+							<div class="col-lg-6">
+								<video class="v_learn" src='${wordVO.w_path}' width="500" height="500" controls autoplay loop></video>
+							</div>
+							<div class="col-lg-6 mt-6">
+								<video class="v_learn" autoplay width='500' height="360" id="videoElement"></video>
+							</div>
+						</div>
+					</div>					
+					<form action="/learn/level4/learn_4_1" method="POST" id="creatLearn" name='lfrm4_1'>
+						<input type='hidden' name='m_id' id='m_id' value="${sessionScope.id }">
+						<input type='hidden' name='w_num' id='w_num' value="${wordVO.w_num }">
+					</form>
+					<hr>
+					<div class="justify-content-center text-center mt-3">
+					<c:choose>
+						<c:when test="${param.cnt == 1 }">
+       					  	<span><i class="bi bi-check2-all me-1"></i>다음문제로 넘어가 주세요.</span>
+       					</c:when>
+						<c:otherwise>
+							<span>학습미완료</span>
+       					</c:otherwise>
+					</c:choose>
+					</div>
+					<div class="form-group row justify-content-center text-center">
+						<div class="col-lg-3 py-4 text-lg-end pt-lg-45">
+							<span class="pointer fs-6 mt-lg-4" onclick="location.href='<%=request.getContextPath()%>/learn/level4/choose'"><i class="bi bi-justify me-2 style="style="font-size: 1rem;"></i>목록</span>
+						</div>
+						<form class="col-lg-3 py-4 text-lg-center">
+							<button class="btn btn-outline-primary rounded-pill mb-lg-0 mx-1 px-3 fs-6 alertNext" type="submit" form="creatLearn">학습완료</button>
+						</form>
+						<div class="col-lg-3 py-4 text-lg-start pt-lg-45">
+							<span class="pointer fs-6 mt-lg-4" onclick="location.href='<%=request.getContextPath()%>/learn/level4/learn_4_2'">다음<i class="bi bi-chevron-right ms-2 style="style="font-size: 1rem;"></i></span>				 
+						</div>
+					</div>
+					<hr>
+				 </div>
+			   </div>
+			</section>
+	 	<script src="/js/webcam_learn.js"></script>
+	</body>
 
-<table border="1">
-<tr><td colspan="2">단어 : ${wordVO.w_word}</td></tr>
-<tr> 
-	<td><video src='${wordVO.w_path}' width='640' height="360" controls autoplay loop></video> </td> 
-	<td> 
-		<div id="container">
-			<video autoplay width='640' height="360" id="videoElement"></video>
-		</div>
-	</td>
-</tr>
-</table>
-<hr>
-<form action="/learn/level4/learn_4_1" method="POST" id="creatLearn" name='lfrm4_1'>
-	<input type='hidden' name='m_id' id='m_id' value="${sessionScope.id }">
-	<input type='hidden' name='w_num' id='w_num' value="${wordVO.w_num }">
-</form>
-<button type="submit" form="creatLearn">학습완료</button>
-<hr>
-<DIV class='message'>
-<c:choose>
-        <c:when test="${param.cnt == 1 }">
-          학습완료, 다음문제로 넘어가 주세요.     
-        </c:when>
-        <c:otherwise>
-          학습 미완료
-        </c:otherwise>
-      </c:choose>
-</DIV>
-<hr>
-<table>
-<tr> <td>이전</td> <td><A href='/learn/level4/choose'>목록</A></td> <td><A href='/learn/level4/learn_4_2'>다음</A></td> </tr>
-</table>
-</section>
-<script src="/js/webcam_learn.js"></script>
-</body>
+	<script type="text/javascript">
+		$().ready(function() {
+			$(".alertNext").click(function() {
+				Swal.fire({
+				  icon: 'success',
+				  title: '학습완료, 다음문제로 넘어가 주세요',
+				  showConfirmButton: false,
+				});
+			});
+		});
+	</script>	
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </html>
