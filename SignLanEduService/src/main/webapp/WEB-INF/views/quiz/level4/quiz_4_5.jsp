@@ -41,17 +41,21 @@
 			   -moz-transform:rotateY(180deg); /* Firefox */
 			}
 			
-		</style>	
+			</style>
+		</head>
 	</head>
-	<body>
 
+	<body>	
 		<p id="answer" style="display: none; height: 100px;">${index}</p>
 	
 		<script src="/js/webcam_detection.js"></script>
+		<script src="/js/quiz_result.js"></script>
 	
 		<h1>Quiz Level 4 - 5</h1>
 		<hr>
-		<div id="problem">Quiz 단어: ${word}</div>
+		<div id="w_num" style="display: none;">${w_num}</div>
+		<div id="problem">Quiz 단어:</div>
+		<div id="problem_word">${word}</div>
 		<div id="message"></div>
 	
 		<hr>
@@ -61,38 +65,33 @@
 				<td><button id="submit" class="btn btn-info">submit</button></td>
 			</tr>
 		</table>
-		
+	
 		<br>
 		<div id="myProgress">
-			<div id="myBar">10%</div>
+			<div id="myBar"></div>
 		</div>
-		
+	
 		<div id="container-canvas1"></div>
 		<div id="container-canvas2"></div>
 	
-	
 		<hr>
-		<form name='frm' method='POST' action='./quiz/level4/quiz_4_5'
-			class="form-horizontal">
-			<input type='hidden' name='m_num' id='m_num' class="form-control" 
-				value='${sessionScope.m_num}'> 
-			<input type="hidden" name="q_correct" class="form-control" 
-				 id="q_correct"> 
-			<input type="hidden" name="q_percent" class="form-control" 
-				 id="q_percent">
 	
-			<div class='content_bottom_menu'>
-				<button type="submit" class="btn btn-info">저장</button>
-				<button id="btn_list" type="button" onclick="location.href='/quiz/level4/choose'"
-					class="btn btn-info">목록</button>
-				<button id="btn_next" type="button" onclick="location.href='/quiz/level4/quiz_4_6'"
-					class="btn btn-info">다음</button>
-			</div>
-	
-	
-		</form>
+		<table>
+			<tr>
+				<td><button type="button" id="save_btn" class="btn btn-info">저장</button></td>
+				<td><button id="btn_next" type="button"
+						onclick="location.href='/quiz/level4/quiz_4_4'"
+						class="btn btn-info">이전</button></td>
+				<td><button id="btn_list" type="button"
+						onclick="location.href='/quiz/level4/choose'" class="btn btn-info">목록</button></td>
+				<td><button id="btn_next" type="button"
+						onclick="location.href='/quiz/level4/quiz_4_6'"
+						class="btn btn-info">다음</button></td>
+			</tr>
+		</table>
+
 	</body>
-	
+
 	<!-- Core theme CSS (includes Bootstrap)-->
 	<link href="<%=request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css"/>
 	
@@ -106,13 +105,5 @@
 	<!-- Webcam - p5 Js -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
-
-<!-- 	<table> -->
-<!-- 		<tr> -->
-<!-- 			<td>이전</td> -->
-<!-- 			<td><A href='/quiz/level4/choose'>목록</A></td> -->
-<!-- 			<td><A href='/quiz/level4/quiz_4_2'>다음</A></td> -->
-<!-- 		</tr> -->
-<!-- 	</table> -->
-
+	
 </html>

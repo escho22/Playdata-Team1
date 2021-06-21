@@ -48,6 +48,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE m_num
 		= #{m_num}
 	</delete>
+	
+	<select id="list" resultType="com.example.SignLanEduService.vo.MemberVO">
+		SELECT * 
+		FROM member;
+	</select>
 
 	<!-- 현재 패스워드 검사 -->
 	<select id="passwd_check" parameterType="HashMap"
