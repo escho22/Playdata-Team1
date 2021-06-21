@@ -46,19 +46,24 @@
 					<div class="py-4">
 						<div class="text-center">
 							<h1 class="h3 text-gray-900 mb-5 font-card">Level 4 Completed! <i class="bi bi-stars" style="font-size: 2rem;"></i></h1>
-							<div class="fs-3">				
+							<div class="h4 font-card font-blue">
+							${memberVO.m_id }님의 현재 포인트 <br>
+							<h2 class="font-card">${memberVO.m_point }</h2>
+							</div>
+							<div class="fs-3 mt-45">				
 							You have completed level 4! amazing!						
 							<br/>
 							Congratulations!		
 							</div>
-							<div class="mt-45">
-							${memberVO.m_id }님의 현재 포인트 <br>
-							<h2 class="font-card">${memberVO.m_point }</h2>
-							</div>
-
-
-<hr>
-<A href='<%=request.getContextPath()%>/learn/select'>목록</A>
-</section>
-</body>
+							<br/>
+						</div>
+					</div>
+					<hr>
+					<div class="text-lg-end">
+						<a href='<%=request.getContextPath()%>/learn/select'> 목록 </a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
 </html>

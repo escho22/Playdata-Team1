@@ -44,7 +44,7 @@
 							<button class="btn btn-outline-primary rounded-pill py-3 mb-3 px-sm-6 alertStart" name="alertStart">
 								Level 3
 							</button>
-							<button class="btn btn-outline-primary rounded-pill py-3 mb-3 px-sm-6" onclick="location.href='<%=request.getContextPath()%>/quiz/level4/choose'">
+							<button class="btn btn-outline-primary rounded-pill py-3 mb-3 px-sm-6" onclick="location.href='<%=request.getContextPath()%>/quiz/level4/quiz_4_1'">
 								Level 4
 							</button>
 						</div>

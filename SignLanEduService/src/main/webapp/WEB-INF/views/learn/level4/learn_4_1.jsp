@@ -82,10 +82,10 @@
 				 </div>
 			   </div>
 			</section>
-	 	<script src="/js/webcam_learn.js"></script>
+	 	<script src="<%=request.getContextPath()%>/js/webcam_learn.js"></script>
 	</body>
 
-	<script type="text/javascript">
+	<script type="<%=request.getContextPath()%>/text/javascript">
 		$().ready(function() {
 			$(".alertNext").click(function() {
 				Swal.fire({

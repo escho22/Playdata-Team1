@@ -241,9 +241,11 @@
 									<div class="text-center">
 										<a class="small" href='<%=request.getContextPath()%>/member/login'>Already have an account? Sign-in!</a>
 									</div>
-								</div>
-								<div class="col-lg-6 d-none d-lg-block bg-register-image"></div>
+								</div>							
 							</div>
+						</div>
+						<div class="col-lg-6 d-none d-lg-block bg-register-image p-6">
+							<img src="<%=request.getContextPath()%>/assets/img/hands2.png" width="500" height="500" alt="hand" style="transform:rotate(350deg);" />
 						</div>
 					</div>
 				</div>
