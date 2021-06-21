@@ -63,8 +63,8 @@
 		<br>
 		Good Job!
 		<br>
-		<br>
 	</h1>
+	<A href='../'>Home</A>
 </div>
 
 </body>

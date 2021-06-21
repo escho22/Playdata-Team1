@@ -10,7 +10,7 @@
 	    <meta name="description" content="" />
 	    <meta name="author" content="" />
 	    <!-- 페이지 탭에 표시될 아이콘 및 페이지명 -->
-	  	<title>Quiz - Level 4-2</title>
+	  	<title>Quiz - Level 4-1</title>
 	    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 	     
 	    <!-- Bootstrap icons-->

@@ -39,11 +39,9 @@
 						<br />
 						<div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
 							<button type="button" id="btn_retry"
-								class="btn btn-primary rounded-pill mb-lg-0 mx-1 px-3">Try
-								again</button>
+								class="btn btn-primary rounded-pill mb-lg-0 mx-1 px-3">Try again</button>
 							<button type="button" id="btn_home"
-								class="btn btn-primary rounded-pill mb-lg-0 mx-1 px-3">go
-								to main</button>
+								class="btn btn-primary rounded-pill mb-lg-0 mx-1 px-3">go to main</button>
 						</div>
 					</div>
 				</div>

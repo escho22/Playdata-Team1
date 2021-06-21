@@ -13,7 +13,7 @@
 준비중입니다!
 
 <hr>
-<A href='/quiz/select'>목록</A> <br>
+<A href='<%=request.getContextPath()%>/quiz/select'>목록</A> <br>
 
 </body>
 </html>

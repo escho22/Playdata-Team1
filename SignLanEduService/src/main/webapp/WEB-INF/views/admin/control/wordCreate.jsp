@@ -37,7 +37,7 @@
 								</div>
 								
 								<form class="user" name='frm' id='frm' method='POST'
-									action='/admin/control/wordCreate' class="form-horizontal">									
+									action='<%=request.getContextPath()%>/admin/control/wordCreate' class="form-horizontal">									
 									<div class="form-group row">
 										<div class="col-sm-6 mb-4 mb-sm-0">
 											<label class="form-control form-control-user">단어</label>
@@ -97,7 +97,7 @@
 										<div class="col-sm-12 mb-3" align="right">
 											<button id='btn_send'
 												class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">Create</button>
-											<button type="button" onclick="location.href='../'"
+											<button type="button" onclick="location.href='<%=request.getContextPath()%>/admin/control/choose'"
 												class="btn btn-primary rounded-pill mb-lg-0">Cancel</button>																					
 										</div>
 									</div>
@@ -110,15 +110,10 @@
 			</div>
 		</div>
 	</section>
-
-<section class="signup">
-<h2>Admin - Create Word</h2>
-<hr>
-need to made form 
-<hr>
-<A href='/admin/control/choose'>관리</A> <br>
-<A href='/'>Home</A>
-</section>
+<!-- <section class="signup"> -->
+<%-- <A href='<%=request.getContextPath()%>/admin/control/choose'>관리</A> <br> --%>
+<%-- <A href='<%=request.getContextPath()%>/'>Home</A> --%>
+<!-- </section> -->
 </body>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

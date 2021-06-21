@@ -270,7 +270,8 @@ figure {
 }
 
 img,
-svg {
+svg,
+.vs {
   vertical-align: middle;
 }
 
@@ -3767,7 +3768,8 @@ form.user .btn-user {
 }
 
 .btn-group,
-.btn-group-vertical {
+.btn-group-vertical,
+.tt {
   position: relative;
   display: inline-flex;
   vertical-align: middle;
@@ -6900,6 +6902,25 @@ form.user .btn-user {
   order: 6 !important;
 }
 
+.v_learn {
+   margin-left: 1.5rem;
+   object-fit: cover;
+}
+
+/* .videoContainer
+{
+   position:absolute;
+   height:60%;
+   width:60%;
+   overflow: hidden;
+}
+
+.videoContainer video
+{
+   min-width: 70%;
+   min-height: 100%;
+} */
+
 .m-0 {
   margin: 0 !important;
 }
@@ -7018,8 +7039,16 @@ form.user .btn-user {
   margin-top: 1.5rem !important;
 }
 
+.mt-45 {
+  margin-top: 2rem !important;
+}
+
 .mt-5 {
   margin-top: 3rem !important;
+}
+
+.mt-6 {
+  margin-top: 4rem !important;
 }
 
 .mt-auto {
@@ -9488,6 +9517,10 @@ form.user .btn-user {
   .pt-lg-4 {
     padding-top: 1.5rem !important;
   }
+  
+  .pt-lg-45 {
+    padding-top: 2rem !important;
+  }
 
   .pt-lg-5 {
     padding-top: 3rem !important;
@@ -11242,6 +11275,17 @@ footer a:hover, footer a:active, footer a:focus {
   padding-left: 15rem;
 }
 
+.learn {
+  position: relative;
+  background: linear-gradient(160deg, #ffff, #FAFFD1);
+  background-position: center;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  padding-right: 9rem;
+  padding-left: 9rem;
+}
+
 .masthead {
   position: relative;
   background: linear-gradient(160deg, #ffff, #FAFFD1);
@@ -11329,4 +11373,40 @@ footer a:hover, footer a:active, footer a:focus {
   .masthead .masthead-device-mockup .device-wrapper {
     max-width: 17rem;
   }
+  
+.services .icon-box {
+    padding: 60px 30px;
+    transition: all ease-in-out 0.3s;
+    background: #fefefe;
+    box-shadow: 0px 5px 90px 0px rgb(110 123 131 / 10%);
+    border-radius: 18px;
+    border-bottom: 5px solid #fff;
+}
+
+.services .icon-box .icon {
+    width: 64px;
+    height: 64px;
+    background: #009961;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: ease-in-out 0.3s;
+    color: #fff;
+}
+
+.bx {
+    font-family: 'boxicons'!important;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    display: inline-block;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
 }

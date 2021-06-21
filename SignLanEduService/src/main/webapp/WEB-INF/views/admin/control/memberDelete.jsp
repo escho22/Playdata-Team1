@@ -24,6 +24,7 @@
 <link href="<%=request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+<section class="masthead">
 <h2>Admin - Member Delete</h2>
 <hr>
 회원번호 : ${memberVO.m_num }
@@ -31,7 +32,7 @@ ID : ${memberVO.m_id } <br>
 가입일 : ${memberVO.m_register }
 정말 해당 회원을 삭제하시겠습니까? <br>
 <div class="form-group row">
-<form action="/admin/control/memberDelete" method="post">
+<form action="<%=request.getContextPath()%>/admin/control/memberDelete" method="post">
 <div class="col-sm-12 mb-3" align="right">
 	<input type="hidden" name='m_num' id="m_num" value='${memberVO.m_num }'>
 	<button type="submit" id='btn_send' class="btn btn-primary rounded-pill px-3 mb-lg-0 mx-1">확인</button>
@@ -39,8 +40,9 @@ ID : ${memberVO.m_id } <br>
 </form>
 </div>						
 <hr>
-<A href='/admin/control/choose'>관리</A> <br>
-<A href='/'>Home</A>
+<A href='<%=request.getContextPath()%>/admin/control/choose'>관리</A> <br>
+<A href='<%=request.getContextPath()%>/'>Home</A>
+</section>
 </body>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

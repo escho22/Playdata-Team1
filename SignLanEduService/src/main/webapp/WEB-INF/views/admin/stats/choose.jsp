@@ -35,12 +35,12 @@
 <section class="masthead">
 <h2>Admin - Statistics Select</h2>
 <hr>
-<A href='/admin/stats/memberList'>Member</A>
-<A href='/admin/stats/learnList'>Learn</A>
-<A href='/admin/stats/quizList'>Quiz</A>
+<A href='<%=request.getContextPath()%>/admin/stats/memberList'>Member</A>
+<A href='<%=request.getContextPath()%>/admin/stats/learnList'>Learn</A>
+<A href='<%=request.getContextPath()%>/admin/stats/quizList'>Quiz</A>
 <hr>
-<A href='/admin/select'>목록</A>
-<A href='/'>Home</A>
+<A href='<%=request.getContextPath()%>/admin/select'>목록</A>
+<A href='<%=request.getContextPath()%>/'>Home</A>
 </section>
 </body>
 </html>

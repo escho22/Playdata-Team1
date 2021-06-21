@@ -10,7 +10,6 @@
 //    });
 //}
 
-
 //browser support check "ms" vendor function is for IE8
 navigator.getUserMedia = ( navigator.getUserMedia       ||
                            navigator.webkitGetUserMedia ||
