@@ -51,7 +51,7 @@ function setup() {
 	button1.addEventListener('click', async event => {
 		//setTimeout(function(){capture = getFrame(webcam)},5000)
 		progress_move();
-		setTimeout(function() { getFrame() }, 10000)
+		setTimeout(function() { getFrame() }, 10000) 
 
 	});
 

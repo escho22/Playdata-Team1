@@ -44,4 +44,9 @@
 		<put-attribute name="body"
 			value="/WEB-INF/views/member/logout_msg.jsp" />
 	</definition>
+<!-- 	<definition name="/member/logout_fail_msg" extends="main">
+		<put-attribute name="title" value="로그아웃 실패"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/logout_fail_msg.jsp" />
+	</definition> -->  
 </tiles-definitions>       
