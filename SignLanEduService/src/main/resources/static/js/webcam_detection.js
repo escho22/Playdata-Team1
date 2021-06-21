@@ -5,13 +5,12 @@ var mycanvas;
 
 var classes;
 var word_idx = 0;
-var conf = 0;
 var answer_key = document.getElementById("answer").innerHTML;
-var result = 0;
-
+var correct = 0;
+var conf = 0;
+var quiz_data;
 
 var i = 0;
-
 function progress_move() {
 	if (i == 0) {
 		i = 1;
@@ -25,7 +24,7 @@ function progress_move() {
 			} else {
 				width += 10;
 				elem.style.width = width + "%";
-				elem.innerHTML = width + "%";
+				//elem.innerHTML = width;
 			}
 		}
 	}
@@ -44,7 +43,6 @@ function getFrame() {
 }
 
 function setup() {
-	//VIDEO= document.createElement("VIDEO");
 	webcam = createCapture(VIDEO);
 	webcam.size(1280, 720);
 	webcam.parent("container-canvas1");
@@ -83,50 +81,55 @@ function setup() {
 		};
 		const response = await fetch('http://localhost:8000/result', options);
 		const json = await response.json();
-		console.log(json);
-
 		const json_object = JSON.parse(json);
+
 		word_idx = json_object.word_index;
 		conf = json_object.confidence;
 		const box = json_object.box_coord;
 		const ratio = 540 / 540;
-
-		//draw bounding box and write result with data from JSON
-		if (word_idx != 'INCORRECT' && word_idx === answer_key) {
-			textSize(32);
-			text(word_idx, 10, 30);
-			text(conf, 10, 60);
-			result = 1;
+		
+		if(json_object && word_idx === answer_key){
+			word_txt = document.getElementById("problem_word").innerHTML;
+			correct = 1;
 		}
-		else {
-			textSize(32);
-			text("INCORRECT", 10, 30);
+		else{
+			word_txt = "TRY AGAIN"
 		}
+			
+		textSize(32);
+		text(word_txt, 10, 30);
+		text(conf, 10, 60);
 		fill(0, 102, 153, 51);
 		rect((box[0] * ratio + 155), (box[1] * ratio), (box[2] * ratio), (box[3] * ratio));
 
 		check();
-
-		//pass values to jsp html
-		document.getElementById("q_correct").value = result;
-		document.getElementById("q_percent").value = conf;
+		
+		conf = parseFloat(conf)
+		quiz_data = {
+			q_correct: correct,
+			q_percent: conf
+		};
+		w_num = document.getElementById("w_num").innerHTML;
+		//pass result and conf to ajax func
+		var save_btn = $("#save_btn");
+			
+		save_btn.on("click", function(e){
+			quizService.add(w_num,quiz_data, function(result){showResult();});
+		});	
 
 	});
 }
 
 function check() {
-	//console.log("answer_key: ",answer_key);
-	word_idx = word_idx.toString();
-	//console.log("word_idx: ", word_idx);
-
-	if (word_idx === answer_key) {
+	if (correct == 1) {
 		document.getElementById("message").innerHTML = "정답입니다!";
-		document.getElementById("circle").style.visibility = 'visible';
 	}
 	else {
 		document.getElementById("message").innerHTML = "다시 기억해보세요";
-		document.getElementById("circle").style.visibility = 'hidden';
 	}
 }
 
 
+function showResult(){
+	//alert("Keep up the good work!");
+}
