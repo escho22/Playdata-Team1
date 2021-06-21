@@ -192,7 +192,7 @@ public class LearnController {
 		ModelAndView mav = new ModelAndView();
 		
 		WordVO wordVO = this.wservice.readWord(4);
-		System.out.println(wordVO.getW_num());
+		//System.out.println(wordVO.getW_num());
 		
 		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_4");
@@ -228,7 +228,7 @@ public class LearnController {
 		ModelAndView mav = new ModelAndView();
 		
 		WordVO wordVO = this.wservice.readWord(5);
-		System.out.println(wordVO.getW_num());
+		//System.out.println(wordVO.getW_num());
 		
 		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_5");
@@ -264,7 +264,7 @@ public class LearnController {
 		ModelAndView mav = new ModelAndView();
 		
 		WordVO wordVO = this.wservice.readWord(6);
-		System.out.println(wordVO.getW_num());
+		//System.out.println(wordVO.getW_num());
 		
 		mav.addObject("wordVO",wordVO);
 		mav.setViewName("/learn/level4/learn_4_6");

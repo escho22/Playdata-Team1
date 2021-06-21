@@ -39,15 +39,15 @@
 	<br>
 	<table>
 		<tr>
-			<td><A href='/admin/control/choose'>관리</A></td>
+			<td><A href='<%=request.getContextPath()%>/admin/control/choose'>관리</A></td>
 		</tr>
 		<tr>
-			<td><A href='/admin/stats/choose'>통계</A></td>
+			<td><A href='<%=request.getContextPath()%>/admin/stats/choose'>통계</A></td>
 		</tr>
 	</table>
 	<br>
 	<hr>
-	<A href='/'>Home</A>
+	<A href='<%=request.getContextPath()%>/'>Home</A>
 </section>	
 </body>
 </html>

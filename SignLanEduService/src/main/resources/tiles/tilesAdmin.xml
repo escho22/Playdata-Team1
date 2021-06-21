@@ -16,12 +16,6 @@
 			value="/WEB-INF/views/admin/control/choose.jsp" />
 	</definition>
 
-	<definition name="/admin/control/adminCreate" extends="main">
-		<put-attribute name="title" value="관리자생성"></put-attribute>
-		<put-attribute name="body"
-			value="/WEB-INF/views/admin/control/adminCreate.jsp" />
-	</definition>
-
 	<definition name="/admin/control/memberDelete"
 		extends="main">
 		<put-attribute name="title" value="회원삭제"></put-attribute>

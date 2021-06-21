@@ -32,6 +32,7 @@
 	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 	    <script src="<%=request.getContextPath()%>/js/scripts.js"></script> 
 	</head>
+
 	<body>
 		<section class="quiz">
 			<div class="container px-5">

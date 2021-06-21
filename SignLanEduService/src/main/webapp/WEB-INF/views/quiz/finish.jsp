@@ -53,14 +53,19 @@
 <body>
 <h1>Quiz Level 4</h1>
 <hr>
-<h1 style="text-align:center;">
-Quiz Complete! 
-<br>
-<br>
-Good Job!
-<br>
-<br>
-</h1>
+<div id="message" style="text-align:center;">
+	<img src='<%=request.getContextPath()%>/assets/img/welldone.jpg' alt="Well done!">
+<!-- 	<img src='https://simondesenlisblogs.org/wp-content/uploads/2021/02/welldone.jpg' alt="Well done!"> -->
+	<br>
+	<h1>
+		Quiz End 
+		<br>
+		<br>
+		Good Job!
+		<br>
+	</h1>
+	<A href='../'>Home</A>
+</div>
 
 </body>
 </html>

@@ -39,8 +39,8 @@
 <thead>
 <tr>
 	<th>번호</th>
-	<th>ID</th>
 	<th>단어</th>
+	<th>단어내용</th>
 	<th>정답여부</th>
 	<th>일치도</th>
 	<th>날짜</th>
@@ -69,8 +69,8 @@
 </tfoot>
 </table>
 <hr>
-<A href='/admin/stats/choose'>통계</A> <br>
-<A href='/'>Home</A>
+<A href='<%=request.getContextPath()%>/admin/stats/choose'>통계</A> <br>
+<A href='<%=request.getContextPath()%>/'>Home</A>
 </section>
 </body>
 </html>

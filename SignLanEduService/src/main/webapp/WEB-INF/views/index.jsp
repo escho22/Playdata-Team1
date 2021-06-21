@@ -11,7 +11,7 @@
 	    <meta name="author" content="" />
 	    <!-- 페이지 탭에 표시될 아이콘 및 페이지명 -->
 	    <title>lantern</title>
-	    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+	    <link rel="icon" type="image/x-icon" href="<%=request.getContextPath()%>/assets/favicon.ico"/>
 	     
 	    <!-- Bootstrap icons-->
 	   	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
@@ -59,7 +59,7 @@
 	                    		lanterning!</h3>
 	                        <p class="lead fw-normal text-muted mb-5">Do you want to learn sign language? Come join us! If you are worried, click try button.</p>
 	                        <div class="d-flex flex-column flex-lg-row align-items-center">
-	                       		 <a class="btn btn-primary py-3 px-4 rounded-pill me-3" href="/member/login" target="_blank">Sign-in</a>                   
+	                       		 <a class="btn btn-primary py-3 px-4 rounded-pill me-3" href="<%=request.getContextPath()%>/member/login" target="_blank">Sign-in</a>                   
 	                             <button class="btn btn-primary py-3 px-4 rounded-pill" onclick="location.href='https://startbootstrap.com/theme/new-age'">Try our service</button> 
 	                        </div>
 	                    </div>
@@ -139,7 +139,7 @@
     </body>
     
    	<!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="<%=request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css"/>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
