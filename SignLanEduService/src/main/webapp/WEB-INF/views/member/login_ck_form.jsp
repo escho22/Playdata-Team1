@@ -8,7 +8,7 @@
 		<meta name="description" content="" />
 		<meta name="author" content="" />
 		<!-- 페이지 탭에 표시될 아이콘 및 페이지명 -->
-		<title>Create an Account</title>
+		<title>Login</title>
 		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 		 
 		<!-- Bootstrap icons-->
@@ -106,4 +106,3 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 </html>
-
