@@ -46,11 +46,12 @@
 					<div class="card-body px-5">
 						<div class="row">
 							<div class="col-lg-6">
-								<video class="v_learn" src='${wordVO.w_path}' width="500" height="500" controls autoplay loop></video>
+ 								<video class="v_learn" src='${wordVO.w_path}' width="500" height="500" controls autoplay loop></video>
 							</div>
 							<div class="col-lg-6 mt-6">
 								<video class="v_learn" autoplay width='500' height="360" id="videoElement"></video>
 							</div>
+							<div id="errorMsg"></div>
 						</div>
 					</div>					
 					<form action="<%=request.getContextPath()%>/learn/level4/learn_4_1" method="POST" id="creatLearn" name='lfrm4_1'>
