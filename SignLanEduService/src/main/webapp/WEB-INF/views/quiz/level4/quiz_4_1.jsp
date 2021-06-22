@@ -95,6 +95,7 @@
 									<span class="pointer fs-6 mt-lg-4" onclick="location.href='<%=request.getContextPath()%>/quiz/level4/quiz_4_2'">다음<i class="bi bi-chevron-right ms-2 style="style="font-size: 1rem;"></i></span>				 
 								</div>
 						   </div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -114,5 +115,19 @@
 	<!-- Webcam - p5 Js -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+	
+	<script type="<%=request.getContextPath()%>/text/javascript">
+	    $().ready(function() {
+			$(".alertNext").click(function() {
+				Swal.fire({
+				  icon: 'success',
+				  title: '학습완료, 다음문제로 넘어가 주세요',
+				  showConfirmButton: false,
+				});
+			});
+		});
+	</script>	
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 </html>
