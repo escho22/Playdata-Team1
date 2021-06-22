@@ -173,11 +173,11 @@
 											<button type="button" onclick="location.href='../'"
 												class="btn btn-primary rounded-pill mb-lg-0">Cancel</button>
 												
-											<button type="button" onclick="location.href='<%=request.getContextPath()%>/member/myLearnList'"
+<%-- 											<button type="button" onclick="location.href='<%=request.getContextPath()%>/member/myLearnList'"
 												class="btn btn-primary rounded-pill mb-lg-0">학습이력</button>
 												
 											<button type="button" onclick="location.href='<%=request.getContextPath()%>/member/myQuizList'"
-												class="btn btn-primary rounded-pill mb-lg-0">퀴즈이력</button>
+												class="btn btn-primary rounded-pill mb-lg-0">퀴즈이력</button> --%>
 										</div>
 									</div>
 								</form>
