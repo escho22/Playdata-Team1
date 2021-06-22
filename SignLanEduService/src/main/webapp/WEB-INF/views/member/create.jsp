@@ -41,7 +41,7 @@
 	// jQuery ajax 요청
 	function checkID() {
 		var frm = $('#frm'); // id가 frm인 태그 검색
-		var id = $('#m_id', frm).val(); // frm 폼에서 id가 'id'인 태그 검색
+		var m_id = $('#m_id', frm).val(); // frm 폼에서 id가 'id'인 태그 검색
 		var params = '';
 		var msg = '';
 
@@ -54,28 +54,32 @@
 			$('#modal_panel').modal(); // 다이얼로그 출력
 			return false;
 		} else { // when ID is entered
-			params = 'm_id' + m_id;
+			params = 'm_id=' + m_id;
 			// var params = $('#frm').serialize(); // 직렬화, 폼의 데이터를 키와 값의 구조로 조합
-			// alert('params: ' + params);
+			//alert('params: ' + params);
 
 			$.ajax({
-						url : './checkID', // controller get요청
+						url : '<%=request.getContextPath()%>/member/checkID', // controller get요청
 						type : 'get', // post
 						cache : false, // 응답 결과 임시 저장 취소
 						async : true, // true: 비동기 통신
 						dataType : 'json', // 응답 형식: json, html, xml...
 						data : params, // 데이터
 						success : function(rdata) { // 서버로부터 성공적으로 응답이 온경우
-							// alert(rdata);
+							//alert(rdata);
+							//alert(rdata.cnt);
 							var msg = "";
 
 							if (rdata.cnt > 0) {
+								alert("이미 사용중인 ID 입니다.");
+								$('#m_id').val('');
 								$('#modal_content').attr('class',
 										'alert alert-danger'); // Bootstrap CSS 변경
 								msg = "이미 사용중인 ID 입니다.";
 								// $('#btn_close').attr("data-focus", "이동할 태그 지정"); 
 								$('#btn_close').attr("data-focus", "m_id");
 							} else {
+								alert("사용 가능한 ID 입니다.");
 								$('#modal_content').attr('class',
 										'alert alert-success'); // Bootstrap CSS 변경
 								msg = "사용 가능한 ID 입니다.";
@@ -213,7 +217,7 @@
 									<div class="form-group row">
 										<div class="col-sm-6">
 											<input type="text" class="form-control form-control-user" name='m_birth'
-												id="exampleInputEmail" placeholder="Birth">
+												id="m_birth" placeholder="Birth">
 										</div>									
 										<div class="col-sm-6">
 											<div class="form-control form-control-user">
@@ -224,7 +228,7 @@
 									</div>
 									<div class="form-group">
 										<input type='text' class="form-control form-control-user"
-											name='m_email' id='email' value='' required="required"
+											name='m_email' id='m_email' value='' required="required"
 											placeholder="* Email Address">
 									</div>
 									<div class="form-group row">
