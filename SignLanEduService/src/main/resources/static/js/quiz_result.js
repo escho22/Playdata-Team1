@@ -1,7 +1,7 @@
 console.log('*****Quiz Module..........')
 
 var quizService = (function(){
-	console.log("make ajax add function")
+	console.log("make ajax add function");
 	
 	function add(w_num,quiz_data,callback,error){
 		console.log(quiz_data);
