@@ -53,9 +53,10 @@ public class MemberController {
 
 	@ResponseBody
 	@RequestMapping(value = "/member/checkID", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
-	public String checkID(String id) {
-		int cnt = this.service.checkID(id);
-
+	public String checkID(String m_id) {
+		System.out.println("m_id : "+m_id);
+		int cnt = this.service.checkID(m_id);
+		System.out.println("cnt : "+cnt);
 		JSONObject json = new JSONObject();
 		json.put("cnt", cnt);
 
