@@ -80,6 +80,11 @@
 								$('#btn_close').attr("data-focus", "m_id");
 							} else {
 								alert("사용 가능한 ID 입니다.");
+								 if (confirm("해당 ID로 가입하시겠습니까?") == true){    //확인
+									 document.getElementById('m_id').readOnly = true;								     
+								 }else{   //취소
+									 $('#m_id').val('');
+								 }								
 								$('#modal_content').attr('class',
 										'alert alert-success'); // Bootstrap CSS 변경
 								msg = "사용 가능한 ID 입니다.";
