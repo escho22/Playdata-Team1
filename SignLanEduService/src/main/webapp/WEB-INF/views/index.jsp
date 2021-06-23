@@ -59,8 +59,8 @@
 	                    		lanterning!</h3>
 	                        <p class="lead fw-normal text-muted mb-5">Do you want to learn sign language? Come join us! If you are worried, click try button.</p>
 	                        <div class="d-flex flex-column flex-lg-row align-items-center">
-	                       		 <a class="btn btn-primary py-3 px-4 rounded-pill me-3" href="<%=request.getContextPath()%>/member/login" target="_blank">Sign-in</a>                   
-	                             <button class="btn btn-primary py-3 px-4 rounded-pill" onclick="location.href='https://startbootstrap.com/theme/new-age'">Try our service</button> 
+	                       		 <a class="btn btn-primary py-3 px-4 rounded-pill me-3" href="<%=request.getContextPath()%>/#features">Lantern</a>
+	                             <button class="btn btn-primary py-3 px-4 rounded-pill" onclick="location.href='https://sldict.korean.go.kr/front/sign/signList.do?top_category=CTE'" target='blank'>수어사전</button> 
 	                        </div>
 	                    </div>
 	                </div>

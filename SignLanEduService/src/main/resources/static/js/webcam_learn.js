@@ -1,11 +1,26 @@
+//original code:
+var video = document.querySelector("#videoElement");
+
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+}
+
+
+////test code1::
 //WebRTC:
-/*
- *  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
- *
- *  Use of this source code is governed by a BSD-style license
- *  that can be found in the LICENSE file in the root of the source
- *  tree.
- */
+///*
+// *  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
+// *
+// *  Use of this source code is governed by a BSD-style license
+// *  that can be found in the LICENSE file in the root of the source
+// *  tree.
+// */
 //'use strict';
 //
 //// Put variables in global scope to make them available to the browser console.
@@ -56,8 +71,7 @@
 //document.querySelector('#showVideo').addEventListener('click', e => init(e));
 
 
-
-//test code::
+////test code2::
 //var video = document.querySelector("#videoElement");
 //
 //navigator.getUserMedia = ( navigator.getUserMedia       ||
@@ -76,23 +90,7 @@
 //}
 
 
-//original code:
-var video = document.querySelector("#videoElement");
-
-if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia({ video: true })
-    .then(function (stream) {
-      video.srcObject = stream;
-    })
-    .catch(function (err0r) {
-      console.log("Something went wrong!");
-    });
-}
-
-
-////browser support check "ms" vendor function is for IE8
-////test code::
-
+////test code3::
 //navigator.getUserMedia = ( navigator.getUserMedia       ||
 //                           navigator.webkitGetUserMedia ||
 //                           navigator.mozGetUserMedia    ||
